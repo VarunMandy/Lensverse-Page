@@ -1,81 +1,81 @@
 import React, { useState, useEffect } from 'react';
 import { Camera, X, ChevronLeft, ChevronRight, Instagram, Twitter, Globe, Mail, Menu } from 'lucide-react';
 
-// Gallery data with categories
-const galleryData = [
-  {
-    id: 1,
-    url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop",
-    category: "Portraits",
-    title: "Urban Portrait"
-  },
-  {
-    id: 2,
-    url: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=1000&fit=crop",
-    category: "Events",
-    title: "Wedding Moment"
-  },
-  {
-    id: 3,
-    url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
-    category: "Landscape",
-    title: "Mountain Vista"
-  },
-  {
-    id: 4,
-    url: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&h=1000&fit=crop",
-    category: "Portraits",
-    title: "Studio Portrait"
-  },
-  {
-    id: 5,
-    url: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&h=600&fit=crop",
-    category: "Street",
-    title: "City Lights"
-  },
-  {
-    id: 6,
-    url: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop",
-    category: "Landscape",
-    title: "Forest Path"
-  },
-  {
-    id: 7,
-    url: "https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?w=800&h=1000&fit=crop",
-    category: "Events",
-    title: "Celebration"
-  },
-  {
-    id: 8,
-    url: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=800&h=1000&fit=crop",
-    category: "Portraits",
-    title: "Natural Light"
-  },
-  {
-    id: 9,
-    url: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop",
-    category: "Landscape",
-    title: "Golden Hour"
-  },
-  {
-    id: 10,
-    url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=1000&fit=crop",
-    category: "Portraits",
-    title: "Expression"
-  },
-  {
-    id: 11,
-    url: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&h=600&fit=crop",
-    category: "Street",
-    title: "Urban Scene"
-  },
-  {
-    id: 12,
-    url: "https://images.unsplash.com/photo-1519167758481-83f29da1a789?w=800&h=1000&fit=crop",
-    category: "Wildlife",
-    title: "Nature's Beauty"
-  }
-];
+// // Gallery data with categories
+// const galleryData = [
+//   {
+//     id: 1,
+//     img: "Photos/1.jpg",
+//     category: "Portraits",
+//     title: "Fashion Portrait"
+//   },
+//   {
+//     id: 2,
+//     img: "Photos/2.jpg",
+//     category: "Events",
+//     title: "Wedding Moment"
+//   },
+//   {
+//     id: 3,
+//     img: "Photos/3.jpg",
+//     category: "Landscape",
+//     title: "Mountain Vista"
+//   },
+//   {
+//     id: 4,
+//     img: "Photos/4.jpg",
+//     category: "Portraits",
+//     title: "Studio Portrait"
+//   },
+//   {
+//     id: 5,
+//     img: "Photos/5.jpg",
+//     category: "Street",
+//     title: "City Lights"
+//   },
+//   {
+//     id: 6,
+//     img: "Photos/6.jpg",
+//     category: "Landscape",
+//     title: "Forest Path"
+//   },
+//   {
+//     id: 7,
+//     img: "Photos/7.jpg",
+//     category: "Events",
+//     title: "Celebration"
+//   },
+//   {
+//     id: 8,
+//     img: "Photos/8.jpg",
+//     category: "Portraits",
+//     title: "Natural Light"
+//   },
+//   {
+//     id: 9,
+//     img: "Photos/9.jpg",
+//     category: "Landscape",
+//     title: "Golden Hour"
+//   },
+//   {
+//     id: 10,
+//     img: "Photos/10.jpg",
+//     category: "Portraits",
+//     title: "Expression"
+//   },
+//   {
+//     id: 11,
+//     img: "Photos/11.jpg",
+//     category: "Street",
+//     title: "Urban Scene"
+//   },
+//   {
+//     id: 12,
+//     img: "Photos/12.jpgz",
+//     category: "Wildlife",
+//     title: "Nature's Beauty"
+//   }
+// ];
 
 const categories = ["All", "Portraits", "Landscape", "Events", "Street", "Wildlife"];
 

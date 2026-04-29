@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lensverse Photography - Visual storyteller capturing moments that tell stories">
+    <title>Lensverse Photography - Visual Storyteller</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #0f172a;
+            --primary-light: #f8fafc;
+            --accent: #334155;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .navbar-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            letter-spacing: 0.3em;
+            color: white;
+            text-decoration: none;
+            font-weight: 300;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .navbar-brand:hover {
+            opacity: 0.7;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .navbar-link {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.875rem;
+            letter-spacing: 0.2em;
+            transition: var(--transition);
+            padding-bottom: 0.25rem;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .navbar-link:hover,
+        .navbar-link.active {
+            color: white;
+            border-bottom-color: white;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(15,23,42,0.7), rgba(15,23,42,0.5), rgba(15,23,42,0.7));
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            color: white;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 0.875rem;
+            letter-spacing: 0.4em;
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title {
+            font-size: clamp(4rem, 10vw, 8rem);
+            margin-bottom: 2rem;
+            font-weight: 200;
+        }
+
+        .hero-description {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            color: #e2e8f0;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            letter-spacing: 0.2em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-dark);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .btn-primary:hover {
+            background: #f1f5f9;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-dark);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator-inner {
+            width: 1.5rem;
+            height: 2.5rem;
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            padding-top: 0.5rem;
+        }
+
+        .scroll-dot {
+            width: 0.25rem;
+            height: 0.75rem;
+            background: rgba(255,255,255,0.5);
+            border-radius: 0.5rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            min-height: 100vh;
+            padding: 8rem 2rem 5rem;
+            background: #ffffff;
+        }
+
+        .portfolio-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .section-subtitle {
+            font-size: 0.875rem;
+            letter-spacing: 0.3em;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--text-dark);
+            margin-bottom: 3rem;
+        }
+
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            border: 1px solid #e2e8f0;
+            background: white;
+            color: var(--text-dark);
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-dark);
+            color: white;
+            border-color: var(--primary-dark);
+            box-shadow: 0 4px 15px rgba(15,23,42,0.3);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: var(--transition);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .gallery-item:hover {
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+        }
+
+        .gallery-item-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .gallery-item:hover .gallery-item-image {
+            transform: scale(1.1);
+        }
+
+        .gallery-item-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2), transparent);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item-info {
+            color: white;
+            transform: translateY(1rem);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-item-info {
+            transform: translateY(0);
+        }
+
+        .gallery-item-title {
+            font-size: 1.125rem;
+            font-weight: 300;
+            margin-bottom: 0.25rem;
+        }
+
+        .gallery-item-category {
+            font-size: 0.875rem;
+            color: #cbd5e1;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .lightbox-close:hover {
+            color: #cbd5e1;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .lightbox-nav:hover {
+            color: #cbd5e1;
+        }
+
+        .lightbox-prev {
+            left: 2rem;
+        }
+
+        .lightbox-next {
+            right: 2rem;
+        }
+
+        .lightbox-image {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+        }
+
+        .lightbox-title {
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        .lightbox-category {
+            font-size: 0.875rem;
+            color: #94a3b8;
+            margin-top: 0.25rem;
+        }
+
+        /* About Section */
+        .about {
+            min-height: 100vh;
+            padding: 8rem 2rem 5rem;
+            background: white;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        .about-image {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .about-image-bg {
+            position: absolute;
+            bottom: -1.5rem;
+            right: -1.5rem;
+            width: 10rem;
+            height: 10rem;
+            background: var(--primary-dark);
+            border-radius: 1rem;
+            z-index: -1;
+        }
+
+        .about-content {
+            animation: fadeInRight 1s ease-out;
+        }
+
+        .about-text {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin: 2.5rem 0 1rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            padding: 0.5rem 1rem;
+            background: #f1f5f9;
+            color: var(--text-dark);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+
+        .experience-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .experience-item {
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        /* Contact Section */
+        .contact {
+            min-height: 100vh;
+            padding: 8rem 2rem 5rem;
+            background: #f8fafc;
+        }
+
+        .contact-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .contact-description {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            font-weight: 300;
+            margin-top: 1.5rem;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.5rem;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-dark);
+            box-shadow: 0 0 0 3px rgba(15,23,42,0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--primary-dark);
+            color: white;
+            border: none;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            letter-spacing: 0.2em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .form-submit:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(15,23,42,0.3);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-info-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-info-title {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-info-text {
+            color: var(--text-light);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 3rem;
+            height: 3rem;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .social-link:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .success-message {
+            color: #10b981;
+            text-align: center;
+            margin-top: 1rem;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Footer */
+        .footer {
+            background: black;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 2rem;
+            letter-spacing: 0.3em;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-social-link {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-social-link:hover {
+            opacity: 0.7;
+        }
+
+        .footer-divider {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 2rem 0;
+        }
+
+        .footer-copyright {
+            color: #64748b;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lightbox-nav {
+                font-size: 2rem;
+            }
+
+            .lightbox-prev {
+                left: 1rem;
+            }
+
+            .lightbox-next {
+                right: 1rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a class="navbar-brand" onclick="showPage('home')">LENSVERSE</a>
+            <ul class="navbar-menu">
+                <li><a class="navbar-link active" data-page="home" onclick="showPage('home')">HOME</a></li>
+                <li><a class="navbar-link" data-page="portfolio" onclick="showPage('portfolio')">PORTFOLIO</a></li>
+                <li><a class="navbar-link" data-page="about" onclick="showPage('about')">ABOUT</a></li>
+                <li><a class="navbar-link" data-page="contact" onclick="showPage('contact')">CONTACT</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home-page" class="hero page">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">VISUAL STORYTELLER</p>
+            <h1 class="hero-title">Lensverse</h1>
+            <p class="hero-description">
+                Capturing moments that tell stories, one frame at a time.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="showPage('portfolio')">
+                    VIEW PORTFOLIO
+                    <span>→</span>
+                </button>
+                <button class="btn btn-secondary" onclick="showPage('contact')">
+                    CONTACT ME
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-indicator-inner">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio-page" class="portfolio page hidden">
+        <div class="portfolio-header">
+            <p class="section-subtitle">SELECTED WORK</p>
+            <h2 class="section-title">Featured Gallery</h2>
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="All" onclick="filterGallery('All')">All</button>
+                <button class="filter-btn" data-category="Portraits" onclick="filterGallery('Portraits')">Portraits</button>
+                <button class="filter-btn" data-category="Landscape" onclick="filterGallery('Landscape')">Landscape</button>
+                <button class="filter-btn" data-category="Events" onclick="filterGallery('Events')">Events</button>
+                <button class="filter-btn" data-category="Street" onclick="filterGallery('Street')">Street</button>
+                <button class="filter-btn" data-category="Wildlife" onclick="filterGallery('Wildlife')">Wildlife</button>
+            </div>
+        </div>
+        <div class="gallery-grid" id="gallery"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-page" class="about page hidden">
+        <div class="about-container">
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=800&h=800&fit=crop" alt="Photographer" class="about-image">
+                <div class="about-image-bg"></div>
+            </div>
+            <div class="about-content">
+                <p class="section-subtitle">ABOUT ME</p>
+                <h2 class="section-title">Visual Storyteller</h2>
+                
+                <p class="about-text">
+                    I'm a passionate photographer dedicated to capturing the extraordinary in everyday moments. 
+                    With over 10 years of experience, I specialize in portrait, landscape, and event photography.
+                </p>
+                
+                <p class="about-text">
+                    My approach combines technical precision with artistic vision, creating images that 
+                    resonate emotionally and stand the test of time. Every photograph tells a unique story, 
+                    and I'm honored to help preserve these memories.
+                </p>
+                
+                <p class="about-text">
+                    Based in the heart of nature's canvas, I draw inspiration from the world around me, 
+                    constantly seeking new perspectives and pushing creative boundaries.
+                </p>
+
+                <h3 class="about-subtitle">Expertise</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Portrait Photography</span>
+                    <span class="skill-tag">Landscape</span>
+                    <span class="skill-tag">Event Coverage</span>
+                    <span class="skill-tag">Studio Lighting</span>
+                    <span class="skill-tag">Photo Editing</span>
+                    <span class="skill-tag">Commercial Work</span>
+                </div>
+
+                <h3 class="about-subtitle">Experience</h3>
+                <ul class="experience-list">
+                    <li class="experience-item">📸 10+ years professional photography</li>
+                    <li class="experience-item">🏆 Featured in National Geographic, Vogue</li>
+                    <li class="experience-item">🎓 MFA in Photography, Rhode Island School of Design</li>
+                    <li class="experience-item">🌍 Work exhibited in 15+ countries worldwide</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-page" class="contact page hidden">
+        <div class="contact-header">
+            <h2 class="section-title">Have a project in mind?</h2>
+            <p class="contact-description">
+                I'd love to hear about your vision. Let's create something beautiful together.
+            </p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-form">
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea id="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">
+                        GET IN TOUCH
+                        <span>→</span>
+                    </button>
+                    
+                    <p id="successMessage" class="success-message hidden">
+                        Thank you! I'll get back to you soon.
+                    </p>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-info-section">
+                    <h3 class="contact-info-title">Let's Connect</h3>
+                    <p class="contact-info-text">
+                        Whether you're planning a wedding, need professional portraits, or have a creative 
+                        project in mind, I'm here to bring your vision to life.
+                    </p>
+                    
+                    <h4 class="contact-info-title" style="margin-top: 1.5rem;">Follow My Work</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-info-section">
+                    <h4 class="contact-info-title">Location</h4>
+                    <p class="contact-info-text">Based in Portland, Oregon</p>
+                    <p class="contact-info-text">Available for travel worldwide</p>
+                </div>
+                
+                <div class="contact-info-section">
+                    <h4 class="contact-info-title">Response Time</h4>
+                    <p class="contact-info-text">I typically respond within 24-48 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3 class="footer-title">LENSVERSE PHOTOGRAPHY</h3>
+        <div class="footer-social">
+            <a href="#" class="footer-social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="#" class="footer-social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+            </a>
+            <a href="#" class="footer-social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+            </a>
+            <a href="#" class="footer-social-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+        </div>
+        <hr class="footer-divider">
+        <p class="footer-copyright">© 2026 ALL RIGHTS RESERVED</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">×</button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">›</button>
+        <img id="lightbox-image" class="lightbox-image" src="" alt="">
+        <div class="lightbox-caption">
+            <p id="lightbox-title" class="lightbox-title"></p>
+            <p id="lightbox-category" class="lightbox-category"></p>
+        </div>
+    </div>
+
+    <script>
+        // Gallery Data
+        const galleryData = [
+            { id: 1, url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop", category: "Portraits", title: "Urban Portrait" },
+            { id: 2, url: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=1000&fit=crop", category: "Events", title: "Wedding Moment" },
+            { id: 3, url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop", category: "Landscape", title: "Mountain Vista" },
+            { id: 4, url: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&h=1000&fit=crop", category: "Portraits", title: "Studio Portrait" },
+            { id: 5, url: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&h=600&fit=crop", category: "Street", title: "City Lights" },
+            { id: 6, url: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop", category: "Landscape", title: "Forest Path" },
+            { id: 7, url: "https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?w=800&h=1000&fit=crop", category: "Events", title: "Celebration" },
+            { id: 8, url: "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=800&h=1000&fit=crop", category: "Portraits", title: "Natural Light" },
+            { id: 9, url: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop", category: "Landscape", title: "Golden Hour" },
+            { id: 10, url: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=1000&fit=crop", category: "Portraits", title: "Expression" },
+            { id: 11, url: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&h=600&fit=crop", category: "Street", title: "Urban Scene" },
+            { id: 12, url: "https://images.unsplash.com/photo-1519167758481-83f29da1a789?w=800&h=1000&fit=crop", category: "Wildlife", title: "Nature's Beauty" }
+        ];
+
+        let currentCategory = 'All';
+        let currentLightboxIndex = 0;
+        let filteredImages = galleryData;
+
+        // Initialize Gallery
+        function initGallery() {
+            renderGallery(galleryData);
+        }
+
+        // Render Gallery
+        function renderGallery(images) {
+            const gallery = document.getElementById('gallery');
+            gallery.innerHTML = '';
+            
+            images.forEach((image, index) => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                item.style.animationDelay = `${index * 100}ms`;
+                item.innerHTML = `
+                    <img src="${image.url}" alt="${image.title}" class="gallery-item-image" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-info">
+                            <p class="gallery-item-title">${image.title}</p>
+                            <p class="gallery-item-category">${image.category}</p>
+                        </div>
+                    </div>
+                `;
+                item.onclick = () => openLightbox(index);
+                gallery.appendChild(item);
+            });
+        }
+
+        // Filter Gallery
+        function filterGallery(category) {
+            currentCategory = category;
+            
+            // Update active filter button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.category === category);
+            });
+            
+            // Filter images
+            filteredImages = category === 'All' 
+                ? galleryData 
+                : galleryData.filter(img => img.category === category);
+            
+            renderGallery(filteredImages);
+        }
+
+        // Lightbox Functions
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            const image = filteredImages[index];
+            
+            document.getElementById('lightbox-image').src = image.url;
+            document.getElementById('lightbox-title').textContent = image.title;
+            document.getElementById('lightbox-category').textContent = image.category;
+            document.getElementById('lightbox').classList.add('active');
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function navigateLightbox(direction) {
+            currentLightboxIndex = (currentLightboxIndex + direction + filteredImages.length) % filteredImages.length;
+            const image = filteredImages[currentLightboxIndex];
+            
+            document.getElementById('lightbox-image').src = image.url;
+            document.getElementById('lightbox-title').textContent = image.title;
+            document.getElementById('lightbox-category').textContent = image.category;
+        }
+
+        // Page Navigation
+        function showPage(pageName) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.add('hidden');
+            });
+            
+            // Show selected page
+            document.getElementById(`${pageName}-page`).classList.remove('hidden');
+            
+            // Update active nav link
+            document.querySelectorAll('.navbar-link').forEach(link => {
+                link.classList.toggle('active', link.dataset.page === pageName);
+            });
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Form Submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Show success message
+            document.getElementById('successMessage').classList.remove('hidden');
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+            
+            // Hide message after 3 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').classList.add('hidden');
+            }, 3000);
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Keyboard Navigation for Lightbox
+        document.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') navigateLightbox(1);
+                if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            }
+        });
+
+        // Initialize on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            initGallery();
+        });
+    </script>
+</body>
+</html>

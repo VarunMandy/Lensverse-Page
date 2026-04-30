@@ -289,20 +289,20 @@ const PortfolioPage = () => {
           </div>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Gallery Grid - Masonry */}
+        <div className="max-w-7xl mx-auto masonry-grid">
           {filteredImages.map((image, index) => (
             <div
               key={image.id}
               className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer transition-all duration-500 hover:shadow-2xl animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
+              style={{ animationDelay: `${index * 100}ms`, breakInside: 'avoid', marginBottom: '1.5rem' }}
               onClick={() => handleImageClick(image)}
             >
-              <div className="aspect-[4/5] overflow-hidden">
+              <div className="overflow-hidden">
                 <img
                   src={image.url}
                   alt={image.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full block object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
               </div>
@@ -655,6 +655,23 @@ export default function PhotographyPortfolio() {
 
         .animate-fade-in {
           animation: fade-in 0.6s ease-out forwards;
+        }
+
+        .masonry-grid {
+          column-count: 3;
+          column-gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+          .masonry-grid {
+            column-count: 1;
+          }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+          .masonry-grid {
+            column-count: 2;
+          }
         }
 
         html {

@@ -1,83 +1,52 @@
 import React, { useState, useEffect } from 'react';
-import { Camera, X, ChevronLeft, ChevronRight, Instagram, Twitter, Globe, Mail, Menu } from 'lucide-react';
+import { Camera, X, ChevronLeft, ChevronRight, Instagram, Mail, Menu } from 'lucide-react';
 
-// // Gallery data with categories
-// const galleryData = [
-//   {
-//     id: 1,
-//     img: "Photos/1.jpg",
-//     category: "Portraits",
-//     title: "Fashion Portrait"
-//   },
-//   {
-//     id: 2,
-//     img: "Photos/2.jpg",
-//     category: "Events",
-//     title: "Wedding Moment"
-//   },
-//   {
-//     id: 3,
-//     img: "Photos/3.jpg",
-//     category: "Landscape",
-//     title: "Mountain Vista"
-//   },
-//   {
-//     id: 4,
-//     img: "Photos/4.jpg",
-//     category: "Portraits",
-//     title: "Studio Portrait"
-//   },
-//   {
-//     id: 5,
-//     img: "Photos/5.jpg",
-//     category: "Street",
-//     title: "City Lights"
-//   },
-//   {
-//     id: 6,
-//     img: "Photos/6.jpg",
-//     category: "Landscape",
-//     title: "Forest Path"
-//   },
-//   {
-//     id: 7,
-//     img: "Photos/7.jpg",
-//     category: "Events",
-//     title: "Celebration"
-//   },
-//   {
-//     id: 8,
-//     img: "Photos/8.jpg",
-//     category: "Portraits",
-//     title: "Natural Light"
-//   },
-//   {
-//     id: 9,
-//     img: "Photos/9.jpg",
-//     category: "Landscape",
-//     title: "Golden Hour"
-//   },
-//   {
-//     id: 10,
-//     img: "Photos/10.jpg",
-//     category: "Portraits",
-//     title: "Expression"
-//   },
-//   {
-//     id: 11,
-//     img: "Photos/11.jpg",
-//     category: "Street",
-//     title: "Urban Scene"
-//   },
-//   {
-//     id: 12,
-//     img: "Photos/12.jpgz",
-//     category: "Wildlife",
-//     title: "Nature's Beauty"
-//   }
-// ];
+// Gallery data with categories
+const galleryData = [
+  { id: 1, url: "Photos/1.jpg", category: "Fashion", title: "Neon Editorial" },
+  { id: 2, url: "Photos/2.jpg", category: "Events", title: "Live Strings" },
+  { id: 3, url: "Photos/3.jpg", category: "Portraits", title: "Raw Vocals" },
+  { id: 4, url: "Photos/4.jpg", category: "Events", title: "Guitar Detail" },
+  { id: 5, url: "Photos/5.jpg", category: "Events", title: "Stage Light" },
+  { id: 6, url: "Photos/6.jpg", category: "Portraits", title: "The Crooner" },
+  { id: 7, url: "Photos/7.jpg", category: "Events", title: "Classical Grace" },
+  { id: 8, url: "Photos/8.jpg", category: "Portraits", title: "Dancer's Gaze" },
+  { id: 9, url: "Photos/9.jpg", category: "Events", title: "Red Glow" },
+  { id: 10, url: "Photos/10.jpg", category: "Events", title: "In The Moment" },
+  { id: 11, url: "Photos/11.jpg", category: "Events", title: "Joyful Note" },
+  { id: 12, url: "Photos/12.jpg", category: "Events", title: "Rhythm & Soul" },
+  { id: 13, url: "Photos/13.jpg", category: "Portraits", title: "Golden Voice" },
+  { id: 14, url: "Photos/14.jpg", category: "Fashion", title: "Amber Silhouette" },
+  { id: 15, url: "Photos/15.jpg", category: "Landscape", title: "Sunset Shore" },
+  { id: 16, url: "Photos/16.jpg", category: "Landscape", title: "Sky High" },
+  { id: 17, url: "Photos/17.jpg", category: "Landscape", title: "Tropical Canal" },
+  { id: 18, url: "Photos/18.jpg", category: "Portraits", title: "Good Boy" },
+  { id: 19, url: "Photos/19.jpg", category: "Landscape", title: "The Lighthouse" },
+  { id: 20, url: "Photos/20.jpg", category: "Events", title: "Paisley Groove" },
+  { id: 21, url: "Photos/21.jpg", category: "Landscape", title: "Temple Gopuram" },
+  { id: 22, url: "Photos/22.jpg", category: "Fashion", title: "Pink Wings" },
+  { id: 23, url: "Photos/23.jpg", category: "Fashion", title: "Royal Crown" },
+  { id: 24, url: "Photos/24.jpg", category: "Fashion", title: "Golden Fairy" },
+  { id: 25, url: "Photos/25.jpg", category: "Portraits", title: "Wings of Light" },
+  { id: 26, url: "Photos/26.jpg", category: "Fashion", title: "Neon Bloom" },
+  { id: 27, url: "Photos/27.jpg", category: "Fashion", title: "Emerald Flame" },
+  { id: 28, url: "Photos/28.jpg", category: "Fashion", title: "Desert Prince" },
+  { id: 29, url: "Photos/29.jpg", category: "Portraits", title: "Purple Halo" },
+  { id: 30, url: "Photos/30.jpg", category: "Fashion", title: "Blue Blossom" },
+  { id: 31, url: "Photos/31.jpg", category: "Fashion", title: "Lotus Glow" },
+  { id: 32, url: "Photos/32.jpg", category: "Fashion", title: "Crimson Fire" },
+  { id: 33, url: "Photos/33.jpg", category: "Fashion", title: "Golden Lotus" },
+  { id: 34, url: "Photos/34.jpg", category: "Portraits", title: "Duo in Motion" },
+  { id: 35, url: "Photos/35.jpg", category: "Fashion", title: "Violet Duo" },
+  { id: 36, url: "Photos/36.jpg", category: "Fashion", title: "Scarlet Dance" },
+  { id: 38, url: "Photos/38.JPG", category: "Landscape", title: "Still Waters" },
+  { id: 39, url: "Photos/39.jpg", category: "Street", title: "Spring Bricks" },
+  { id: 43, url: "Photos/43.jpg", category: "Landscape", title: "Night Tower" },
+  { id: 44, url: "Photos/44.jpg", category: "Street", title: "Rapid Service" },
+  { id: 45, url: "Photos/45.jpg", category: "Street", title: "Doorway Visitor" }
+];
 
-const categories = ["All", "Portraits", "Landscape", "Events", "Street", "Wildlife"];
+const categories = ["All", "Portraits", "Landscape", "Events", "Fashion", "Street"];
 
 // Navigation Component
 const Navigation = ({ currentPage, setCurrentPage, isScrolled }) => {
@@ -85,7 +54,9 @@ const Navigation = ({ currentPage, setCurrentPage, isScrolled }) => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      currentPage !== 'home'
+        ? 'bg-slate-900/95 backdrop-blur-md shadow-lg'
+        : isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
@@ -387,23 +358,20 @@ const AboutPage = () => {
           {/* Bio Content */}
           <div>
             <p className="text-gray-500 text-sm tracking-[0.3em] mb-4">ABOUT ME</p>
-            <h1 className="text-5xl font-light text-slate-900 mb-6">Visual Storyteller</h1>
+            <h1 className="text-5xl font-light text-slate-900 mb-6">Photographer</h1>
             
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
-                I'm a passionate photographer dedicated to capturing the extraordinary in everyday moments. 
-                With over 10 years of experience, I specialize in portrait, landscape, and event photography.
+                Hey, I'm Varun Mandepudi — a photographer based in Boston, Massachusetts. 
+                I love finding beauty in both the ordinary and the unexpected, chasing light 
+                and capturing moments that feel honest and alive.
               </p>
               
               <p>
-                My approach combines technical precision with artistic vision, creating images that 
-                resonate emotionally and stand the test of time. Every photograph tells a unique story, 
-                and I'm honored to help preserve these memories.
-              </p>
-              
-              <p>
-                Based in the heart of nature's canvas, I draw inspiration from the world around me, 
-                constantly seeking new perspectives and pushing creative boundaries.
+                From quiet landscapes at golden hour to the raw energy of street life, 
+                fashion editorials, and event photography — every frame is a story worth 
+                telling. I'm always open to collaborations and creative projects — let's 
+                make something together.
               </p>
             </div>
 
@@ -411,8 +379,8 @@ const AboutPage = () => {
             <div className="mt-10">
               <h3 className="text-xl font-light text-slate-900 mb-4">Expertise</h3>
               <div className="flex flex-wrap gap-3">
-                {['Portrait Photography', 'Landscape', 'Event Coverage', 'Studio Lighting', 
-                  'Photo Editing', 'Commercial Work'].map((skill) => (
+                {['Portrait Photography', 'Landscape', 'Street Photography', 'Fashion', 
+                  'Event Photography', 'Photo Editing'].map((skill) => (
                   <span
                     key={skill}
                     className="px-4 py-2 bg-gray-100 text-slate-700 rounded-full text-sm"
@@ -427,10 +395,9 @@ const AboutPage = () => {
             <div className="mt-10">
               <h3 className="text-xl font-light text-slate-900 mb-4">Experience</h3>
               <div className="space-y-3 text-gray-700">
-                <p>📸 10+ years professional photography</p>
-                <p>🏆 Featured in National Geographic, Vogue</p>
-                <p>🎓 MFA in Photography, Rhode Island School of Design</p>
-                <p>🌍 Work exhibited in 15+ countries worldwide</p>
+                <p>📸 Portrait, Landscape & Street Photography</p>
+                <p>🌆 Based in Boston, Massachusetts</p>
+                <p>🎨 Skilled in Lightroom & Photoshop post-processing</p>
               </div>
             </div>
           </div>
@@ -449,16 +416,44 @@ const ContactPage = () => {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setFormData({ name: '', email: '', message: '' });
+    setSending(true);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: '16f0726e-09d2-4be5-9f9b-3e33b289dbee',
+          subject: 'New Contact from Lensverse Portfolio',
+          from_name: 'Lensverse Portfolio',
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 5000);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      alert('Something went wrong. Please try again.');
+    }
+
+    setSending(false);
   };
 
   return (
@@ -523,10 +518,11 @@ const ContactPage = () => {
 
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-slate-900 text-white rounded-full text-sm tracking-[0.2em] font-medium hover:bg-slate-800 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg"
+                disabled={sending}
+                className="w-full px-8 py-4 bg-slate-900 text-white rounded-full text-sm tracking-[0.2em] font-medium hover:bg-slate-800 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg disabled:opacity-60"
               >
-                GET IN TOUCH
-                <ChevronRight size={18} />
+                {sending ? 'SENDING...' : 'GET IN TOUCH'}
+                {!sending && <ChevronRight size={18} />}
               </button>
 
               {submitted && (
@@ -551,25 +547,15 @@ const ContactPage = () => {
               <h4 className="text-lg font-medium text-slate-900 mb-4">Follow My Work</h4>
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/_.lensverse_?igsh=MWVldmV1Z3M4MTRxYg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white transition-all duration-300 shadow-lg"
                 >
                   <Instagram size={20} />
                 </a>
                 <a
-                  href="#"
-                  className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white transition-all duration-300 shadow-lg"
-                >
-                  <Twitter size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white transition-all duration-300 shadow-lg"
-                >
-                  <Globe size={20} />
-                </a>
-                <a
-                  href="#"
+                  href="mailto:lensverse1@gmail.com"
                   className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-700 hover:bg-slate-900 hover:text-white transition-all duration-300 shadow-lg"
                 >
                   <Mail size={20} />
@@ -579,14 +565,9 @@ const ContactPage = () => {
 
             <div className="bg-white p-6 rounded-2xl shadow-lg">
               <h4 className="text-lg font-medium text-slate-900 mb-3">Location</h4>
-              <p className="text-gray-600">Based in Portland, Oregon</p>
-              <p className="text-gray-600 mt-2">Available for travel worldwide</p>
+              <p className="text-gray-600">Based in Boston, Massachusetts</p>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl shadow-lg">
-              <h4 className="text-lg font-medium text-slate-900 mb-3">Response Time</h4>
-              <p className="text-gray-600">I typically respond within 24-48 hours</p>
-            </div>
           </div>
         </div>
       </div>
@@ -603,16 +584,10 @@ const Footer = () => {
           <h3 className="text-3xl font-light tracking-[0.3em] mb-6">LENSVERSE PHOTOGRAPHY</h3>
           
           <div className="flex justify-center gap-6 mb-8">
-            <a href="#" className="hover:opacity-70 transition-opacity">
+            <a href="https://www.instagram.com/_.lensverse_?igsh=MWVldmV1Z3M4MTRxYg==" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
               <Instagram size={24} />
             </a>
-            <a href="#" className="hover:opacity-70 transition-opacity">
-              <Twitter size={24} />
-            </a>
-            <a href="#" className="hover:opacity-70 transition-opacity">
-              <Globe size={24} />
-            </a>
-            <a href="#" className="hover:opacity-70 transition-opacity">
+            <a href="mailto:lensverse1@gmail.com" className="hover:opacity-70 transition-opacity">
               <Mail size={24} />
             </a>
           </div>

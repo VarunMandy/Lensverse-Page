@@ -472,17 +472,6 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.2);
         }
 
-        .about-image-bg {
-            position: absolute;
-            bottom: -1.5rem;
-            right: -1.5rem;
-            width: 10rem;
-            height: 10rem;
-            background: var(--primary-dark);
-            border-radius: 1rem;
-            z-index: -1;
-        }
-
         .about-content {
             animation: fadeInRight 1s ease-out;
         }
@@ -880,7 +869,6 @@
         <div class="about-container">
             <div class="about-image-wrapper">
                 <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=800&h=800&fit=crop" alt="Photographer" class="about-image">
-                <div class="about-image-bg"></div>
             </div>
             <div class="about-content">
                 <p class="section-subtitle">ABOUT ME</p>
@@ -976,7 +964,7 @@
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
-                        <a href="mailto:lensverse1@gmail.com" class="social-link">
+                        <a href="mailto:lensverse1@gmail.com" onclick="window.location.href='mailto:lensverse1@gmail.com'" class="social-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                 <polyline points="22,6 12,13 2,6"></polyline>
@@ -1005,7 +993,7 @@
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
             </a>
-            <a href="mailto:lensverse1@gmail.com" class="footer-social-link">
+            <a href="mailto:lensverse1@gmail.com" onclick="window.location.href='mailto:lensverse1@gmail.com'" class="footer-social-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                     <polyline points="22,6 12,13 2,6"></polyline>
@@ -1071,7 +1059,18 @@
             { id: 39, url: "Photos/39.jpg", category: "Street", title: "Spring Bricks" },
             { id: 43, url: "Photos/43.jpg", category: "Landscape", title: "Night Tower" },
             { id: 44, url: "Photos/44.jpg", category: "Street", title: "Rapid Service" },
-            { id: 45, url: "Photos/45.jpg", category: "Street", title: "Doorway Visitor" }
+            { id: 45, url: "Photos/45.jpg", category: "Street", title: "Doorway Visitor" },
+            { id: 37, url: "Photos/37.jpg", category: "Street", title: "Spiral Descent" },
+            { id: 40, url: "Photos/40.jpg", category: "Landscape", title: "Golden Dome" },
+            { id: 41, url: "Photos/41.jpg", category: "Landscape", title: "Glass & Sky" },
+            { id: 42, url: "Photos/42.jpg", category: "Street", title: "Grand Doors" },
+            { id: 46, url: "Photos/46.jpg", category: "Portraits", title: "Motion Blur" },
+            { id: 47, url: "Photos/47.jpg", category: "Portraits", title: "Autumn Friend" },
+            { id: 48, url: "Photos/48.jpg", category: "Landscape", title: "Lady Liberty" },
+            { id: 49, url: "Photos/49.jpg", category: "Landscape", title: "City Skyline" },
+            { id: 50, url: "Photos/50.jpg", category: "Portraits", title: "Snow Watch" },
+            { id: 51, url: "Photos/51.jpg", category: "Street", title: "DUMBO View" },
+            { id: 52, url: "Photos/52.jpg", category: "Street", title: "Night Glow" }
         ];
 
         let currentCategory = 'All';

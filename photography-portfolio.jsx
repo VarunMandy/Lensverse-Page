@@ -43,7 +43,18 @@ const galleryData = [
   { id: 39, url: "Photos/39.jpg", category: "Street", title: "Spring Bricks" },
   { id: 43, url: "Photos/43.jpg", category: "Landscape", title: "Night Tower" },
   { id: 44, url: "Photos/44.jpg", category: "Street", title: "Rapid Service" },
-  { id: 45, url: "Photos/45.jpg", category: "Street", title: "Doorway Visitor" }
+  { id: 45, url: "Photos/45.jpg", category: "Street", title: "Doorway Visitor" },
+  { id: 37, url: "Photos/37.jpg", category: "Street", title: "Spiral Descent" },
+  { id: 40, url: "Photos/40.jpg", category: "Landscape", title: "Golden Dome" },
+  { id: 41, url: "Photos/41.jpg", category: "Landscape", title: "Glass & Sky" },
+  { id: 42, url: "Photos/42.jpg", category: "Street", title: "Grand Doors" },
+  { id: 46, url: "Photos/46.jpg", category: "Portraits", title: "Motion Blur" },
+  { id: 47, url: "Photos/47.jpg", category: "Portraits", title: "Autumn Friend" },
+  { id: 48, url: "Photos/48.jpg", category: "Landscape", title: "Lady Liberty" },
+  { id: 49, url: "Photos/49.jpg", category: "Landscape", title: "City Skyline" },
+  { id: 50, url: "Photos/50.jpg", category: "Portraits", title: "Snow Watch" },
+  { id: 51, url: "Photos/51.jpg", category: "Street", title: "DUMBO View" },
+  { id: 52, url: "Photos/52.jpg", category: "Street", title: "Night Glow" }
 ];
 
 const categories = ["All", "Portraits", "Landscape", "Events", "Fashion", "Street"];
@@ -352,7 +363,6 @@ const AboutPage = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-slate-900 rounded-2xl -z-10"></div>
           </div>
 
           {/* Bio Content */}

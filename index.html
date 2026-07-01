@@ -306,6 +306,7 @@
             break-inside: avoid;
             margin-bottom: 1.5rem;
             background: #e2e8f0;
+            min-height: 240px;
         }
 
         /* Shimmer skeleton while image loads */
@@ -322,6 +323,10 @@
 
         .gallery-item.loaded::before {
             display: none;
+        }
+
+        .gallery-item.loaded {
+            min-height: unset;
         }
 
         @keyframes shimmer {
@@ -1142,7 +1147,7 @@
                     img.onerror = () => entry.target.classList.add('loaded');
                     obs.unobserve(entry.target);
                 });
-            }, { rootMargin: '200px 0px' });
+            }, { rootMargin: '800px 0px' });
 
             images.forEach((image, index) => {
                 const item = document.createElement('div');
@@ -1158,7 +1163,19 @@
                 `;
                 item.onclick = () => openLightbox(index);
                 gallery.appendChild(item);
-                observer.observe(item);
+
+                // Load first 9 immediately (above-the-fold), lazy-load the rest
+                if (index < 9) {
+                    const img = item.querySelector('img[data-src]');
+                    if (img) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        img.onload = () => item.classList.add('loaded');
+                        img.onerror = () => item.classList.add('loaded');
+                    }
+                } else {
+                    observer.observe(item);
+                }
             });
         }
 

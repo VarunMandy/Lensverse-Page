@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "eyebrow": "VISUAL STORYTELLER",
+    "heading": "Lensverse",
+    "subheading": "Capturing moments that tell stories, one frame at a time."
+  },
+  "about": {
+    "profileImage": "Photos/profile-pic.jpg",
+    "bio": [
+      "Hey, I'm Varun Mandepudi — a photographer based in Boston, Massachusetts. I love finding beauty in both the ordinary and the unexpected, chasing light and capturing moments that feel honest and alive.",
+      "From quiet landscapes at golden hour to the raw energy of street life, fashion editorials, and event photography — every frame is a story worth telling. I'm always open to collaborations and creative projects — let's make something together."
+    ],
+    "expertise": [
+      "Portrait Photography",
+      "Landscape",
+      "Street Photography",
+      "Fashion",
+      "Event Photography",
+      "Photo Editing"
+    ],
+    "experience": [
+      "📸 5+ years of Professional Experience",
+      "🌆 30+ Sucessful Projects",
+      "🎨 Skilled in Lightroom & Photoshop post-processing"
+    ]
+  },
+  "contact": {
+    "heading": "Have a project in mind?",
+    "blurb": "I'd love to hear about your vision. Let's create something beautiful together.",
+    "connectBlurb": "Whether you're planning a wedding, need professional portraits, or have a creative project in mind, I'm here to bring your vision to life.",
+    "instagramUrl": "https://www.instagram.com/_.lensverse_?igsh=MWVldmV1Z3M4MTRxYg==",
+    "email": "lensverse1@gmail.com",
+    "location": "Based in Boston, Massachusetts"
+  },
+  "footer": {
+    "brand": "LENSVERSE PHOTOGRAPHY",
+    "copyrightYear": 2026
+  }
+}

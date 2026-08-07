@@ -858,11 +858,9 @@
         <div class="hero-background"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-subtitle">VISUAL STORYTELLER</p>
-            <h1 class="hero-title">Lensverse</h1>
-            <p class="hero-description">
-                Capturing moments that tell stories, one frame at a time.
-            </p>
+            <p class="hero-subtitle" id="hero-eyebrow"></p>
+            <h1 class="hero-title" id="hero-heading"></h1>
+            <p class="hero-description" id="hero-subheading"></p>
             <div class="hero-buttons">
                 <button class="btn btn-primary" onclick="showPage('portfolio')">
                     VIEW PORTFOLIO
@@ -901,41 +899,19 @@
     <section id="about-page" class="about page hidden">
         <div class="about-container">
             <div class="about-image-wrapper">
-                <img src="Photos/Profile pic.jpg" alt="Photographer" class="about-image">
+                <img id="about-image" src="" alt="Photographer" class="about-image">
             </div>
             <div class="about-content">
                 <p class="section-subtitle">ABOUT ME</p>
                 <h2 class="section-title">Photographer</h2>
                 
-                <p class="about-text">
-                    Hey, I'm Varun Mandepudi — a photographer based in Boston, Massachusetts. 
-                    I love finding beauty in both the ordinary and the unexpected, chasing light 
-                    and capturing moments that feel honest and alive.
-                </p>
-                
-                <p class="about-text">
-                    From quiet landscapes at golden hour to the raw energy of street life, 
-                    fashion editorials, and event photography — every frame is a story worth 
-                    telling. I'm always open to collaborations and creative projects — let's 
-                    make something together.
-                </p>
+                <div id="about-bio"></div>
 
                 <h3 class="about-subtitle">Expertise</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">Portrait Photography</span>
-                    <span class="skill-tag">Landscape</span>
-                    <span class="skill-tag">Street Photography</span>
-                    <span class="skill-tag">Fashion</span>
-                    <span class="skill-tag">Event Photography</span>
-                    <span class="skill-tag">Photo Editing</span>
-                </div>
+                <div class="skills-list" id="about-expertise"></div>
 
                 <h3 class="about-subtitle">Experience</h3>
-                <ul class="experience-list">
-                    <li class="experience-item">📸 5+ years of Professional Experience</li>
-                    <li class="experience-item">🌆 30+ Sucessful Projects</li>
-                    <li class="experience-item">🎨 Skilled in Lightroom & Photoshop post-processing</li>
-                </ul>
+                <ul class="experience-list" id="about-experience"></ul>
             </div>
         </div>
     </section>
@@ -943,10 +919,8 @@
     <!-- Contact Section -->
     <section id="contact-page" class="contact page hidden">
         <div class="contact-header">
-            <h2 class="section-title">Have a project in mind?</h2>
-            <p class="contact-description">
-                I'd love to hear about your vision. Let's create something beautiful together.
-            </p>
+            <h2 class="section-title" id="contact-heading"></h2>
+            <p class="contact-description" id="contact-blurb"></p>
         </div>
         
         <div class="contact-container">
@@ -983,21 +957,18 @@
             <div class="contact-info">
                 <div class="contact-info-section">
                     <h3 class="contact-info-title">Let's Connect</h3>
-                    <p class="contact-info-text">
-                        Whether you're planning a wedding, need professional portraits, or have a creative 
-                        project in mind, I'm here to bring your vision to life.
-                    </p>
-                    
+                    <p class="contact-info-text" id="contact-connect-blurb"></p>
+
                     <h4 class="contact-info-title" style="margin-top: 1.5rem;">Follow My Work</h4>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/_.lensverse_?igsh=MWVldmV1Z3M4MTRxYg==" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <a href="" target="_blank" rel="noopener noreferrer" class="social-link" id="contact-instagram-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
-                        <a href="mailto:lensverse1@gmail.com" onclick="window.location.href='mailto:lensverse1@gmail.com'" class="social-link">
+                        <a href="" class="social-link" id="contact-email-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                 <polyline points="22,6 12,13 2,6"></polyline>
@@ -1005,10 +976,10 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="contact-info-section">
                     <h4 class="contact-info-title">Location</h4>
-                    <p class="contact-info-text">Based in Boston, Massachusetts</p>
+                    <p class="contact-info-text" id="contact-location"></p>
                 </div>
                 
             </div>
@@ -1017,16 +988,16 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <h3 class="footer-title">LENSVERSE PHOTOGRAPHY</h3>
+        <h3 class="footer-title" id="footer-brand"></h3>
         <div class="footer-social">
-            <a href="https://www.instagram.com/_.lensverse_?igsh=MWVldmV1Z3M4MTRxYg==" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+            <a href="" target="_blank" rel="noopener noreferrer" class="footer-social-link" id="footer-instagram-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
             </a>
-            <a href="mailto:lensverse1@gmail.com" onclick="window.location.href='mailto:lensverse1@gmail.com'" class="footer-social-link">
+            <a href="" class="footer-social-link" id="footer-email-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                     <polyline points="22,6 12,13 2,6"></polyline>
@@ -1034,8 +1005,14 @@
             </a>
         </div>
         <hr class="footer-divider">
-        <p class="footer-copyright">© 2026 ALL RIGHTS RESERVED</p>
+        <p class="footer-copyright" id="footer-copyright"></p>
     </footer>
+    <div id="content-error" class="hidden" style="position:fixed;inset:0;background:#0f172a;color:#f8fafc;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;z-index:5000;font-family:'Montserrat',sans-serif;">
+        <div>
+            <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;margin-bottom:1rem;">Content temporarily unavailable</h2>
+            <p style="color:#94a3b8;">Please refresh the page, or check back shortly.</p>
+        </div>
+    </div>
 
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
@@ -1050,85 +1027,87 @@
     </div>
 
     <script>
-        // Gallery Data
-        const galleryData = [
-            { id: 1, url: "Photos/1.jpg", category: "Fashion", title: "Neon Editorial" },
-            { id: 2, url: "Photos/2.jpg", category: "Events", title: "Live Strings" },
-            { id: 3, url: "Photos/3.jpg", category: "Portraits", title: "Raw Vocals" },
-            { id: 4, url: "Photos/4.jpg", category: "Events", title: "Guitar Detail" },
-            { id: 5, url: "Photos/5.jpg", category: "Events", title: "Stage Light" },
-            { id: 6, url: "Photos/6.jpg", category: "Portraits", title: "The Crooner" },
-            { id: 7, url: "Photos/7.jpg", category: "Events", title: "Classical Grace" },
-            { id: 8, url: "Photos/8.jpg", category: "Portraits", title: "Dancer's Gaze" },
-            { id: 9, url: "Photos/9.jpg", category: "Events", title: "Red Glow" },
-            { id: 10, url: "Photos/10.jpg", category: "Events", title: "In The Moment" },
-            { id: 11, url: "Photos/11.jpg", category: "Events", title: "Joyful Note" },
-            { id: 12, url: "Photos/12.jpg", category: "Events", title: "Rhythm & Soul" },
-            { id: 13, url: "Photos/13.jpg", category: "Portraits", title: "Golden Voice" },
-            { id: 14, url: "Photos/14.jpg", category: "Fashion", title: "Amber Silhouette" },
-            { id: 15, url: "Photos/15.jpg", category: "Landscape", title: "Sunset Shore" },
-            { id: 16, url: "Photos/16.jpg", category: "Landscape", title: "Sky High" },
-            { id: 17, url: "Photos/17.jpg", category: "Landscape", title: "Tropical Canal" },
-            { id: 18, url: "Photos/18.jpg", category: "Portraits", title: "Good Boy" },
-            { id: 19, url: "Photos/19.jpg", category: "Landscape", title: "The Lighthouse" },
-            { id: 20, url: "Photos/20.jpg", category: "Events", title: "Paisley Groove" },
-            { id: 21, url: "Photos/21.jpg", category: "Landscape", title: "Temple Gopuram" },
-            { id: 22, url: "Photos/22.jpg", category: "Fashion", title: "Pink Wings" },
-            { id: 23, url: "Photos/23.jpg", category: "Portraits", title: "Golden Crow" },
-            { id: 24, url: "Photos/24.jpg", category: "Fashion", title: "Golden Fairy" },
-            { id: 25, url: "Photos/25.jpg", category: "Portraits", title: "Wings of Light" },
-            { id: 26, url: "Photos/26.jpg", category: "Fashion", title: "Neon Bloom" },
-            { id: 27, url: "Photos/27.jpg", category: "Fashion", title: "Emerald Flame" },
-            { id: 28, url: "Photos/28.jpg", category: "Fashion", title: "Desert Prince" },
-            { id: 29, url: "Photos/29.jpg", category: "Portraits", title: "Purple Halo" },
-            { id: 30, url: "Photos/30.jpg", category: "Fashion", title: "Blue Blossom" },
-            { id: 31, url: "Photos/31.jpg", category: "Fashion", title: "Lotus Glow" },
-            { id: 32, url: "Photos/32.jpg", category: "Fashion", title: "Crimson Fire" },
-            { id: 33, url: "Photos/33.jpg", category: "Fashion", title: "Golden Lotus" },
-            { id: 34, url: "Photos/34.jpg", category: "Portraits", title: "Duo in Motion" },
-            { id: 35, url: "Photos/35.jpg", category: "Fashion", title: "Violet Duo" },
-            { id: 36, url: "Photos/36.jpg", category: "Fashion", title: "Scarlet Dance" },
-            { id: 37, url: "Photos/37.jpg", category: "Street", title: "Spiral Descent" },            
-            { id: 38, url: "Photos/38.jpg", category: "Landscape", title: "Still Waters" },
-            { id: 39, url: "Photos/39.jpg", category: "Street", title: "Spring Bricks" },
-            { id: 40, url: "Photos/40.jpg", category: "Landscape", title: "Golden Dome" },
-            { id: 41, url: "Photos/41.jpg", category: "Landscape", title: "Glass & Sky" },
-            { id: 42, url: "Photos/42.jpg", category: "Street", title: "Grand Doors" },
-            { id: 43, url: "Photos/43.jpg", category: "Landscape", title: "Night Tower" },
-            { id: 44, url: "Photos/44.jpg", category: "Street", title: "Rapid Service" },
-            { id: 45, url: "Photos/45.jpg", category: "Street", title: "Doorway Visitor" },            
-            { id: 46, url: "Photos/46.jpg", category: "Portraits", title: "Motion Blur" },
-            { id: 47, url: "Photos/47.jpg", category: "Portraits", title: "Autumn Friend" },
-            { id: 48, url: "Photos/48.jpg", category: "Landscape", title: "Lady Liberty" },
-            { id: 49, url: "Photos/49.jpg", category: "Landscape", title: "City Skyline" },
-            { id: 50, url: "Photos/50.jpg", category: "Portraits", title: "Snow Watch" },
-            { id: 51, url: "Photos/51.jpg", category: "Street", title: "DUMBO View" },
-            { id: 52, url: "Photos/52.jpg", category: "Street", title: "Night Glow" },
-            { id: 53, url: "Photos/53.jpg", category: "Street", title: "Silver Classic" },
-            { id: 54, url: "Photos/54.jpg", category: "Portraits", title: "Blueprint" },
-            { id: 55, url: "Photos/55.jpg", category: "Portraits", title: "Blue Steel" },
-            { id: 56, url: "Photos/56.jpg", category: "Fashion", title: "Red Net" },
-            { id: 57, url: "Photos/57.jpg", category: "Fashion", title: "Urban Tapestry" },
-            { id: 58, url: "Photos/58.jpg", category: "Street", title: "Sacred Dome" },
-            { id: 59, url: "Photos/59.jpg", category: "Landscape", title: "Into The Green" },
-            { id: 60, url: "Photos/60.jpg", category: "Landscape", title: "Dark Crossing" },
-            { id: 61, url: "Photos/61.jpg", category: "Landscape", title: "Mirror Bridge" },
-            { id: 62, url: "Photos/62.jpg", category: "Landscape", title: "Lilac Dusk" },
-            { id: 63, url: "Photos/63.jpg", category: "Portraits", title: "Amber Iris" },
-            { id: 64, url: "Photos/64.jpg", category: "Landscape", title: "Dune Path" },
-            { id: 65, url: "Photos/65.jpg", category: "Landscape", title: "Pine Curve" },
-            { id: 66, url: "Photos/66.jpg", category: "Landscape", title: "Forest Table" },
-            { id: 67, url: "Photos/67.jpg", category: "Street", title: "Waiting" },
-            { id: 68, url: "Photos/68.jpg", category: "Portraits", title: "Living Jewel" }
-        ];
-
+        // Content is fetched at load time from content/gallery.json and content/site.json
+        let galleryData = [];
         let currentCategory = 'All';
         let currentLightboxIndex = 0;
-        let filteredImages = galleryData;
+        let filteredImages = [];
+
+        function showContentError() {
+            document.getElementById('content-error').classList.remove('hidden');
+        }
+
+        async function loadGallery() {
+            const res = await fetch('content/gallery.json');
+            if (!res.ok) throw new Error('gallery.json fetch failed');
+            const data = await res.json();
+            galleryData = data.slice().sort((a, b) => a.order - b.order);
+            filteredImages = galleryData;
+            renderGallery(galleryData);
+        }
+
+        function renderSiteContent(site) {
+            document.getElementById('hero-eyebrow').textContent = site.hero.eyebrow;
+            document.getElementById('hero-heading').textContent = site.hero.heading;
+            document.getElementById('hero-subheading').textContent = site.hero.subheading;
+
+            document.getElementById('about-image').src = site.about.profileImage;
+
+            const bioContainer = document.getElementById('about-bio');
+            bioContainer.innerHTML = '';
+            site.about.bio.forEach(paragraph => {
+                const p = document.createElement('p');
+                p.className = 'about-text';
+                p.textContent = paragraph;
+                bioContainer.appendChild(p);
+            });
+
+            const expertiseContainer = document.getElementById('about-expertise');
+            expertiseContainer.innerHTML = '';
+            site.about.expertise.forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'skill-tag';
+                span.textContent = tag;
+                expertiseContainer.appendChild(span);
+            });
+
+            const experienceContainer = document.getElementById('about-experience');
+            experienceContainer.innerHTML = '';
+            site.about.experience.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'experience-item';
+                li.textContent = item;
+                experienceContainer.appendChild(li);
+            });
+
+            document.getElementById('contact-heading').textContent = site.contact.heading;
+            document.getElementById('contact-blurb').textContent = site.contact.blurb;
+            document.getElementById('contact-connect-blurb').textContent = site.contact.connectBlurb;
+            document.getElementById('contact-location').textContent = site.contact.location;
+
+            const mailtoUrl = `mailto:${site.contact.email}`;
+            for (const [instaId, mailId] of [['contact-instagram-link', 'contact-email-link'], ['footer-instagram-link', 'footer-email-link']]) {
+                document.getElementById(instaId).href = site.contact.instagramUrl;
+                document.getElementById(mailId).href = mailtoUrl;
+            }
+
+            document.getElementById('footer-brand').textContent = site.footer.brand;
+            document.getElementById('footer-copyright').textContent = `© ${site.footer.copyrightYear} ALL RIGHTS RESERVED`;
+        }
+
+        async function loadSiteContent() {
+            const res = await fetch('content/site.json');
+            if (!res.ok) throw new Error('site.json fetch failed');
+            renderSiteContent(await res.json());
+        }
 
         // Initialize Gallery
-        function initGallery() {
-            renderGallery(galleryData);
+        async function initGallery() {
+            try {
+                await Promise.all([loadGallery(), loadSiteContent()]);
+            } catch (err) {
+                showContentError();
+            }
         }
 
         // Render Gallery
@@ -1153,7 +1132,7 @@
                 const item = document.createElement('div');
                 item.className = 'gallery-item';
                 item.innerHTML = `
-                    <img data-src="${image.url}" alt="${image.title}" class="gallery-item-image" decoding="async">
+                    <img data-src="${image.thumbnail}" width="${image.width}" height="${image.height}" alt="${image.title}" class="gallery-item-image" decoding="async">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <p class="gallery-item-title">${image.title}</p>
@@ -1200,8 +1179,8 @@
         function openLightbox(index) {
             currentLightboxIndex = index;
             const image = filteredImages[index];
-            
-            document.getElementById('lightbox-image').src = image.url;
+
+            document.getElementById('lightbox-image').src = image.filename;
             document.getElementById('lightbox-title').textContent = image.title;
             document.getElementById('lightbox-category').textContent = image.category;
             document.getElementById('lightbox').classList.add('active');
@@ -1217,8 +1196,8 @@
         function navigateLightbox(direction) {
             currentLightboxIndex = (currentLightboxIndex + direction + filteredImages.length) % filteredImages.length;
             const image = filteredImages[currentLightboxIndex];
-            
-            document.getElementById('lightbox-image').src = image.url;
+
+            document.getElementById('lightbox-image').src = image.filename;
             document.getElementById('lightbox-title').textContent = image.title;
             document.getElementById('lightbox-category').textContent = image.category;
         }

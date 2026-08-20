@@ -66,7 +66,7 @@
     },
     portfolio: {
       title: "Portfolio — Lensverse Photography",
-      description: "Portraits, fashion, events, street, landscape and wildlife — ordered strongest first by an automated quality rating.",
+      description: "Selected photography by Varun Mandepudi — portraits, fashion, live music, street, landscape and wildlife, shot in Boston and beyond.",
     },
     about: {
       title: "About — Lensverse Photography",

@@ -43,8 +43,10 @@
 
 <!-- The hero is the largest paint, but only the home view shows it. Preload it
      when home is the landing route; a cold /portfolio hit should not spend
-     450 KB on a backdrop it never displays. Paired with loading="lazy" on the
-     hero <img>, which browsers skip entirely inside a hidden section. -->
+     450 KB on a backdrop it never displays. The matching half of this is the
+     hero <img> further down, which holds its sources in data-* until app.js
+     hydrates them -- `loading="lazy"` is NOT enough on its own, because
+     browsers still fetch a hidden <img> that has a real src. -->
 <script>
   (function () {
     if (location.pathname.replace(/\/+$/, "") !== "") return;

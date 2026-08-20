@@ -1,0 +1,1390 @@
+{
+ "generated": "2026-08-20T16:50:05",
+ "note": "Internal. Decides gallery order; never served to the browser.",
+ "weights": {
+  "sharpness": 18,
+  "exposure": 14,
+  "contrast": 12,
+  "color": 12,
+  "composition": 16,
+  "isolation": 12,
+  "technical": 16
+ },
+ "summary": {
+  "count": 76,
+  "highest": 94.2,
+  "lowest": 58.4,
+  "median": 80.1,
+  "average": 79.6
+ },
+ "ranking": [
+  {
+   "rank": 1,
+   "src": "36.jpg",
+   "title": "Scarlet Dance",
+   "category": "Fashion",
+   "rating": 94.2,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.7811,
+    "contrast": 1.0,
+    "color": 1.0,
+    "composition": 0.5919,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 2,
+   "src": "29.jpg",
+   "title": "Purple Halo",
+   "category": "Portraits",
+   "rating": 93.9,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.8534,
+    "contrast": 0.9707,
+    "color": 1.0,
+    "composition": 0.5424,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 3,
+   "src": "57.jpg",
+   "title": "Urban Tapestry",
+   "category": "Fashion",
+   "rating": 93.6,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.8185,
+    "contrast": 0.8934,
+    "color": 1.0,
+    "composition": 0.6452,
+    "isolation": 0.9599,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 4,
+   "src": "56.jpg",
+   "title": "Red Net",
+   "category": "Fashion",
+   "rating": 92.7,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.8095,
+    "contrast": 0.8919,
+    "color": 1.0,
+    "composition": 0.5426,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 5,
+   "src": "63.jpg",
+   "title": "Amber Iris",
+   "category": "Portraits",
+   "rating": 92.3,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.9666,
+    "contrast": 0.8825,
+    "color": 1.0,
+    "composition": 0.3956,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 6,
+   "src": "33.jpg",
+   "title": "Golden Lotus",
+   "category": "Fashion",
+   "rating": 91.9,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.8065,
+    "contrast": 0.6765,
+    "color": 1.0,
+    "composition": 0.6723,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 7,
+   "src": "30.jpg",
+   "title": "Blue Blossom",
+   "category": "Fashion",
+   "rating": 91.6,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.871,
+    "exposure": 0.8846,
+    "contrast": 0.8701,
+    "color": 1.0,
+    "composition": 0.5952,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 8,
+   "src": "68.jpg",
+   "title": "Living Jewel",
+   "category": "Portraits",
+   "rating": 91.2,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.9583,
+    "contrast": 0.9352,
+    "color": 1.0,
+    "composition": 0.576,
+    "isolation": 0.6401,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 9,
+   "src": "24.jpg",
+   "title": "Golden Fairy",
+   "category": "Fashion",
+   "rating": 90.7,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9288,
+    "exposure": 0.6652,
+    "contrast": 0.9153,
+    "color": 1.0,
+    "composition": 0.6279,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 10,
+   "src": "6.jpg",
+   "title": "The Crooner",
+   "category": "Portraits",
+   "rating": 90.3,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9443,
+    "exposure": 0.9346,
+    "contrast": 0.9962,
+    "color": 0.9974,
+    "composition": 0.3858,
+    "isolation": 0.8793,
+    "technical": 1.0
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 11,
+   "src": "19.jpg",
+   "title": "The Lighthouse",
+   "category": "Landscape",
+   "rating": 89.7,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.9335,
+    "contrast": 0.9513,
+    "color": 1.0,
+    "composition": 0.3511,
+    "isolation": 0.8172,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 12,
+   "src": "28.jpg",
+   "title": "Desert Prince",
+   "category": "Fashion",
+   "rating": 89.4,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.8978,
+    "exposure": 0.8612,
+    "contrast": 0.803,
+    "color": 1.0,
+    "composition": 0.5023,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 13,
+   "src": "37.jpg",
+   "title": "Spiral Descent",
+   "category": "Street",
+   "rating": 89.1,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.9075,
+    "contrast": 0.994,
+    "color": 0.9958,
+    "composition": 0.3888,
+    "isolation": 0.7448,
+    "technical": 1.0
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 14,
+   "src": "40.jpg",
+   "title": "Golden Dome",
+   "category": "Landscape",
+   "rating": 88.9,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.9446,
+    "contrast": 0.7967,
+    "color": 1.0,
+    "composition": 0.5256,
+    "isolation": 0.7105,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 15,
+   "src": "26.jpg",
+   "title": "Neon Bloom",
+   "category": "Fashion",
+   "rating": 88.6,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9102,
+    "exposure": 0.6806,
+    "contrast": 0.8637,
+    "color": 1.0,
+    "composition": 0.5857,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 16,
+   "src": "20.jpg",
+   "title": "Paisley Groove",
+   "category": "Events",
+   "rating": 88.3,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.9033,
+    "contrast": 0.7751,
+    "color": 1.0,
+    "composition": 0.4205,
+    "isolation": 0.904,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 17,
+   "src": "48.jpg",
+   "title": "Lady Liberty",
+   "category": "Landscape",
+   "rating": 88.0,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.918,
+    "contrast": 0.8267,
+    "color": 0.5778,
+    "composition": 0.6079,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 18,
+   "src": "49.jpg",
+   "title": "City Skyline",
+   "category": "Landscape",
+   "rating": 87.7,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.9604,
+    "contrast": 0.9147,
+    "color": 1.0,
+    "composition": 0.4005,
+    "isolation": 0.6982,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 19,
+   "src": "1.jpg",
+   "title": "Neon Editorial",
+   "category": "Fashion",
+   "rating": 87.1,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.9088,
+    "contrast": 0.8615,
+    "color": 1.0,
+    "composition": 0.4306,
+    "isolation": 0.717,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 20,
+   "src": "59.jpg",
+   "title": "Into The Green",
+   "category": "Landscape",
+   "rating": 86.8,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.5485,
+    "contrast": 1.0,
+    "color": 0.6069,
+    "composition": 0.9123,
+    "isolation": 0.734,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 21,
+   "src": "62.jpg",
+   "title": "Lilac Dusk",
+   "category": "Landscape",
+   "rating": 86.5,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.7707,
+    "exposure": 0.9741,
+    "contrast": 1.0,
+    "color": 0.4809,
+    "composition": 0.6893,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 22,
+   "src": "78.jpg",
+   "title": "Gopuram Skyward",
+   "category": "Landscape",
+   "rating": 85.9,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.7481,
+    "contrast": 0.9961,
+    "color": 0.4814,
+    "composition": 0.8209,
+    "isolation": 0.6817,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 23,
+   "src": "35.jpg",
+   "title": "Violet Duo",
+   "category": "Fashion",
+   "rating": 85.6,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9501,
+    "exposure": 0.7208,
+    "contrast": 0.4601,
+    "color": 1.0,
+    "composition": 0.669,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 24,
+   "src": "31.jpg",
+   "title": "Lotus Glow",
+   "category": "Fashion",
+   "rating": 85.3,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9196,
+    "exposure": 0.7115,
+    "contrast": 0.4503,
+    "color": 1.0,
+    "composition": 0.714,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 25,
+   "src": "18.jpg",
+   "title": "Good Boy",
+   "category": "Portraits",
+   "rating": 84.8,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.9701,
+    "contrast": 0.878,
+    "color": 1.0,
+    "composition": 0.4309,
+    "isolation": 0.4869,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 26,
+   "src": "27.jpg",
+   "title": "Emerald Flame",
+   "category": "Fashion",
+   "rating": 84.2,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.8633,
+    "exposure": 0.8396,
+    "contrast": 0.6568,
+    "color": 1.0,
+    "composition": 0.4355,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 27,
+   "src": "4.jpg",
+   "title": "Guitar Detail",
+   "category": "Events",
+   "rating": 84.0,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.4898,
+    "contrast": 1.0,
+    "color": 1.0,
+    "composition": 0.3246,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 28,
+   "src": "39.jpg",
+   "title": "Spring Bricks",
+   "category": "Street",
+   "rating": 83.7,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.9922,
+    "contrast": 1.0,
+    "color": 0.9439,
+    "composition": 0.4991,
+    "isolation": 0.2277,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 29,
+   "src": "41.jpg",
+   "title": "Glass & Sky",
+   "category": "Landscape",
+   "rating": 83.4,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.5595,
+    "contrast": 0.9485,
+    "color": 0.6801,
+    "composition": 0.7667,
+    "isolation": 0.6845,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 30,
+   "src": "67.jpg",
+   "title": "Waiting",
+   "category": "Street",
+   "rating": 83.1,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.8853,
+    "exposure": 0.7318,
+    "contrast": 0.8735,
+    "color": 0.9115,
+    "composition": 0.6095,
+    "isolation": 0.7083,
+    "technical": 1.0
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 31,
+   "src": "32.jpg",
+   "title": "Crimson Fire",
+   "category": "Fashion",
+   "rating": 82.8,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.8902,
+    "exposure": 0.653,
+    "contrast": 0.8393,
+    "color": 1.0,
+    "composition": 0.4063,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 32,
+   "src": "52.jpg",
+   "title": "Night Glow",
+   "category": "Street",
+   "rating": 82.4,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.4134,
+    "contrast": 0.9589,
+    "color": 0.9713,
+    "composition": 0.6286,
+    "isolation": 0.6986,
+    "technical": 1.0
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 33,
+   "src": "42.jpg",
+   "title": "Grand Doors",
+   "category": "Street",
+   "rating": 82.0,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.5696,
+    "contrast": 1.0,
+    "color": 0.6396,
+    "composition": 0.9785,
+    "isolation": 0.5216,
+    "technical": 0.8477
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 34,
+   "src": "64.jpg",
+   "title": "Dune Path",
+   "category": "Landscape",
+   "rating": 81.8,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.8958,
+    "contrast": 0.998,
+    "color": 0.6932,
+    "composition": 0.411,
+    "isolation": 0.6379,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 35,
+   "src": "70.jpg",
+   "title": "Dawn Outrigger",
+   "category": "Landscape",
+   "rating": 81.4,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9704,
+    "exposure": 0.7953,
+    "contrast": 0.9907,
+    "color": 0.6277,
+    "composition": 0.5563,
+    "isolation": 0.656,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 36,
+   "src": "16.jpg",
+   "title": "Sky High",
+   "category": "Landscape",
+   "rating": 81.1,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.9059,
+    "contrast": 0.7743,
+    "color": 0.2371,
+    "composition": 0.7402,
+    "isolation": 0.8346,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 37,
+   "src": "75.jpg",
+   "title": "Behind The Kit",
+   "category": "Events",
+   "rating": 80.4,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9578,
+    "exposure": 0.8628,
+    "contrast": 0.9395,
+    "color": 0.8586,
+    "composition": 0.3566,
+    "isolation": 0.6065,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 38,
+   "src": "25.jpg",
+   "title": "Wings of Light",
+   "category": "Portraits",
+   "rating": 80.1,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.8877,
+    "exposure": 0.9113,
+    "contrast": 0.8947,
+    "color": 0.9263,
+    "composition": 0.422,
+    "isolation": 0.5419,
+    "technical": 1.0
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 39,
+   "src": "5.jpg",
+   "title": "Stage Light",
+   "category": "Events",
+   "rating": 79.8,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.5271,
+    "contrast": 1.0,
+    "color": 0.6419,
+    "composition": 0.4052,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 40,
+   "src": "47.jpg",
+   "title": "Autumn Friend",
+   "category": "Portraits",
+   "rating": 79.4,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.6738,
+    "contrast": 0.9729,
+    "color": 0.5696,
+    "composition": 0.6223,
+    "isolation": 0.6282,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 41,
+   "src": "12.jpg",
+   "title": "Rhythm & Soul",
+   "category": "Events",
+   "rating": 79.2,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.3998,
+    "contrast": 0.9038,
+    "color": 0.9327,
+    "composition": 0.3615,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 42,
+   "src": "46.jpg",
+   "title": "Motion Blur",
+   "category": "Portraits",
+   "rating": 78.6,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.7024,
+    "exposure": 0.4186,
+    "contrast": 0.9858,
+    "color": 0.8687,
+    "composition": 0.6716,
+    "isolation": 0.9428,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 43,
+   "src": "10.jpg",
+   "title": "In The Moment",
+   "category": "Events",
+   "rating": 78.2,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.7949,
+    "exposure": 0.7774,
+    "contrast": 0.6694,
+    "color": 1.0,
+    "composition": 0.5166,
+    "isolation": 0.7569,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 44,
+   "src": "34.jpg",
+   "title": "Duo in Motion",
+   "category": "Portraits",
+   "rating": 78.0,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.8812,
+    "exposure": 0.4125,
+    "contrast": 0.6987,
+    "color": 0.7891,
+    "composition": 0.6922,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 45,
+   "src": "79.jpg",
+   "title": "Tailored in Mono",
+   "category": "Portraits",
+   "rating": 77.6,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9705,
+    "exposure": 0.5536,
+    "contrast": 1.0,
+    "color": 1.0,
+    "composition": 0.3741,
+    "isolation": 0.5986,
+    "technical": 1.0
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 46,
+   "src": "3.jpg",
+   "title": "Raw Vocals",
+   "category": "Portraits",
+   "rating": 77.3,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9813,
+    "exposure": 0.4442,
+    "contrast": 0.8891,
+    "color": 0.9224,
+    "composition": 0.5359,
+    "isolation": 0.6696,
+    "technical": 1.0
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 47,
+   "src": "58.jpg",
+   "title": "Sacred Dome",
+   "category": "Street",
+   "rating": 77.0,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.66,
+    "contrast": 1.0,
+    "color": 1.0,
+    "composition": 0.3714,
+    "isolation": 0.4198,
+    "technical": 1.0
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 48,
+   "src": "43.jpg",
+   "title": "Night Tower",
+   "category": "Landscape",
+   "rating": 76.8,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.8501,
+    "contrast": 0.9921,
+    "color": 0.8398,
+    "composition": 0.4971,
+    "isolation": 1.0,
+    "technical": 0.3979
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 49,
+   "src": "45.jpg",
+   "title": "Doorway Visitor",
+   "category": "Street",
+   "rating": 76.5,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.65,
+    "contrast": 0.9505,
+    "color": 0.9654,
+    "composition": 0.5949,
+    "isolation": 1.0,
+    "technical": 0.4114
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 50,
+   "src": "22.jpg",
+   "title": "Pink Wings",
+   "category": "Fashion",
+   "rating": 76.0,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.897,
+    "exposure": 0.5308,
+    "contrast": 0.6842,
+    "color": 1.0,
+    "composition": 0.3735,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 51,
+   "src": "61.jpg",
+   "title": "Mirror Bridge",
+   "category": "Landscape",
+   "rating": 75.7,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.5264,
+    "contrast": 1.0,
+    "color": 0.5343,
+    "composition": 0.7044,
+    "isolation": 0.5588,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 52,
+   "src": "17.jpg",
+   "title": "Tropical Canal",
+   "category": "Landscape",
+   "rating": 75.2,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.5394,
+    "contrast": 1.0,
+    "color": 0.367,
+    "composition": 0.5226,
+    "isolation": 0.9106,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 53,
+   "src": "72.jpg",
+   "title": "Molten Horizon",
+   "category": "Landscape",
+   "rating": 74.7,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.4243,
+    "exposure": 0.9098,
+    "contrast": 0.5558,
+    "color": 1.0,
+    "composition": 0.6068,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 54,
+   "src": "21.jpg",
+   "title": "Temple Gopuram",
+   "category": "Landscape",
+   "rating": 74.4,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.7343,
+    "contrast": 0.9657,
+    "color": 0.474,
+    "composition": 0.7446,
+    "isolation": 0.459,
+    "technical": 0.854
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 55,
+   "src": "2.jpg",
+   "title": "Live Strings",
+   "category": "Events",
+   "rating": 74.0,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9784,
+    "exposure": 0.5587,
+    "contrast": 0.983,
+    "color": 0.5902,
+    "composition": 0.3837,
+    "isolation": 0.8249,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 56,
+   "src": "11.jpg",
+   "title": "Joyful Note",
+   "category": "Events",
+   "rating": 73.7,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.8137,
+    "exposure": 0.5244,
+    "contrast": 0.8992,
+    "color": 0.824,
+    "composition": 0.4633,
+    "isolation": 0.8557,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 57,
+   "src": "82.jpg",
+   "title": "Cobalt Ascent",
+   "category": "Fashion",
+   "rating": 73.1,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9152,
+    "exposure": 0.973,
+    "contrast": 0.9599,
+    "color": 0.428,
+    "composition": 0.4953,
+    "isolation": 0.427,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 58,
+   "src": "66.jpg",
+   "title": "Forest Table",
+   "category": "Landscape",
+   "rating": 72.8,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.7202,
+    "contrast": 1.0,
+    "color": 0.8654,
+    "composition": 0.3795,
+    "isolation": 0.2583,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 59,
+   "src": "50.jpg",
+   "title": "Snow Watch",
+   "category": "Portraits",
+   "rating": 72.3,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.6071,
+    "contrast": 1.0,
+    "color": 0.2548,
+    "composition": 0.4248,
+    "isolation": 0.9039,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 60,
+   "src": "81.jpg",
+   "title": "Cobalt Gaze",
+   "category": "Fashion",
+   "rating": 72.0,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.8975,
+    "contrast": 0.8939,
+    "color": 0.5099,
+    "composition": 0.4378,
+    "isolation": 0.394,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 61,
+   "src": "76.jpg",
+   "title": "Acoustic Blue",
+   "category": "Events",
+   "rating": 71.6,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9629,
+    "exposure": 0.5303,
+    "contrast": 0.9039,
+    "color": 0.5582,
+    "composition": 0.374,
+    "isolation": 0.8994,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 62,
+   "src": "14.jpg",
+   "title": "Amber Silhouette",
+   "category": "Fashion",
+   "rating": 71.0,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.7451,
+    "exposure": 0.5403,
+    "contrast": 0.6728,
+    "color": 1.0,
+    "composition": 0.6193,
+    "isolation": 0.6234,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 63,
+   "src": "51.jpg",
+   "title": "DUMBO View",
+   "category": "Street",
+   "rating": 70.6,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.5624,
+    "contrast": 1.0,
+    "color": 0.4513,
+    "composition": 0.5632,
+    "isolation": 0.4858,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 64,
+   "src": "60.jpg",
+   "title": "Dark Crossing",
+   "category": "Landscape",
+   "rating": 70.3,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.5293,
+    "contrast": 1.0,
+    "color": 0.5272,
+    "composition": 0.4959,
+    "isolation": 0.5371,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 65,
+   "src": "69.jpg",
+   "title": "Forest Macaque",
+   "category": "Wildlife",
+   "rating": 69.8,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.5475,
+    "contrast": 0.902,
+    "color": 0.6404,
+    "composition": 0.4509,
+    "isolation": 0.5388,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 66,
+   "src": "77.jpg",
+   "title": "Center Stage",
+   "category": "Events",
+   "rating": 68.6,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.9027,
+    "exposure": 0.5019,
+    "contrast": 0.875,
+    "color": 0.3546,
+    "composition": 0.4466,
+    "isolation": 0.9019,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 67,
+   "src": "13.jpg",
+   "title": "Golden Voice",
+   "category": "Portraits",
+   "rating": 68.2,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.7534,
+    "exposure": 0.2165,
+    "contrast": 0.7332,
+    "color": 0.8132,
+    "composition": 0.5469,
+    "isolation": 1.0,
+    "technical": 1.0
+   },
+   "monochrome": true
+  },
+  {
+   "rank": 68,
+   "src": "65.jpg",
+   "title": "Pine Curve",
+   "category": "Landscape",
+   "rating": 67.9,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.5835,
+    "contrast": 1.0,
+    "color": 0.6219,
+    "composition": 0.4025,
+    "isolation": 0.3084,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 69,
+   "src": "44.jpg",
+   "title": "Rapid Service",
+   "category": "Street",
+   "rating": 67.4,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.5765,
+    "contrast": 1.0,
+    "color": 0.3665,
+    "composition": 0.7838,
+    "isolation": 0.8284,
+    "technical": 0.4104
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 70,
+   "src": "8.jpg",
+   "title": "Dancer's Gaze",
+   "category": "Portraits",
+   "rating": 66.8,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.4524,
+    "contrast": 0.9199,
+    "color": 0.7238,
+    "composition": 0.5199,
+    "isolation": 0.9515,
+    "technical": 0.4444
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 71,
+   "src": "71.jpg",
+   "title": "Curved Glass",
+   "category": "Street",
+   "rating": 66.1,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 1.0,
+    "exposure": 0.5649,
+    "contrast": 1.0,
+    "color": 0.5337,
+    "composition": 0.4659,
+    "isolation": 0.2062,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 72,
+   "src": "80.jpg",
+   "title": "Cobalt Poise",
+   "category": "Fashion",
+   "rating": 65.7,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.8799,
+    "exposure": 0.8699,
+    "contrast": 0.924,
+    "color": 0.4104,
+    "composition": 0.3706,
+    "isolation": 0.3476,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 73,
+   "src": "73.jpg",
+   "title": "Sentinel at Sunset",
+   "category": "Wildlife",
+   "rating": 65.2,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.4374,
+    "exposure": 0.9192,
+    "contrast": 0.875,
+    "color": 1.0,
+    "composition": 0.3623,
+    "isolation": 1.0,
+    "technical": 0.5535
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 74,
+   "src": "15.jpg",
+   "title": "Sunset Shore",
+   "category": "Landscape",
+   "rating": 63.4,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.6892,
+    "exposure": 0.9239,
+    "contrast": 0.7113,
+    "color": 0.5273,
+    "composition": 0.4662,
+    "isolation": 0.2809,
+    "technical": 1.0
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 75,
+   "src": "9.jpg",
+   "title": "Red Glow",
+   "category": "Events",
+   "rating": 61.5,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.7934,
+    "exposure": 0.4652,
+    "contrast": 0.5272,
+    "color": 1.0,
+    "composition": 0.3665,
+    "isolation": 0.704,
+    "technical": 0.6599
+   },
+   "monochrome": false
+  },
+  {
+   "rank": 76,
+   "src": "38.jpg",
+   "title": "Still Waters",
+   "category": "Landscape",
+   "rating": 58.4,
+   "boost": 0.0,
+   "breakdown": {
+    "sharpness": 0.8638,
+    "exposure": 0.9272,
+    "contrast": 0.7494,
+    "color": 0.2415,
+    "composition": 0.3876,
+    "isolation": 0.5249,
+    "technical": 0.3652
+   },
+   "monochrome": false
+  }
+ ]
+}

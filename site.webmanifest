@@ -1,0 +1,13 @@
+{
+  "name": "Lensverse Photography",
+  "short_name": "Lensverse",
+  "description": "Portrait, fashion, event, street and landscape photography by Varun Mandepudi, Boston MA.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0c",
+  "theme_color": "#0a0a0c",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,451 @@
+"""
+Lensverse build step.
+
+Turns the full-resolution originals in Photos/ into a fast, responsive gallery:
+
+  1. rates every photo with tools/score_photos.py
+  2. encodes AVIF + WebP derivatives at 400 / 800 / 1200 px wide for the grid,
+     plus a 2000 px long-edge version for the lightbox, and one JPEG at 800 px
+     as a fallback for browsers that support neither modern format
+  3. embeds a 20 px LQIP thumbnail per photo as a data URI so the grid paints
+     instantly with zero layout shift
+  4. writes photos.json -- the only file the site actually reads
+  5. renders the social preview image and the sitemap
+
+EXIF is dropped on every derivative, so GPS coordinates in the originals are
+never published.
+
+Usage:
+    python tools/build.py                 # full build
+    python tools/build.py --manifest-only # re-score + rewrite JSON, skip encoding
+    python tools/build.py --jobs 4
+"""
+
+from __future__ import annotations
+
+import argparse
+import base64
+import io
+import json
+import os
+import re
+import shutil
+import sys
+import time
+from concurrent.futures import ProcessPoolExecutor, as_completed
+from pathlib import Path
+
+from PIL import Image, ImageOps
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from score_photos import analyse, normalise  # noqa: E402
+
+Image.MAX_IMAGE_PIXELS = None
+
+ROOT = Path(__file__).resolve().parent.parent
+PHOTOS = ROOT / "Photos"
+MEDIA = ROOT / "media"
+META = ROOT / "content" / "photos.meta.json"
+MANIFEST = ROOT / "photos.json"
+RATINGS_REPORT = ROOT / "tools" / "ratings.report.json"
+
+GRID_WIDTHS = (400, 800, 1200)
+LIGHTBOX_EDGE = 2000
+HERO_WIDTHS = (960, 1440, 1920, 2560)
+LQIP_WIDTH = 20
+
+AVIF_QUALITY = 58
+AVIF_SPEED = 6
+WEBP_QUALITY = 78
+JPEG_QUALITY = 82
+
+SITE_URL = "https://lensverse.photography"  # used for sitemap + og:url
+
+
+def slugify(name: str) -> str:
+    stem = Path(name).stem.lower()
+    stem = re.sub(r"[^a-z0-9]+", "-", stem).strip("-")
+    return stem or "photo"
+
+
+def _save_avif(im: Image.Image, path: Path) -> None:
+    try:
+        im.save(path, format="AVIF", quality=AVIF_QUALITY, speed=AVIF_SPEED)
+    except (OSError, ValueError):
+        # older Pillow AVIF plugins reject `speed`
+        im.save(path, format="AVIF", quality=AVIF_QUALITY)
+
+
+def _lqip(im: Image.Image) -> str:
+    """Tiny blurred placeholder as a WebP data URI."""
+    w, h = im.size
+    tiny = im.resize((LQIP_WIDTH, max(1, round(LQIP_WIDTH * h / w))), Image.LANCZOS)
+    buf = io.BytesIO()
+    tiny.save(buf, format="WEBP", quality=42, method=4)
+    return "data:image/webp;base64," + base64.b64encode(buf.getvalue()).decode("ascii")
+
+
+def encode_one(source: str, slug: str) -> dict:
+    """Encode every derivative for one photo. Runs in a worker process."""
+    src = Path(source)
+    with Image.open(src) as raw:
+        im = ImageOps.exif_transpose(raw).convert("RGB")
+
+    full_w, full_h = im.size
+    written = 0
+
+    # Master working copy: 2000 px long edge, used for the lightbox and as the
+    # parent for every smaller size (one expensive decode, many cheap resizes).
+    scale = LIGHTBOX_EDGE / max(full_w, full_h)
+    if scale < 1.0:
+        base = im.resize((max(1, round(full_w * scale)), max(1, round(full_h * scale))),
+                         Image.LANCZOS, reducing_gap=3.0)
+    else:
+        base = im.copy()
+    im.close()
+
+    _save_avif(base, MEDIA / f"{slug}-full.avif")
+    base.save(MEDIA / f"{slug}-full.webp", format="WEBP",
+              quality=WEBP_QUALITY, method=4)
+    written += 2
+
+    widths = []
+    for target in GRID_WIDTHS:
+        w = min(target, base.width)
+        h = max(1, round(base.height * w / base.width))
+        variant = base.resize((w, h), Image.LANCZOS, reducing_gap=3.0)
+        _save_avif(variant, MEDIA / f"{slug}-{target}.avif")
+        variant.save(MEDIA / f"{slug}-{target}.webp", format="WEBP",
+                     quality=WEBP_QUALITY, method=4)
+        if target == 800:
+            variant.save(MEDIA / f"{slug}-800.jpg", format="JPEG",
+                         quality=JPEG_QUALITY, optimize=True, progressive=True)
+            written += 1
+        widths.append(target)
+        written += 2
+        variant.close()
+
+    lqip = _lqip(base)
+    base.close()
+
+    return {"slug": slug, "widths": widths, "lqip": lqip, "files": written}
+
+
+def load_meta() -> dict:
+    if not META.exists():
+        sys.exit(f"error: missing {META}")
+    return json.loads(META.read_text(encoding="utf-8"))
+
+
+def build_hero(slug_of: dict, chosen: str) -> dict:
+    """Encode the wide hero backdrop and the social preview card."""
+    src = PHOTOS / chosen
+    with Image.open(src) as raw:
+        im = ImageOps.exif_transpose(raw).convert("RGB")
+
+    sources = []
+    for width in HERO_WIDTHS:
+        if width > im.width * 1.02:
+            continue
+        h = max(1, round(im.height * width / im.width))
+        variant = im.resize((width, h), Image.LANCZOS, reducing_gap=3.0)
+        _save_avif(variant, MEDIA / f"hero-{width}.avif")
+        variant.save(MEDIA / f"hero-{width}.webp", format="WEBP",
+                     quality=WEBP_QUALITY, method=4)
+        sources.append(width)
+        variant.close()
+
+    # 1200x630 social card, centre-cropped
+    card = ImageOps.fit(im, (1200, 630), Image.LANCZOS, centering=(0.5, 0.42))
+    card.save(ROOT / "og-image.jpg", format="JPEG", quality=86,
+              optimize=True, progressive=True)
+    card.close()
+
+    lqip = _lqip(im)
+    im.close()
+    return {"source": chosen, "widths": sources, "lqip": lqip}
+
+
+def build_portrait(name: str) -> dict | None:
+    """Responsive derivatives for the About portrait.
+
+    It lives in Photos/ but is excluded from the gallery, so it would otherwise
+    be served as a multi-megabyte original.
+    """
+    src = PHOTOS / name
+    if not src.exists():
+        return None
+    with Image.open(src) as raw:
+        im = ImageOps.exif_transpose(raw).convert("RGB")
+
+    widths = []
+    for width in (400, 800, 1200):
+        if width > im.width * 1.02:
+            continue
+        h = max(1, round(im.height * width / im.width))
+        variant = im.resize((width, h), Image.LANCZOS, reducing_gap=3.0)
+        _save_avif(variant, MEDIA / f"portrait-{width}.avif")
+        variant.save(MEDIA / f"portrait-{width}.webp", format="WEBP",
+                     quality=WEBP_QUALITY, method=4)
+        if width == 800:
+            variant.save(MEDIA / "portrait-800.jpg", format="JPEG",
+                         quality=JPEG_QUALITY, optimize=True, progressive=True)
+        widths.append(width)
+        variant.close()
+
+    info = {"widths": widths, "width": im.width, "height": im.height,
+            "lqip": _lqip(im)}
+    im.close()
+    return info
+
+
+def write_sitemap(routes: list[str]) -> None:
+    today = time.strftime("%Y-%m-%d")
+    urls = "\n".join(
+        f"  <url>\n    <loc>{SITE_URL}{r}</loc>\n"
+        f"    <lastmod>{today}</lastmod>\n"
+        f"    <changefreq>monthly</changefreq>\n"
+        f"    <priority>{'1.0' if r == '/' else '0.8'}</priority>\n  </url>"
+        for r in routes
+    )
+    (ROOT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{urls}\n</urlset>\n",
+        encoding="utf-8",
+    )
+    (ROOT / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n",
+        encoding="utf-8",
+    )
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--jobs", type=int, default=max(1, (os.cpu_count() or 4) - 1))
+    ap.add_argument("--manifest-only", action="store_true",
+                    help="re-score and rewrite photos.json without re-encoding")
+    ap.add_argument("--clean", action="store_true", help="wipe media/ first")
+    args = ap.parse_args()
+
+    meta = load_meta()
+    entries: dict = meta["photos"]
+    excluded = set(meta.get("exclude", []))
+    curation = meta.get("curation", {})
+    pinned: list[str] = [p for p in curation.get("pin", []) if p]
+    boosts: dict = {k: float(v) for k, v in (curation.get("boost") or {}).items()
+                    if not k.startswith("_")}
+
+    available = {p.name for p in PHOTOS.iterdir() if p.is_file()}
+    wanted = [n for n in entries if not n.startswith("_")]
+
+    missing = [n for n in wanted if n not in available]
+    orphans = sorted(available - set(wanted) - excluded)
+    if missing:
+        print(f"warning: {len(missing)} listed but not on disk -> skipped: "
+              f"{', '.join(missing)}")
+    if orphans:
+        print(f"warning: {len(orphans)} on disk but not in photos.meta.json "
+              f"(they will not appear): {', '.join(orphans)}")
+
+    names = [n for n in wanted if n in available]
+    if not names:
+        sys.exit("error: nothing to build")
+
+    MEDIA.mkdir(parents=True, exist_ok=True)
+    if args.clean:
+        # Empty the directory rather than removing it: OneDrive keeps a handle on
+        # synced folders, so rmdir fails with WinError 5 even when it is empty.
+        stale = 0
+        for f in MEDIA.iterdir():
+            try:
+                f.unlink() if f.is_file() else shutil.rmtree(f, ignore_errors=True)
+                stale += 1
+            except OSError as exc:
+                print(f"  !! could not remove {f.name}: {exc}")
+        if stale:
+            print(f"cleaned {stale} stale file(s) from media/")
+
+    # ---- 1. rate ---------------------------------------------------------
+    print(f"rating {len(names)} photos ...")
+    scored = []
+    for i, name in enumerate(names, 1):
+        scored.append(analyse(PHOTOS / name))
+        if i % 10 == 0 or i == len(names):
+            print(f"  {i}/{len(names)}", flush=True)
+    normalise(scored)
+    by_name = {s.file: s for s in scored}
+
+    slugs, seen = {}, set()
+    for name in names:
+        slug = slugify(name)
+        n = 2
+        while slug in seen:
+            slug, n = f"{slugify(name)}-{n}", n + 1
+        seen.add(slug)
+        slugs[name] = slug
+
+    # ---- 2. encode -------------------------------------------------------
+    derived: dict = {}
+    if args.manifest_only:
+        # Carry the LQIP placeholders and width lists over from the previous
+        # manifest -- they describe files we are deliberately not re-encoding,
+        # so dropping them would silently regress the grid to blank frames.
+        if MANIFEST.exists():
+            previous = json.loads(MANIFEST.read_text(encoding="utf-8"))
+            for entry in previous.get("photos", []):
+                if entry.get("lqip"):
+                    derived[entry["src"]] = {"lqip": entry["lqip"],
+                                            "widths": entry.get("widths", list(GRID_WIDTHS))}
+            print(f"skipping encode (--manifest-only); reused {len(derived)} placeholders")
+        else:
+            print("skipping encode (--manifest-only); no previous manifest to reuse")
+    else:
+        print(f"encoding derivatives with {args.jobs} workers ...")
+        t0 = time.time()
+        done = 0
+        with ProcessPoolExecutor(max_workers=args.jobs) as pool:
+            futures = {pool.submit(encode_one, str(PHOTOS / n), slugs[n]): n
+                       for n in names}
+            for fut in as_completed(futures):
+                name = futures[fut]
+                try:
+                    derived[name] = fut.result()
+                except Exception as exc:
+                    print(f"  !! {name}: {exc}")
+                done += 1
+                if done % 5 == 0 or done == len(names):
+                    rate = done / max(0.001, time.time() - t0)
+                    eta = (len(names) - done) / max(rate, 1e-6)
+                    print(f"  {done}/{len(names)}  ({rate:.2f}/s, eta {eta:.0f}s)",
+                          flush=True)
+        print(f"encoded in {time.time() - t0:.0f}s")
+
+    # ---- 3. hero ---------------------------------------------------------
+    hero_pick = meta.get("hero")
+    if not hero_pick or hero_pick not in by_name:
+        landscape = [s for s in scored
+                     if s.width / max(1, s.height) >= 1.4
+                     and entries[s.file].get("category") in ("Landscape", "Street")]
+        pool_ = landscape or [s for s in scored if s.width >= s.height]
+        hero_pick = max(pool_, key=lambda s: s.score).file
+    hero = None
+    portrait = None
+    portrait_src = next((n for n in excluded if "profile" in n.lower()), None)
+    if not args.manifest_only:
+        print(f"hero backdrop: {hero_pick}")
+        hero = build_hero(slugs, hero_pick)
+        if portrait_src:
+            portrait = build_portrait(portrait_src)
+            print(f"about portrait: {portrait_src}")
+    elif MANIFEST.exists():
+        previous_manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        hero = previous_manifest.get("hero")
+        portrait = previous_manifest.get("portrait")
+
+    # ---- 4. rank ---------------------------------------------------------
+    # Ratings decide the order and then stay here. They are NOT published:
+    # photos.json carries the resulting sequence and nothing else, so the
+    # numbers never reach the browser (not in the DOM, not in devtools).
+    ranked = []
+    for name in names:
+        s = by_name[name]
+        info = entries[name]
+        ranked.append({
+            "src": name,
+            "title": info.get("title") or Path(name).stem,
+            "category": info.get("category") or "Uncategorised",
+            "rating": round(min(100.0, max(0.0, s.score + boosts.get(name, 0.0))), 1),
+            "boost": boosts.get(name, 0.0),
+            "breakdown": s.components,
+            "monochrome": s.monochrome,
+        })
+
+    pin_rank = {n: i for i, n in enumerate(pinned)}
+    ranked.sort(key=lambda p: (pin_rank.get(p["src"], len(pinned)), -p["rating"],
+                               p["title"]))
+
+    # ---- 5. public manifest ---------------------------------------------
+    photos = []
+    for entry in ranked:
+        name = entry["src"]
+        s = by_name[name]
+        d = derived.get(name)
+        photos.append({
+            "id": slugs[name],
+            "src": name,
+            "title": entry["title"],
+            "category": entry["category"],
+            "width": s.width,
+            "height": s.height,
+            "aspect": round(s.width / max(1, s.height), 4),
+            "monochrome": s.monochrome,
+            "captured": s.captured,
+            "lqip": (d or {}).get("lqip"),
+            "widths": (d or {}).get("widths", list(GRID_WIDTHS)),
+        })
+
+    categories = ["All"] + sorted({p["category"] for p in photos})
+    manifest = {
+        "generated": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        "siteUrl": SITE_URL,
+        "mediaDir": "media",
+        "gridWidths": list(GRID_WIDTHS),
+        "lightboxEdge": LIGHTBOX_EDGE,
+        "categories": categories,
+        "hero": hero,
+        "portrait": portrait,
+        "stats": {"count": len(photos)},
+        "photos": photos,
+    }
+    MANIFEST.write_text(json.dumps(manifest, indent=1), encoding="utf-8")
+
+    # ---- 6. private rating report ---------------------------------------
+    # Your copy of the scores. Lives under tools/ (blocked from the deployed
+    # site by _headers / vercel.json) and is never fetched by the page.
+    ratings = [p["rating"] for p in ranked]
+    RATINGS_REPORT.write_text(json.dumps({
+        "generated": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        "note": "Internal. Decides gallery order; never served to the browser.",
+        "weights": {
+            "sharpness": 18, "exposure": 14, "contrast": 12, "color": 12,
+            "composition": 16, "isolation": 12, "technical": 16,
+        },
+        "summary": {
+            "count": len(ranked),
+            "highest": max(ratings),
+            "lowest": min(ratings),
+            "median": sorted(ratings)[len(ratings) // 2],
+            "average": round(sum(ratings) / len(ratings), 1),
+        },
+        "ranking": [dict(rank=i + 1, **e) for i, e in enumerate(ranked)],
+    }, indent=1), encoding="utf-8")
+
+    write_sitemap(["/", "/portfolio", "/about", "/contact"])
+
+    # GitHub Pages has no rewrite rules, but it does serve 404.html for unknown
+    # paths -- so an identical copy makes /portfolio and friends resolve there.
+    # Netlify and Vercel use _redirects / vercel.json instead and ignore this.
+    index = ROOT / "index.html"
+    if index.exists():
+        shutil.copyfile(index, ROOT / "404.html")
+
+    out_bytes = sum(f.stat().st_size for f in MEDIA.glob("*") if f.is_file())
+    src_bytes = sum((PHOTOS / n).stat().st_size for n in names)
+    print(f"\nphotos.json  {len(photos)} photos, order only "
+          f"(no ratings published)")
+    print(f"{RATINGS_REPORT.relative_to(ROOT).as_posix()}  ratings "
+          f"{min(ratings):.1f}-{max(ratings):.1f}, "
+          f"median {sorted(ratings)[len(ratings) // 2]:.1f}  [internal]")
+    if out_bytes:
+        print(f"media/       {out_bytes / 1e6:.1f} MB of derivatives "
+              f"from {src_bytes / 1e6:.0f} MB of originals "
+              f"({src_bytes / max(out_bytes, 1):.0f}x smaller)")
+    print("gallery order, top 5:")
+    for i, p in enumerate(ranked[:5], 1):
+        print(f"   {i}. {p['title']} ({p['category']})   [{p['rating']:.1f}]")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

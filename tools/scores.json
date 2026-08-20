@@ -1,0 +1,1226 @@
+[
+  {
+    "file": "36.jpg",
+    "width": 5428,
+    "height": 7237,
+    "raw": 90.406,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.7811,
+      "contrast": 1.0,
+      "color": 1.0,
+      "composition": 0.5919,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-11-30T02:10:39",
+    "score": 94.2
+  },
+  {
+    "file": "29.jpg",
+    "width": 2519,
+    "height": 3358,
+    "raw": 90.275,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.8534,
+      "contrast": 0.9707,
+      "color": 1.0,
+      "composition": 0.5424,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-11-30T02:10:07",
+    "score": 93.9
+  },
+  {
+    "file": "57.jpg",
+    "width": 3313,
+    "height": 4970,
+    "raw": 90.021,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.8185,
+      "contrast": 0.8934,
+      "color": 1.0,
+      "composition": 0.6452,
+      "isolation": 0.9599,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-01T16:33:58",
+    "score": 93.5
+  },
+  {
+    "file": "56.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 88.717,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.8095,
+      "contrast": 0.8919,
+      "color": 1.0,
+      "composition": 0.5426,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-01T16:33:57",
+    "score": 92.6
+  },
+  {
+    "file": "63.jpg",
+    "width": 3712,
+    "height": 4949,
+    "raw": 88.452,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.9666,
+      "contrast": 0.8825,
+      "color": 1.0,
+      "composition": 0.3956,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-01T16:33:54",
+    "score": 92.2
+  },
+  {
+    "file": "33.jpg",
+    "width": 3963,
+    "height": 5284,
+    "raw": 88.166,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.8065,
+      "contrast": 0.6765,
+      "color": 1.0,
+      "composition": 0.6723,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-11-30T02:10:20",
+    "score": 91.8
+  },
+  {
+    "file": "30.jpg",
+    "width": 5678,
+    "height": 7570,
+    "raw": 88.028,
+    "components": {
+      "sharpness": 0.871,
+      "exposure": 0.8846,
+      "contrast": 0.8701,
+      "color": 1.0,
+      "composition": 0.5952,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-11-30T02:10:11",
+    "score": 91.5
+  },
+  {
+    "file": "68.jpg",
+    "width": 4032,
+    "height": 3024,
+    "raw": 87.535,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.9583,
+      "contrast": 0.9352,
+      "color": 1.0,
+      "composition": 0.576,
+      "isolation": 0.6401,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-01T16:34:06",
+    "score": 91.0
+  },
+  {
+    "file": "24.jpg",
+    "width": 5798,
+    "height": 7731,
+    "raw": 87.062,
+    "components": {
+      "sharpness": 0.9288,
+      "exposure": 0.6652,
+      "contrast": 0.9153,
+      "color": 1.0,
+      "composition": 0.6279,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-11-30T02:09:49",
+    "score": 90.5
+  },
+  {
+    "file": "6.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 86.728,
+    "components": {
+      "sharpness": 0.9443,
+      "exposure": 0.9346,
+      "contrast": 0.9962,
+      "color": 0.9974,
+      "composition": 0.3858,
+      "isolation": 0.8793,
+      "technical": 1.0
+    },
+    "monochrome": true,
+    "captured": "2026-04-29T00:18:55",
+    "score": 90.1
+  },
+  {
+    "file": "19.jpg",
+    "width": 3013,
+    "height": 5357,
+    "raw": 85.908,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.9335,
+      "contrast": 0.9513,
+      "color": 1.0,
+      "composition": 0.3511,
+      "isolation": 0.8172,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-05-25T00:41:47",
+    "score": 89.4
+  },
+  {
+    "file": "28.jpg",
+    "width": 5777,
+    "height": 7702,
+    "raw": 85.891,
+    "components": {
+      "sharpness": 0.8978,
+      "exposure": 0.8612,
+      "contrast": 0.803,
+      "color": 1.0,
+      "composition": 0.5023,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-11-30T02:10:19",
+    "score": 89.1
+  },
+  {
+    "file": "37.jpg",
+    "width": 4284,
+    "height": 5712,
+    "raw": 85.74,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.9075,
+      "contrast": 0.994,
+      "color": 0.9958,
+      "composition": 0.3888,
+      "isolation": 0.7448,
+      "technical": 1.0
+    },
+    "monochrome": true,
+    "captured": "2026-04-30T06:03:11",
+    "score": 88.8
+  },
+  {
+    "file": "40.jpg",
+    "width": 4196,
+    "height": 5594,
+    "raw": 85.721,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.9446,
+      "contrast": 0.7967,
+      "color": 1.0,
+      "composition": 0.5256,
+      "isolation": 0.7105,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-30T05:19:29",
+    "score": 88.5
+  },
+  {
+    "file": "26.jpg",
+    "width": 5352,
+    "height": 7136,
+    "raw": 85.648,
+    "components": {
+      "sharpness": 0.9102,
+      "exposure": 0.6806,
+      "contrast": 0.8637,
+      "color": 1.0,
+      "composition": 0.5857,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-11-30T02:09:50",
+    "score": 88.2
+  },
+  {
+    "file": "20.jpg",
+    "width": 2840,
+    "height": 3787,
+    "raw": 85.523,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.9033,
+      "contrast": 0.7751,
+      "color": 1.0,
+      "composition": 0.4205,
+      "isolation": 0.904,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-01-25T23:43:38",
+    "score": 87.9
+  },
+  {
+    "file": "48.jpg",
+    "width": 3406,
+    "height": 5109,
+    "raw": 85.432,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.918,
+      "contrast": 0.8267,
+      "color": 0.5778,
+      "composition": 0.6079,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-30T04:53:02",
+    "score": 87.6
+  },
+  {
+    "file": "49.jpg",
+    "width": 5568,
+    "height": 3712,
+    "raw": 85.207,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.9604,
+      "contrast": 0.9147,
+      "color": 1.0,
+      "composition": 0.4005,
+      "isolation": 0.6982,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-30T04:53:01",
+    "score": 87.2
+  },
+  {
+    "file": "1.jpg",
+    "width": 2626,
+    "height": 3502,
+    "raw": 84.553,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.9088,
+      "contrast": 0.8615,
+      "color": 1.0,
+      "composition": 0.4306,
+      "isolation": 0.717,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-29T00:22:39",
+    "score": 86.6
+  },
+  {
+    "file": "59.jpg",
+    "width": 3648,
+    "height": 5472,
+    "raw": 84.368,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.5485,
+      "contrast": 1.0,
+      "color": 0.6069,
+      "composition": 0.9123,
+      "isolation": 0.734,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-01T16:34:03",
+    "score": 86.2
+  },
+  {
+    "file": "62.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 84.309,
+    "components": {
+      "sharpness": 0.7707,
+      "exposure": 0.9741,
+      "contrast": 1.0,
+      "color": 0.4809,
+      "composition": 0.6893,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-01T16:34:09",
+    "score": 86.0
+  },
+  {
+    "file": "35.jpg",
+    "width": 6048,
+    "height": 8064,
+    "raw": 83.417,
+    "components": {
+      "sharpness": 0.9501,
+      "exposure": 0.7208,
+      "contrast": 0.4601,
+      "color": 1.0,
+      "composition": 0.669,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-11-30T02:10:46",
+    "score": 85.2
+  },
+  {
+    "file": "31.jpg",
+    "width": 3024,
+    "height": 4032,
+    "raw": 83.342,
+    "components": {
+      "sharpness": 0.9196,
+      "exposure": 0.7115,
+      "contrast": 0.4503,
+      "color": 1.0,
+      "composition": 0.714,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-11-30T02:10:03",
+    "score": 84.9
+  },
+  {
+    "file": "18.jpg",
+    "width": 3644,
+    "height": 4859,
+    "raw": 82.855,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.9701,
+      "contrast": 0.878,
+      "color": 1.0,
+      "composition": 0.4309,
+      "isolation": 0.4869,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-29T00:19:51",
+    "score": 84.4
+  },
+  {
+    "file": "27.jpg",
+    "width": 3024,
+    "height": 4032,
+    "raw": 82.144,
+    "components": {
+      "sharpness": 0.8633,
+      "exposure": 0.8396,
+      "contrast": 0.6568,
+      "color": 1.0,
+      "composition": 0.4355,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-11-30T02:09:42",
+    "score": 83.8
+  },
+  {
+    "file": "4.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 82.052,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.4898,
+      "contrast": 1.0,
+      "color": 1.0,
+      "composition": 0.3246,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": true,
+    "captured": "2026-04-29T00:18:55",
+    "score": 83.5
+  },
+  {
+    "file": "39.jpg",
+    "width": 2702,
+    "height": 3602,
+    "raw": 81.937,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.9922,
+      "contrast": 1.0,
+      "color": 0.9439,
+      "composition": 0.4991,
+      "isolation": 0.2277,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-29T00:28:00",
+    "score": 83.1
+  },
+  {
+    "file": "41.jpg",
+    "width": 2996,
+    "height": 3995,
+    "raw": 81.857,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.5595,
+      "contrast": 0.9485,
+      "color": 0.6801,
+      "composition": 0.7667,
+      "isolation": 0.6845,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-30T05:19:28",
+    "score": 82.8
+  },
+  {
+    "file": "67.jpg",
+    "width": 3655,
+    "height": 5482,
+    "raw": 81.853,
+    "components": {
+      "sharpness": 0.8853,
+      "exposure": 0.7318,
+      "contrast": 0.8735,
+      "color": 0.9115,
+      "composition": 0.6095,
+      "isolation": 0.7083,
+      "technical": 1.0
+    },
+    "monochrome": true,
+    "captured": "2026-07-01T16:34:01",
+    "score": 82.6
+  },
+  {
+    "file": "32.jpg",
+    "width": 2984,
+    "height": 3979,
+    "raw": 81.738,
+    "components": {
+      "sharpness": 0.8902,
+      "exposure": 0.653,
+      "contrast": 0.8393,
+      "color": 1.0,
+      "composition": 0.4063,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-11-30T02:10:14",
+    "score": 82.2
+  },
+  {
+    "file": "52.jpg",
+    "width": 3521,
+    "height": 5281,
+    "raw": 81.391,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.4134,
+      "contrast": 0.9589,
+      "color": 0.9713,
+      "composition": 0.6286,
+      "isolation": 0.6986,
+      "technical": 1.0
+    },
+    "monochrome": true,
+    "captured": "2026-04-30T04:53:01",
+    "score": 81.8
+  },
+  {
+    "file": "42.jpg",
+    "width": 2525,
+    "height": 2525,
+    "raw": 81.129,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.5696,
+      "contrast": 1.0,
+      "color": 0.6396,
+      "composition": 0.9785,
+      "isolation": 0.5216,
+      "technical": 0.8477
+    },
+    "monochrome": false,
+    "captured": "2026-04-30T05:19:29",
+    "score": 81.4
+  },
+  {
+    "file": "64.jpg",
+    "width": 5281,
+    "height": 3521,
+    "raw": 81.067,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.8958,
+      "contrast": 0.998,
+      "color": 0.6932,
+      "composition": 0.411,
+      "isolation": 0.6379,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-01T16:34:06",
+    "score": 81.1
+  },
+  {
+    "file": "16.jpg",
+    "width": 5176,
+    "height": 4000,
+    "raw": 80.677,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.9059,
+      "contrast": 0.7743,
+      "color": 0.2371,
+      "composition": 0.7402,
+      "isolation": 0.8346,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-06-01T22:55:42",
+    "score": 80.6
+  },
+  {
+    "file": "Untitled-24.jpg",
+    "width": 4000,
+    "height": 5328,
+    "raw": 79.878,
+    "components": {
+      "sharpness": 0.9578,
+      "exposure": 0.8628,
+      "contrast": 0.9395,
+      "color": 0.8586,
+      "composition": 0.3566,
+      "isolation": 0.6065,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-16T21:02:09",
+    "score": 79.9
+  },
+  {
+    "file": "25.jpg",
+    "width": 2729,
+    "height": 3638,
+    "raw": 79.842,
+    "components": {
+      "sharpness": 0.8877,
+      "exposure": 0.9113,
+      "contrast": 0.8947,
+      "color": 0.9263,
+      "composition": 0.422,
+      "isolation": 0.5419,
+      "technical": 1.0
+    },
+    "monochrome": true,
+    "captured": "2025-11-30T02:07:16",
+    "score": 79.6
+  },
+  {
+    "file": "5.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 79.565,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.5271,
+      "contrast": 1.0,
+      "color": 0.6419,
+      "composition": 0.4052,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-29T00:18:54",
+    "score": 79.2
+  },
+  {
+    "file": "47.jpg",
+    "width": 3272,
+    "height": 4908,
+    "raw": 79.439,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.6738,
+      "contrast": 0.9729,
+      "color": 0.5696,
+      "composition": 0.6223,
+      "isolation": 0.6282,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-30T04:53:02",
+    "score": 78.8
+  },
+  {
+    "file": "12.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 79.419,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.3998,
+      "contrast": 0.9038,
+      "color": 0.9327,
+      "composition": 0.3615,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": true,
+    "captured": "2026-04-29T00:22:37",
+    "score": 78.5
+  },
+  {
+    "file": "46.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 78.817,
+    "components": {
+      "sharpness": 0.7024,
+      "exposure": 0.4186,
+      "contrast": 0.9858,
+      "color": 0.8687,
+      "composition": 0.6716,
+      "isolation": 0.9428,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-30T04:53:06",
+    "score": 77.9
+  },
+  {
+    "file": "10.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 78.574,
+    "components": {
+      "sharpness": 0.7949,
+      "exposure": 0.7774,
+      "contrast": 0.6694,
+      "color": 1.0,
+      "composition": 0.5166,
+      "isolation": 0.7569,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-29T00:22:37",
+    "score": 77.5
+  },
+  {
+    "file": "34.jpg",
+    "width": 6048,
+    "height": 8064,
+    "raw": 78.566,
+    "components": {
+      "sharpness": 0.8812,
+      "exposure": 0.4125,
+      "contrast": 0.6987,
+      "color": 0.7891,
+      "composition": 0.6922,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": true,
+    "captured": "2025-11-30T02:10:39",
+    "score": 77.2
+  },
+  {
+    "file": "3.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 78.229,
+    "components": {
+      "sharpness": 0.9813,
+      "exposure": 0.4442,
+      "contrast": 0.8891,
+      "color": 0.9224,
+      "composition": 0.5359,
+      "isolation": 0.6696,
+      "technical": 1.0
+    },
+    "monochrome": true,
+    "captured": "2026-04-29T00:18:54",
+    "score": 76.8
+  },
+  {
+    "file": "58.jpg",
+    "width": 4049,
+    "height": 5398,
+    "raw": 78.219,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.66,
+      "contrast": 1.0,
+      "color": 1.0,
+      "composition": 0.3714,
+      "isolation": 0.4198,
+      "technical": 1.0
+    },
+    "monochrome": true,
+    "captured": "2026-07-01T16:33:53",
+    "score": 76.5
+  },
+  {
+    "file": "43.jpg",
+    "width": 1179,
+    "height": 1338,
+    "raw": 78.204,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.8501,
+      "contrast": 0.9921,
+      "color": 0.8398,
+      "composition": 0.4971,
+      "isolation": 1.0,
+      "technical": 0.3979
+    },
+    "monochrome": false,
+    "captured": null,
+    "score": 76.2
+  },
+  {
+    "file": "45.jpg",
+    "width": 1179,
+    "height": 1460,
+    "raw": 78.191,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.65,
+      "contrast": 0.9505,
+      "color": 0.9654,
+      "composition": 0.5949,
+      "isolation": 1.0,
+      "technical": 0.4114
+    },
+    "monochrome": true,
+    "captured": null,
+    "score": 75.9
+  },
+  {
+    "file": "22.jpg",
+    "width": 5798,
+    "height": 7731,
+    "raw": 77.765,
+    "components": {
+      "sharpness": 0.897,
+      "exposure": 0.5308,
+      "contrast": 0.6842,
+      "color": 1.0,
+      "composition": 0.3735,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-11-30T02:09:48",
+    "score": 75.3
+  },
+  {
+    "file": "61.jpg",
+    "width": 3712,
+    "height": 4949,
+    "raw": 77.757,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.5264,
+      "contrast": 1.0,
+      "color": 0.5343,
+      "composition": 0.7044,
+      "isolation": 0.5588,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-01T16:34:14",
+    "score": 75.0
+  },
+  {
+    "file": "17.jpg",
+    "width": 4000,
+    "height": 5600,
+    "raw": 77.245,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.5394,
+      "contrast": 1.0,
+      "color": 0.367,
+      "composition": 0.5226,
+      "isolation": 0.9106,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-05-25T01:14:08",
+    "score": 74.5
+  },
+  {
+    "file": "21.jpg",
+    "width": 2198,
+    "height": 2931,
+    "raw": 76.642,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.7343,
+      "contrast": 0.9657,
+      "color": 0.474,
+      "composition": 0.7446,
+      "isolation": 0.459,
+      "technical": 0.854
+    },
+    "monochrome": false,
+    "captured": "2025-05-18T17:53:01",
+    "score": 73.9
+  },
+  {
+    "file": "2.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 76.351,
+    "components": {
+      "sharpness": 0.9784,
+      "exposure": 0.5587,
+      "contrast": 0.983,
+      "color": 0.5902,
+      "composition": 0.3837,
+      "isolation": 0.8249,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-29T00:18:53",
+    "score": 73.4
+  },
+  {
+    "file": "11.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 76.349,
+    "components": {
+      "sharpness": 0.8137,
+      "exposure": 0.5244,
+      "contrast": 0.8992,
+      "color": 0.824,
+      "composition": 0.4633,
+      "isolation": 0.8557,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-29T00:22:36",
+    "score": 73.1
+  },
+  {
+    "file": "66.jpg",
+    "width": 5117,
+    "height": 3411,
+    "raw": 75.639,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.7202,
+      "contrast": 1.0,
+      "color": 0.8654,
+      "composition": 0.3795,
+      "isolation": 0.2583,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-01T16:34:13",
+    "score": 72.4
+  },
+  {
+    "file": "50.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 75.2,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.6071,
+      "contrast": 1.0,
+      "color": 0.2548,
+      "composition": 0.4248,
+      "isolation": 0.9039,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-30T04:53:03",
+    "score": 71.9
+  },
+  {
+    "file": "Untitled-25.jpg",
+    "width": 4000,
+    "height": 5328,
+    "raw": 75.078,
+    "components": {
+      "sharpness": 0.9629,
+      "exposure": 0.5303,
+      "contrast": 0.9039,
+      "color": 0.5582,
+      "composition": 0.374,
+      "isolation": 0.8994,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-16T21:02:11",
+    "score": 71.5
+  },
+  {
+    "file": "Untitled-23.jpg",
+    "width": 4000,
+    "height": 5328,
+    "raw": 74.465,
+    "components": {
+      "sharpness": 0.8422,
+      "exposure": 0.6959,
+      "contrast": 0.6879,
+      "color": 0.9368,
+      "composition": 0.549,
+      "isolation": 0.4401,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-16T21:02:10",
+    "score": 70.9
+  },
+  {
+    "file": "14.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 74.44,
+    "components": {
+      "sharpness": 0.7451,
+      "exposure": 0.5403,
+      "contrast": 0.6728,
+      "color": 1.0,
+      "composition": 0.6193,
+      "isolation": 0.6234,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-29T00:22:38",
+    "score": 70.5
+  },
+  {
+    "file": "51.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 74.131,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.5624,
+      "contrast": 1.0,
+      "color": 0.4513,
+      "composition": 0.5632,
+      "isolation": 0.4858,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-04-30T04:53:04",
+    "score": 70.0
+  },
+  {
+    "file": "60.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 74.118,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.5293,
+      "contrast": 1.0,
+      "color": 0.5272,
+      "composition": 0.4959,
+      "isolation": 0.5371,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-01T16:34:08",
+    "score": 69.7
+  },
+  {
+    "file": "Untitled-26.jpg",
+    "width": 3712,
+    "height": 5568,
+    "raw": 71.999,
+    "components": {
+      "sharpness": 0.9027,
+      "exposure": 0.5019,
+      "contrast": 0.875,
+      "color": 0.3546,
+      "composition": 0.4466,
+      "isolation": 0.9019,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-16T21:02:10",
+    "score": 68.3
+  },
+  {
+    "file": "13.jpg",
+    "width": 3712,
+    "height": 4949,
+    "raw": 71.899,
+    "components": {
+      "sharpness": 0.7534,
+      "exposure": 0.2165,
+      "contrast": 0.7332,
+      "color": 0.8132,
+      "composition": 0.5469,
+      "isolation": 1.0,
+      "technical": 1.0
+    },
+    "monochrome": true,
+    "captured": "2026-04-29T00:22:38",
+    "score": 67.9
+  },
+  {
+    "file": "65.jpg",
+    "width": 5568,
+    "height": 3712,
+    "raw": 71.771,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.5835,
+      "contrast": 1.0,
+      "color": 0.6219,
+      "composition": 0.4025,
+      "isolation": 0.3084,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2026-07-01T16:34:17",
+    "score": 67.5
+  },
+  {
+    "file": "44.jpg",
+    "width": 1179,
+    "height": 1451,
+    "raw": 71.517,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.5765,
+      "contrast": 1.0,
+      "color": 0.3665,
+      "composition": 0.7838,
+      "isolation": 0.8284,
+      "technical": 0.4104
+    },
+    "monochrome": false,
+    "captured": null,
+    "score": 67.0
+  },
+  {
+    "file": "8.jpg",
+    "width": 1080,
+    "height": 1920,
+    "raw": 70.903,
+    "components": {
+      "sharpness": 1.0,
+      "exposure": 0.4524,
+      "contrast": 0.9199,
+      "color": 0.7238,
+      "composition": 0.5199,
+      "isolation": 0.9515,
+      "technical": 0.4444
+    },
+    "monochrome": false,
+    "captured": "2026-04-29T00:24:15",
+    "score": 66.3
+  },
+  {
+    "file": "Profile pic.jpg",
+    "width": 1440,
+    "height": 1440,
+    "raw": 67.39,
+    "components": {
+      "sharpness": 0.8834,
+      "exposure": 0.9784,
+      "contrast": 0.9615,
+      "color": 0.4235,
+      "composition": 0.5162,
+      "isolation": 0.4835,
+      "technical": 0.4444
+    },
+    "monochrome": false,
+    "captured": "2026-04-30T08:17:20",
+    "score": 64.1
+  },
+  {
+    "file": "15.jpg",
+    "width": 2899,
+    "height": 3865,
+    "raw": 67.034,
+    "components": {
+      "sharpness": 0.6892,
+      "exposure": 0.9239,
+      "contrast": 0.7113,
+      "color": 0.5273,
+      "composition": 0.4662,
+      "isolation": 0.2809,
+      "technical": 1.0
+    },
+    "monochrome": false,
+    "captured": "2025-06-01T23:12:44",
+    "score": 63.5
+  },
+  {
+    "file": "9.jpg",
+    "width": 1811,
+    "height": 2414,
+    "raw": 63.99,
+    "components": {
+      "sharpness": 0.7934,
+      "exposure": 0.4652,
+      "contrast": 0.5272,
+      "color": 1.0,
+      "composition": 0.3665,
+      "isolation": 0.704,
+      "technical": 0.6599
+    },
+    "monochrome": false,
+    "captured": "2026-04-29T00:22:37",
+    "score": 61.6
+  },
+  {
+    "file": "38.jpg",
+    "width": 1280,
+    "height": 960,
+    "raw": 58.763,
+    "components": {
+      "sharpness": 0.8638,
+      "exposure": 0.9272,
+      "contrast": 0.7494,
+      "color": 0.2415,
+      "composition": 0.3876,
+      "isolation": 0.5249,
+      "technical": 0.3652
+    },
+    "monochrome": false,
+    "captured": "2026-07-01T16:34:12",
+    "score": 58.4
+  }
+]

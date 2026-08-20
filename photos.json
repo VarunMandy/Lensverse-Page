@@ -1,0 +1,1337 @@
+{
+ "generated": "2026-08-20T16:50:05",
+ "siteUrl": "https://lensverse.photography",
+ "mediaDir": "media",
+ "gridWidths": [
+  400,
+  800,
+  1200
+ ],
+ "lightboxEdge": 2000,
+ "categories": [
+  "All",
+  "Events",
+  "Fashion",
+  "Landscape",
+  "Portraits",
+  "Street",
+  "Wildlife"
+ ],
+ "hero": {
+  "source": "49.jpg",
+  "widths": [
+   960,
+   1440,
+   1920,
+   2560
+  ],
+  "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBACdASoUAA0APulgqE2pJaQiMAgBIB0JagCdMoMxgEmlf2Djnz8NFOAAyyaghP6Do07vQPVZ36VSM4Di9Gmmbo2bzPDxZ50+bVWiekbc8bwDGb+HFlFkVq5WiPw0mHRcWKE/NKQAAA=="
+ },
+ "portrait": {
+  "widths": [
+   400,
+   800,
+   1200
+  ],
+  "width": 2534,
+  "height": 3379,
+  "lqip": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACQBQCdASoUABsAPuFeok0opSMiMAwBEBwJQBOmUABp1ecG8gAcQi0vEIi6COBuvIYYycPRAAD+rqfOvY1Cxi60zWgV3EwcW8txNvC6iiXHuTKkgVqW0OZYFMMDsYHHETKCLb1IxcABOBCvy+2lhu+Qlwo9hvcCFCjaEtJ5ka4AiERsHXxcFs1/948giFZWF8Yfgh/3MZnSJx6gZxVQD6QDUvm+F1PA67pCNRgSPK+eNKV/4C2o27KqnVoZQkv0FwAAAA=="
+ },
+ "stats": {
+  "count": 76
+ },
+ "photos": [
+  {
+   "id": "36",
+   "src": "36.jpg",
+   "title": "Scarlet Dance",
+   "category": "Fashion",
+   "width": 5428,
+   "height": 7237,
+   "aspect": 0.75,
+   "monochrome": false,
+   "captured": "2025-11-30T02:10:39",
+   "lqip": "data:image/webp;base64,UklGRugAAABXRUJQVlA4INwAAACwBQCdASoUABsAPuVipk0pJaOiMBgMASAciWwAnTMYJagk+m+xbQ9BTu7olnyK3fc0k2TXggAA/sshGI9zbcsvWyAEwZayHXmlRT48g/zjhnvGKUE8k1TEDlYFMn37MyaffTsbhYH8RZPbR9nRDB/9ChX/6FCvl3bbgZmVkvnLKKlPlHKYecE8ZdBH9KSGP+oFrIT4Yf18TY8iUyrsaYfP8wX6U+ZhHCvWLx2U2xuoSXl5XpVUvjaOW1ySab7A/VOXGrcubwES/T7EgoL6uOjvNgFKA1MR0UygAAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "29",
+   "src": "29.jpg",
+   "title": "Purple Halo",
+   "category": "Portraits",
+   "width": 2519,
+   "height": 3358,
+   "aspect": 0.7501,
+   "monochrome": false,
+   "captured": "2025-11-30T02:10:07",
+   "lqip": "data:image/webp;base64,UklGRiQBAABXRUJQVlA4IBgBAAAwBgCdASoUABsAPulmrk+pJSSiKAqpIB0JbACdMoR5n7NxU+QEsADlUC4gvFlRIsKS1c72+6b2LUrYAPcmxFgkOpt7HlkOogLCMvYTZcF5tJDpgIErnRTEWWdDDgshc0DZz65RnVkf0mk1iMngp4qVHEQf/D5yCtUHaf/hIUy4q1Xu2onl43X5cNxvzb/VRVhbo6vmJ3jBzSePdVtHGtHntL3BI7glUUMyeLhq4LRNsWHfQYqtw+az5JWZHj/C5SViwLPqpNV81dGuBd5KAArs74MbakFvw1uFyuGS6uUuf4G17qbRmbKu1RWuf1H9yWjsd0NAc/go0BzEGsBzE254raJr7cdx2U6jNbHlXxbqX00TjPHMAAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "57",
+   "src": "57.jpg",
+   "title": "Urban Tapestry",
+   "category": "Fashion",
+   "width": 3313,
+   "height": 4970,
+   "aspect": 0.6666,
+   "monochrome": false,
+   "captured": "2026-07-01T16:33:58",
+   "lqip": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAACQBACdASoUAB4APulgqU8pJSOiMBgIASAdCWwAnTMhhBz6SD3CH6eH9UtspaAA+bEgODu0j3CJjTwJKVR8VOmVSrUVvonPYhO4b08if93HKTEHj/8Wh6eiFeBez11k+EvNoTiZE0oXd3Vl5tnffK7pkfcoZQNNJ9C3tzC3oikFvf/mNhdlWJb53arb646qYUmtuvIJaIV5xyIoz+QUqE41ARAzC9+ptwkN2Bpk6ww2Q9cUlwzl1gI8v5q8FwAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "56",
+   "src": "56.jpg",
+   "title": "Red Net",
+   "category": "Fashion",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-07-01T16:33:57",
+   "lqip": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAACQBQCdASoUAB4APulgp00pJaOiMAgBIB0JbADCuUFQCPMwKZixS95SKyVQHhLpqA+mn/99kAD+WRL0jdMD0atajMvLL+N3vvBsO6qyvbZ4WF2/5Bj8z7cdsfWmkGVvwCGFHOmON3+XUcZqMWKsQNCuXDD0eFVFqN8UBSTLXi6NEPF8/nDwvCJ+VumZxy+94jKrTDa2/BUqoYYLBKYHucL9ApUQZM6ALqw8S9lvMuYJh89fTVdeNHWItX1UJ7HJC7h3iZl8H+Tkyxx7R/qcmUafAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "63",
+   "src": "63.jpg",
+   "title": "Amber Iris",
+   "category": "Portraits",
+   "width": 3712,
+   "height": 4949,
+   "aspect": 0.7501,
+   "monochrome": false,
+   "captured": "2026-07-01T16:33:54",
+   "lqip": "data:image/webp;base64,UklGRvYAAABXRUJQVlA4IOoAAAAwBgCdASoUABsAPuloqU6pJiOiMBgIASAdCWwAnTM0PjCA70ABR2McQ6nclaFGOoNVWXoNsOrUPzRAAP7Qtw8nvqojkGpvC00rd9Ymtzf10cCr6Un3psqgu/L/HduQUd7VXvfy0jy0jn3q+UeJYDV+5DX8mLA8zAtWXUoA8BXOLBbR0cygm0p+wWJ8hW9GPW2JTH/E7+jrq2PNepHmlXTv8ig0ZDGzCMItRo9F18DSMrWFDM3ujoIaF2RN7lLba87oVlPA9c9xv2C0tR44dBfl6paJtZlV5abXv60WlNa9LQ8DtEzuoVlqAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "33",
+   "src": "33.jpg",
+   "title": "Golden Lotus",
+   "category": "Fashion",
+   "width": 3963,
+   "height": 5284,
+   "aspect": 0.75,
+   "monochrome": false,
+   "captured": "2025-11-30T02:10:20",
+   "lqip": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAAAQBQCdASoUABsAPuVgqU0pJaQrsBgMAXAciWwAnTM0PjeqgCulvlj88UuhsvJBmNkAAP4TwoNIC3tXBkov0IYjWvqw/Iwi5s+fqT5Ak/i5mFysPzCpv/ln1PORdz6+ZiZr1H0291RRt8D9njKX7EvmEhUwSfyp+a1wNImwjAKo3ZIgz1fq78/xIZGnyjYzGbPmhC0vo+7KOiVCO7O0Kma41nbQO3FPyP3OQy1BsgioAU3T6fDEAAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "30",
+   "src": "30.jpg",
+   "title": "Blue Blossom",
+   "category": "Fashion",
+   "width": 5678,
+   "height": 7570,
+   "aspect": 0.7501,
+   "monochrome": false,
+   "captured": "2025-11-30T02:10:11",
+   "lqip": "data:image/webp;base64,UklGRvwAAABXRUJQVlA4IPAAAADQBgCdASoUABsAPulqqU4pJqOiMBgIASAdCWwAnTKEePeMfkBuANoRL7CAejYAx/YhYpMPe0gLpGR3Sdb7egAA/lIXkBM4hyVuqhxrucHYnKGfK4p/S1Wejcgw16pGiCU66LAA78wyn/8MWwYKZBQ1KbP6G/nfnizO/TrcY4skR/FfFe8pVWwza9oKfvCqa2iyyUpyIizGWM4Gs4nr8Y2XCbkO/WfC/wJfS5xHRLkVOn3h20E84VZzHTLLz6rwU4WyaBwE5vwJ1y9eD04Vj7RUUQ1eV9wOwFHuwew/5OQft2dD+px1TDArxWwyLqcQAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "68",
+   "src": "68.jpg",
+   "title": "Living Jewel",
+   "category": "Portraits",
+   "width": 4032,
+   "height": 3024,
+   "aspect": 1.3333,
+   "monochrome": false,
+   "captured": "2026-07-01T16:34:06",
+   "lqip": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAAAwBQCdASoUAA8APulep00pJSOiMAgBIB0JbACsH8IxWJ0D3Dnl3rsRT6+5dz+4v72kAAD+6iaABu2QZFq/4kPL+7CBFMJG9eirPmXweZiuVfu5Y6EKZcP1QiyloTV4Z8gWick8OZxEvAPkupG9fF6MRXZ0XtbvOCfBTCeJEw9DyjC/fi/Ol6sKYVUVlubWzJDFaetKyx96fymQb56YeWdHk5/zKOH40JTg4czx09WzjJ07q1Pgo+cYAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "24",
+   "src": "24.jpg",
+   "title": "Golden Fairy",
+   "category": "Fashion",
+   "width": 5798,
+   "height": 7731,
+   "aspect": 0.75,
+   "monochrome": false,
+   "captured": "2025-11-30T02:09:49",
+   "lqip": "data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAADQBQCdASoUABsAPulmrFApJSQiqAqpIB0JbACsLz56afigRHZJ+s+PZt3OvXqL3BUrYP6pzB16AP7ryy98UlZ25P/VgFmN/2gpl1mTTMSTmMwdUxUCSb04QXJX+TJ9bx1IGa3/0mz+JseTi4P7ayk+u+vDpbM/NWRf47plAslkOi0SXNeIfjA4rFTxBJhgtLWbGU3l/v/iG5vCl7pFGd5FPf75l/UJEJ+aq2aMfuao1o/BAJKDGPKZefC4SoM3U/Obpeg4EMS02qOOuZ1tUNcuO/FTAG8YcTTjIwpaHsAAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "6",
+   "src": "6.jpg",
+   "title": "The Crooner",
+   "category": "Portraits",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": true,
+   "captured": "2026-04-29T00:18:55",
+   "lqip": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAADwBACdASoUAB4APuloqVCpJaOiqAqpIB0JaQAAj/Yj4RA9to+52q6i17viTg5YSwAA/vk/OilE2nrn+zKB8/ZndFu7XqN9x82ypdN/UOkaaX3EyaF8yP9gtNc1wNqxXyQh8P9qNQrn0ko2LesoDbeS+AaIyQVafY9VqGsfF/XjpEZVt6/5TKLrmorDhx/h5SKOgJhP/4rLAcPt2+mtjbA/KsvLhx9hwIQcCCVemt/825I4euREHt7aLi0f6AAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "19",
+   "src": "19.jpg",
+   "title": "The Lighthouse",
+   "category": "Landscape",
+   "width": 3013,
+   "height": 5357,
+   "aspect": 0.5624,
+   "monochrome": false,
+   "captured": "2025-05-25T00:41:47",
+   "lqip": "data:image/webp;base64,UklGRiQBAABXRUJQVlA4IBgBAADwBgCdASoUACQAPulip08pJSMiKrgN+SAdCWwAv2uFBnerqqioDGUaYxOLrigRG/BSf8IefRSwoOpkbnKYYuCgAP5hJ5E0IDR5352xkb87Lcr5GRuYW0k/6BgwNf6Q2PChFLE/GQp/6YiRtG/y8KgFeDDpdtkd8dYyFB6g1ONHtJX0sG38atHDnJSRqTLuQU/5XtYvX/pCEha32iA6qK3hCo4oipMjOq8MPrYvkjY55ttjZ1J9Wpm5IVwSx8QwFcuqr/luQ6GOhDguFdceCTMTnFRkoimZVufF6jgM38c75v9vrXOxUlKP2qxgApZHlH2XeNIW2Sdy2Xq1pZF+H79NQjHWH2ojsYsmn+m/f4NfaGJhMxlVlgAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "28",
+   "src": "28.jpg",
+   "title": "Desert Prince",
+   "category": "Fashion",
+   "width": 5777,
+   "height": 7702,
+   "aspect": 0.7501,
+   "monochrome": false,
+   "captured": "2025-11-30T02:10:19",
+   "lqip": "data:image/webp;base64,UklGRvYAAABXRUJQVlA4IOoAAABQBgCdASoUABsAPulepU0pJSMiMAgBIB0JbACdMoRwMPj4A3AMwA9bMBT+ZruRowQpB2mFMoU+lKmOAAD8WlcemP2n7qC7S+wrYPgPe6MEHah0iiSQOlkPlWwyIY8PazECzcgxnG0Lg+uAsTT/8K1IEbdYWcWN4q07L0l4mqBP7gSHWZP98acQEB3QWNQVegQwcqwBipKb2/WPiUFpr0WuFOX31Yl/DTt2uT0gazZt/hbPY1A4YNp+An1/3T9mUZuXAbVw1bb+XgGxlmCOPvBAvAgb/tv3T9blDnong5Q3IwdQH8Uf81cRAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "37",
+   "src": "37.jpg",
+   "title": "Spiral Descent",
+   "category": "Street",
+   "width": 4284,
+   "height": 5712,
+   "aspect": 0.75,
+   "monochrome": true,
+   "captured": "2026-04-30T06:03:11",
+   "lqip": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAABwBQCdASoUABsAPulsrlGpJaQiqAgBIB0JaQAIGY6NisT2cF/wklU/KQVOM+YDynEMB4kgAP0BNlMrBPDUiPc9zF/S6L4c6uVHpk1eXryNFeInK/EA7Us+klBuqRGNZ+fF1l0l05GWi7RvBc/A3daAkf6JsSItCi6TWmufd4Y3TqcMJjAcNTSEH7tPb6Z3prpNuOFfAgL4L/8W1rFzTkZX/JWPOnirD4+qs49fasntnlgBuJZPdEgZfsYzgAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "40",
+   "src": "40.jpg",
+   "title": "Golden Dome",
+   "category": "Landscape",
+   "width": 4196,
+   "height": 5594,
+   "aspect": 0.7501,
+   "monochrome": false,
+   "captured": "2026-04-30T05:19:29",
+   "lqip": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAAAQBgCdASoUABsAPulep02pJSOiMBgMASAdCWwAnTMmAW+CPAbYCaZQPDxj1ZsvgxvJvdjJzK5OeRAA7QEDIX5hQSBhx80uEF+LkPLuPN7SZQxV4E/iccAHAPYhSTWNcTkZvrsAtBZqUhTEPAJuULxxd+L7+t3RLu50AzeWBgIHAgwJhC6ImZW+Iuhxr6i64R5Pwp3/BzBM6ZReLAt8pCbaDZSxuB3lcnbJokIlKxUjKp9dpyESIEn6CQ1aIUgAAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "26",
+   "src": "26.jpg",
+   "title": "Neon Bloom",
+   "category": "Fashion",
+   "width": 5352,
+   "height": 7136,
+   "aspect": 0.75,
+   "monochrome": false,
+   "captured": "2025-11-30T02:09:50",
+   "lqip": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAADwBACdASoUABsAPuVgqE0pJaQiMBgMASAciWwAqSNIgOjUxSWpFkiWtIGb/b6nhQAA/srqeCSO2EqHPfg3soWtkJS+4Ofje45n5aMfmu7ORZJNa324buFz//kp/uqFvz07591nVvgFWfs58XApe419jpzfIdRyskBSGDXSvV5pz55BLxViVy7J3Q2hnHzlSAn+Sv2LP4rog9agIKsn34BDqoggdM4xNxn9+c755fIWYvkMrTIg82/QAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "20",
+   "src": "20.jpg",
+   "title": "Paisley Groove",
+   "category": "Events",
+   "width": 2840,
+   "height": 3787,
+   "aspect": 0.7499,
+   "monochrome": false,
+   "captured": "2026-01-25T23:43:38",
+   "lqip": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoUABsAPulgp00pJaOiMAgBIB0JbACdMoR7X4AANMSdvTrAHFj0dHbtSpKyAADpOrgB8D1eRPtvWl/54wAvkoj6G5oGb1lOkfjeG5qIjKr/e/pSHRnIv/gfcejpCl4Uh9n/dRfrQTur0ajTcaYqgE+NY71Z2rkzIIbZzcKYS6oMgnJXr12Vll/mNuIuvAhExE/NkbZZLFClMuFSXkyIGw2I0ZbUPsPyfU/txedAAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "48",
+   "src": "48.jpg",
+   "title": "Lady Liberty",
+   "category": "Landscape",
+   "width": 3406,
+   "height": 5109,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-04-30T04:53:02",
+   "lqip": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAACwBQCdASoUAB4APulmp0+pJaMiKA1RIB0JYgCpJ5AWAAoaOzgligzwOYdFZStC5EVI66QXNQAAypHv+t6LD/93eGrpV3eUpF/7PeKn/rk9iFQQSqOQv2QjjuEhVriX7ufzMJY6hkZBWGL/AiUVQB/De424salqcO2mHPoKa/sKhLOWiEvUkk11J1+IbH/jJK6R0t3kaAGa5d4p0qNIzsWOvQEEoqlChrhfINbcAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "49",
+   "src": "49.jpg",
+   "title": "City Skyline",
+   "category": "Landscape",
+   "width": 5568,
+   "height": 3712,
+   "aspect": 1.5,
+   "monochrome": false,
+   "captured": "2026-04-30T04:53:01",
+   "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBACdASoUAA0APulgqE2pJaQiMAgBIB0JagCdMoMxgEmlf2Djnz8NFOAAyyaghP6Do07vQPVZ36VSM4Di9Gmmbo2bzPDxZ50+bVWiekbc8bwDGb+HFlFkVq5WiPw0mHRcWKE/NKQAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "1",
+   "src": "1.jpg",
+   "title": "Neon Editorial",
+   "category": "Fashion",
+   "width": 2626,
+   "height": 3502,
+   "aspect": 0.7499,
+   "monochrome": false,
+   "captured": "2026-04-29T00:22:39",
+   "lqip": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAACQBQCdASoUABsAPuFeok0opSMiMAwBEBwJbACdMoR7KCmZPWoKUWWSuu79+aCd0gSBhYeaAAD+EScepCf23fq8pL8EuB6dcKPysCZWMFPuerR58J1wGhg9MRKQS/jcJmnb9XiaIycnsNI7AtIJQ/ElNTHEX/f6uJBr2Fnr9ZDQaImz0ZfQPIA94cnHOiVRS2IuKQ/2/Bk6gy6pzD/jYN+9rX3Mgz59YnIbXBS6Z3H7XUL3pfRVaNqV74ngmhfvo54yb0QA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "59",
+   "src": "59.jpg",
+   "title": "Into The Green",
+   "category": "Landscape",
+   "width": 3648,
+   "height": 5472,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-07-01T16:34:03",
+   "lqip": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4IMoAAACQBQCdASoUAB4APulkq08pJSOiMBgIASAdCWIAtvqDx4t/4B5+13WnnyHnamUa0NhXlxvuAAD+8dP9gzDzo8qii+qrP3FCZAqrykpzUKMbweZK2vIhXCSjM3Q5gpOCcAjFTsBmz4Cf5gpkrB/C11V4FZWqt9QyHvmJiM5QjOjA2RMR6R6BI8Z8lRbtOECaXuaEvN54bFcGVD7YZIBnG7iuwwQ4RNVhfrWYdGlVbZRzeP8UQ9KySCk/CnTqeUDOa2vNKyBAJsrnCgAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "62",
+   "src": "62.jpg",
+   "title": "Lilac Dusk",
+   "category": "Landscape",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-07-01T16:34:09",
+   "lqip": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAACQBQCdASoUAB4APulorFApJaQiqAqpIB0JZgCsIVyEr7pjRmdLoXzmIfWXtwxHJ6Uagn0gwAD+9N1HvzZMDj67fFbihlRUw+dt0ithzxb3mIThmS7iPd4eL63YVJeSvHkbNyBdYxEBDylLIwBlTdS6DVrJLgbBosQPqOYWBkG/eTYWobWmCpXbnMcob6n6qvq/IXU5+3ajy1MrGEl3Ycvx/5QQX1Y8sB52LoB6c9FiP8Mt9a1A5D4e8JmttNERPkrQzCqetwfZq9wARVQAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "78",
+   "src": "78.jpg",
+   "title": "Gopuram Skyward",
+   "category": "Landscape",
+   "width": 2673,
+   "height": 4009,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-08-20T16:08:06",
+   "lqip": "data:image/webp;base64,UklGRvAAAABXRUJQVlA4IOQAAADQBQCdASoUAB4APuliqE0pJaOiMAgBIB0JQBf+Nk4wGk5NgJ+dNTok6YV5mMaA4vsDgAFbiLmgAP7A7xevP5v/rFHNlM3onu0sIRO1xBUinbKsbJ1JYLMnOhC46UwgYpMNIwO/0CBArqkqZA3Ej/ftd7u7IwGEHYqtfeAE1isUkFfW7Q3npiNt4EP+ILL2dedP7GinKwXPZJ55FwNh7aqXjjc1N93oqE6AkZWpGaTL9OPThFjfAO489hf8KPgrjW6udKnIBD1fJXvGhc4JPcGdHliMP2GkueovieY1JAmI4gggQAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "35",
+   "src": "35.jpg",
+   "title": "Violet Duo",
+   "category": "Fashion",
+   "width": 6048,
+   "height": 8064,
+   "aspect": 0.75,
+   "monochrome": false,
+   "captured": "2025-11-30T02:10:46",
+   "lqip": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAwBACdASoUABsAPuFeo00opSMiMAwBEBwJbACdMt8DTqyR6KAFbELnSWQA/uizsN9s0tb7ZyqgdA+o3I1cv//jgcfSt4XdP8RjsjdGXrtgzEPAhfkJ5Qd/yMuf3xbbnMndyJ5H2UG+lhc06a0T7aNzna9YHxpQlOwfmIC6m2/qyAU6VmWX1LDUVO4v296KgAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "31",
+   "src": "31.jpg",
+   "title": "Lotus Glow",
+   "category": "Fashion",
+   "width": 3024,
+   "height": 4032,
+   "aspect": 0.75,
+   "monochrome": false,
+   "captured": "2025-11-30T02:10:03",
+   "lqip": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoUABsAPulkqU0pJaQiMAgBIB0JagCdM1XDTrmZJfjqhjQpjoAA/rkX5DAyXHY/LkW/DAs8LJH+/6+ubPHxL/8z331an/pQKq/pX+TZFhNJIIUxNi1LA1TF1VsNHffJzICWwGreLtirCndsDUZDYkTyHeXpepia9YYSoF1uAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "18",
+   "src": "18.jpg",
+   "title": "Good Boy",
+   "category": "Portraits",
+   "width": 3644,
+   "height": 4859,
+   "aspect": 0.7499,
+   "monochrome": false,
+   "captured": "2026-04-29T00:19:51",
+   "lqip": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAADQBQCdASoUABsAPuleq0+pJKOiMBgIASAdCWwAnTKEenipQS0VOHJM0dPka0UroUBLSOGGcJtQAPypftNN12YF4NEXYxmnuR4rSHs5B6eV6nRp0F10LMAjpxrb0bfrqfRn/4i/r5NQ9zMvDh0g0X4h3oSOoBFtavCcCkl5oIfV1SLK9iin7mYIONXLV3hv+ocvt2ROJOi2vT0aXCSnlkWKNOvc7TDXTDgG9Er5bMQX32HMvZD7JTKSq0h4/21eFYpN5mIsfXC8hhRoccf8BJ9e6jHD7+cKHN4gzwWLRfHs2HZ3lneumJynCcINoAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "27",
+   "src": "27.jpg",
+   "title": "Emerald Flame",
+   "category": "Fashion",
+   "width": 3024,
+   "height": 4032,
+   "aspect": 0.75,
+   "monochrome": false,
+   "captured": "2025-11-30T02:09:42",
+   "lqip": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAADwBACdASoUABsAPulgq02pJaQiKA1RIB0JbACxHxngAmkYGPoCP3LoefxfKkMoE4AA/EzBNhZw1avkUtMgck6phE6CWgORNwK5nY1juzg4rdqZPc8/+YJ/ySzo7/Ncft3PdjWsQof/8Q59vn5bXv+X5GSQb8Pjd5jMcdIsMmtifakowgg9EUQIxy5Wu0tlKV5/NKhz0dqqjV/VYKe62Mn+K6/6WlEv8ggX0X+v8j1fYcvAJf8VxxoSnkrV6wZ84LOmU01b0XKYxvpwYXfSjK9RV61YHvuenAAAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "4",
+   "src": "4.jpg",
+   "title": "Guitar Detail",
+   "category": "Events",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": true,
+   "captured": "2026-04-29T00:18:55",
+   "lqip": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAABQBQCdASoUAB4APulsrlGpJaQiqAgBIB0JaQAIEC5+x0eEFafsZknxpzjQzo962fKRUAAA/vxEju3rFKTOKlHwtH1EtgNjQTvThEt1WbX4dlXY5ggm4iO0Gaj+7lybolEs3eyvk7f5POYGZjYn/kv9pu0QbYGMgUNkgX8dH4Lv+r/wzFYST6N1rx4slnHiaEtkmlQww/5liSjFv5/clLCnbdXjSGxZpscbPJqQQVhgmAmTMAOmcrJzu6ASxTf7GOy5pHvQE8024flpDrgAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "39",
+   "src": "39.jpg",
+   "title": "Spring Bricks",
+   "category": "Street",
+   "width": 2702,
+   "height": 3602,
+   "aspect": 0.7501,
+   "monochrome": false,
+   "captured": "2026-04-29T00:28:00",
+   "lqip": "data:image/webp;base64,UklGRu4AAABXRUJQVlA4IOIAAACwBQCdASoUABsAPulkqU0pJaQiMAgBIB0JbACdMtB4Hthx3oCIPTXotTTbhHwHXr/VU8CvBCgA27ELfua6SUdGEA4mELh6/oNpFUlJZ2dZzQXpUKV2gYw63g+6yYPAmcQG1jQqrnJ74q5/K9dADIYAtSeR4PvC343LzX7Y76NaM4Y2MCwZurlaOXbk2274SQequmYjhy2kjFtvUCgUdGQDT03ZTKfoRR0OdkRemXOg/qIhgcvoVIFIN56C/wLEl+ZAEtU3+IcMoGaPh9mziJRHO2NGIsb2NbAYxZpPcIIpwAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "41",
+   "src": "41.jpg",
+   "title": "Glass & Sky",
+   "category": "Landscape",
+   "width": 2996,
+   "height": 3995,
+   "aspect": 0.7499,
+   "monochrome": false,
+   "captured": "2026-04-30T05:19:28",
+   "lqip": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAACwBQCdASoUABsAPuliqE0pJaOiMAgBIB0JYgCdM47DPOmBDpJaUfwH1wffTZ09SlewP40Tl8AA/d1ZOsgSgQpFnql3LJhBMzUVqBpDlMkS1H1Sdm8NPEBL3excfJjYfZtYI0uNBcHTo2zf4XPDdKAvCvfUv6aJfy07ME1LMH+H6bk5xgfXAnewoDSfLuNpqkU+A6G7UnhXrUJ6Y01dsUPF2YVShAOyF9xT2ZGP/0zzn+LoouwAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "67",
+   "src": "67.jpg",
+   "title": "Waiting",
+   "category": "Street",
+   "width": 3655,
+   "height": 5482,
+   "aspect": 0.6667,
+   "monochrome": true,
+   "captured": "2026-07-01T16:34:01",
+   "lqip": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAABQBQCdASoUAB4APulmrU+pJaQiKAqpIB0JaQAGaBVMZQIePwmu0JvzGhtE9r/F14aPJgAA/oLQMijzD21OgPr1j5As7BnIznoSGW/hIgbAsNAKsqWW43NZ8y4Yx4M5aZcnS96I8P4eTmea92hdEXFlgLUl9WlYS3/ZP/XL9Ga6Lg4EgZLdWHKdCjsV7i4vNIbHf/+Acz8O3Ke8KGAHSiNWht0boAsXoLs4ljmZYtKYql8FRI1GSI7XIqQuAnjpjKv2CHr192YMSLCxRdAfBBNAAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "32",
+   "src": "32.jpg",
+   "title": "Crimson Fire",
+   "category": "Fashion",
+   "width": 2984,
+   "height": 3979,
+   "aspect": 0.7499,
+   "monochrome": false,
+   "captured": "2025-11-30T02:10:14",
+   "lqip": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAAAQBQCdASoUABsAPulcpk0pJSMxMAgCIB0JbACdMoR5gQAuysBKViZ7TadB6MXezB9wAPxTAVHVhEQ8C6uvQp+Znv7vIbkzrQYh/8N6yK4tMlF/Sn4OJ/tbMOxA7//+LQs3JHOms6Cg3ckg4H+4M1Wbn5BjpYI/BamHWtft2d9s4lDnCJuaMafztVbjpcaVfRnP8EPx8pQKo0NHNqEpzmJM4eQ8G4J6oy2PyaErKDnGY7iWLv5VUY0aqowLdv5AAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "52",
+   "src": "52.jpg",
+   "title": "Night Glow",
+   "category": "Street",
+   "width": 3521,
+   "height": 5281,
+   "aspect": 0.6667,
+   "monochrome": true,
+   "captured": "2026-04-30T04:53:01",
+   "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABQBQCdASoUAB4APulcpU4pJKMiMBgMASAdCWcAAI91y+KeCkN/2O0TUv2OiYRfWYUa3mAA/vkLwYdHTCD1ee5p1oucOzAaiBFo0H5fWUq8xj+91lu4GNYMTTXstcaLs+U2wSUumBsz+VjzweDeq8WG7kO0mxzC0w+bB+XsAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "42",
+   "src": "42.jpg",
+   "title": "Grand Doors",
+   "category": "Street",
+   "width": 2525,
+   "height": 2525,
+   "aspect": 1.0,
+   "monochrome": false,
+   "captured": "2026-04-30T05:19:29",
+   "lqip": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAADwBACdASoUABQAPulqrFGpJaQiqAgBIB0JZACdMzQ+ABLHw2SkpXyZqJg/I3v5huAA/vLdCHJCdjeVZ8i2De0ZLHN13iDSRcpZ/tpSbBsWeVY93Fod7Y+Qycn8oyNYHASqZnHJRI472R/EcK5VNFOYyQLFVbQudx4PdLR+x4e2v9IzGrb+TcDV17ef7BHd1Eusxuz7s/SucTY5FsVxmdpqodglPJFkAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "64",
+   "src": "64.jpg",
+   "title": "Dune Path",
+   "category": "Landscape",
+   "width": 5281,
+   "height": 3521,
+   "aspect": 1.4999,
+   "monochrome": false,
+   "captured": "2026-07-01T16:34:06",
+   "lqip": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQBACdASoUAA0APulgqE0pJaOiMAgBIB0JbACdMoMljEmlMjQGMw/INePgAP7xzy/9jGEEFXfMZbbrRlDVVy+AapQj1pljESk8I1Bft+4WXcahHDMy5hVk/gn/YWtH3mbvuPTg/89H/dzvU7Pj2E4ZFtcQSeAJZu/tYQGDYhtYPDnavF4AAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "70",
+   "src": "70.jpg",
+   "title": "Dawn Outrigger",
+   "category": "Landscape",
+   "width": 3376,
+   "height": 6000,
+   "aspect": 0.5627,
+   "monochrome": false,
+   "captured": "2026-08-20T15:06:30",
+   "lqip": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAAAQBwCdASoUACQAPuloqVApJiOipW5hIB0JaACsM0dEQrcBQ7WVbAbTg0OpVs/FEO2t58A8s9tCybr8KYp9MbaawAD+8NE900DcuaOe9JeQRm2Uwx9sCH+abOED8QzXg+6KukFxdz1ffyDv1P3+hOHYXJ99PkH3w/OtDN+VooxYCtBeBrdOUIFbFrnUnwqGCqwh5MngDSYgP71QzNwBN+7E0ZOXMGvySWqDfVajh4L/5wUbtU7oPs4H9NFFQh9xGxLkIzvouGym5FSnSFdR5djDFsuIv18gnbffktwAAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "16",
+   "src": "16.jpg",
+   "title": "Sky High",
+   "category": "Landscape",
+   "width": 5176,
+   "height": 4000,
+   "aspect": 1.294,
+   "monochrome": false,
+   "captured": "2025-06-01T22:55:42",
+   "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoUAA8APulgqE0pJaOiMAgBIB0JZQCsAAi9JK3gVW3UwADNie1IxNdW2D0ZTn3kWyMbBbGkZzft6Rkcm+jQg8uiVxXDoXcViQh3y1/74mPIh3FjgtIhFyQAAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "75",
+   "src": "75.jpg",
+   "title": "Behind The Kit",
+   "category": "Events",
+   "width": 4000,
+   "height": 5328,
+   "aspect": 0.7508,
+   "monochrome": false,
+   "captured": "2026-07-16T21:02:09",
+   "lqip": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAADwBACdASoUABsAPuFeo00opSMiMAwBEBwJbACdM2cnrEmfKRO4FpiL/hxeXiRGK9AA/uQWkYQ5/O62NM6XHNMtgblnqWoB4GkJBQeSukbrqWDZplX8XZsp/U/oMTBHtTzrnVd563BKQI/J6bdFJjzZTCLim3nYwNOUnLANOgDI4hIqEgGdZFmbzvojwjhMY5SHeRWIv7Q4gl56ERwWBC0vTcb2zDcjkg2Gay0QBUMRW+TcIj7SpSjQlqQSrD89ka0K3rgKNRoab8Z40n8QlIam67qAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "25",
+   "src": "25.jpg",
+   "title": "Wings of Light",
+   "category": "Portraits",
+   "width": 2729,
+   "height": 3638,
+   "aspect": 0.7501,
+   "monochrome": true,
+   "captured": "2025-11-30T02:07:16",
+   "lqip": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAABQBQCdASoUABsAPulgq0+pJSOiMBgIASAdCWkAA+Vw1W938a+Ku6JTm181imST950o16AA/vDfetv7/fqp2xZG9XYS1ubVi/3zQ1xOGH1HgJ9DKrIuzt2/Cjh97ZjJAYY9qspAGDtvP62eVzMpoZlv6WvxVubXxkvv80XkIyZ4vLo5I1MmQUxyLEhybHUbzdPs6ZpTkoW1SXmGcihlddv+T93laukD1UjA903y+ilsIeIreB2xYpJBZXwTiyPnhLm3UnAr4bcr3PymmZpL+ZAAAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "5",
+   "src": "5.jpg",
+   "title": "Stage Light",
+   "category": "Events",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-04-29T00:18:54",
+   "lqip": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAACQBQCdASoUAB4APulmp0+pJaMiKA1RIB0JbAC7AYxPygOmjtQDDkaGlJI/4K+WTHyqEFTwAAD++uiuugJgO5d8WCdi5w1vC6JJfwmVhWOdxsJYZODyJmlKGs97AXnrLKgkMmD5iUPjbtUaDmD4EyhUuFx1Qw7CwsqZdvq2B5TJkNKSiVime1oauEcklhD9vFdT1gL+ArNISCn8UGuRvdVXfUyE/49L+sowad2N48ifcjAanvs+DCgCXABCl7oG/BWg4bHhGAasCCIqAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "47",
+   "src": "47.jpg",
+   "title": "Autumn Friend",
+   "category": "Portraits",
+   "width": 3272,
+   "height": 4908,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-04-30T04:53:02",
+   "lqip": "data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAADwBQCdASoUAB4APulgp00pJaOiMAgBIB0JagC32MhD5zUNF0zU9DLEeJH26iGmstmMSSE/0lXn4AD+wBRsTEy127BmKRGN/aQ5tu6kyWFOZBoW4oSn3ITVDgbiS4jyGDGMlf1/P2TrHZ9cWzeaBm9MsdbjjgaVIYt35TEoQZuTJpT1EMZs409435Of7fHY3mrelwXjXPIbnFGZM20ALXADXGNt2iTrhtWOewa9mDjGkaa/TosggNCpRsI8d6i9C536T0K5KC8Umfd6rxJM/t/o02SVpAMV5rEMBKxzDTC9zDaNrM6lpX3ipYMRGbdYrCMzMiVcUAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "12",
+   "src": "12.jpg",
+   "title": "Rhythm & Soul",
+   "category": "Events",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": true,
+   "captured": "2026-04-29T00:22:37",
+   "lqip": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAABQBQCdASoUAB4APulgpk2pJaMiMBgMASAdCWUAxNmL4Vm2MKb5ENSArnx65K+L3AEh2gAA/vhIz9UN0jyocaZ/GsZIe8ec1Jbz8nopVCSz450Pte5N+UlBBDQi91EOSJWq561CTX+ZIRC+5Mtft1tLtOWJeAbnQYx0gt5Y1jwmZGmynUaqTXQNXQ1nAHcCdmuyWCwmFTxDM5i5wLGVp22aBnkop3P8I+30Ys2A5hMH2dCJUmsAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "46",
+   "src": "46.jpg",
+   "title": "Motion Blur",
+   "category": "Portraits",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-04-30T04:53:06",
+   "lqip": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAABQBgCdASoUAB4APuleqk+pJKOiMBgIASAdCWwAuzlBOdiQBDArgAVo/wwIyMYEKHTtUmuV36db/H9WQAD+9W5SjdjY3EuKAwuxkV/VIlEpeT4AGN1TOiUbISjWWvfQiWp3sZbIkdN0FTBJAFY3FbS4Yw1qtvnZEggHH4VkLSj8usDhPw4qT/CfElEhVTdAD+Xs9TOLRG/mFDULinOMkmTAvOs5xNFvS5tqYwO3ezLXLPVOK/6+5d7UIA1eFa8Zouml//jrld8yzd0MPdLjG4qAAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "10",
+   "src": "10.jpg",
+   "title": "In The Moment",
+   "category": "Events",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-04-29T00:22:37",
+   "lqip": "data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAABwBgCdASoUAB4APulgp00pJaOiMAgBIB0JbACdMoR8P67xE711gB+gADVZ/Ziuq/79GOKIoZ1sU98BKwAA/tAj45X/ACbPdWFZpSPlg7LbTn2un7crG5Ua0xqz3tY/v1SAY08f33PS5D5kWd96f0zuOYksbhyukql9rKj4e8en+3bkcMIvaddusH2SutekD4O47nVz8OkBD6VVlg3jJxke+fNxDkC1WUPL7Jjw4WaldNkkk8RJqTNfZ84b2f05VIr2324vZEgsxsA2eY2v2oAjA4UAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "34",
+   "src": "34.jpg",
+   "title": "Duo in Motion",
+   "category": "Portraits",
+   "width": 6048,
+   "height": 8064,
+   "aspect": 0.75,
+   "monochrome": true,
+   "captured": "2025-11-30T02:10:39",
+   "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASoUABsAPulkqk6pJaOiMBgIASAdCWkAAC51Bc0uI5e4C/vbt4AA/ui4NUbjkAVO7e49Leei+1ren1G0bf58N5+jUzeBqnp19r8GC/eKyxz0x0Fulm6J39HpOCv/6Bu8spVifUahXtg3W0eyCAAAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "79",
+   "src": "79.jpg",
+   "title": "Tailored in Mono",
+   "category": "Portraits",
+   "width": 3877,
+   "height": 5816,
+   "aspect": 0.6666,
+   "monochrome": true,
+   "captured": "2026-08-20T16:08:31",
+   "lqip": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAABwBQCdASoUAB4APulgqE0pJaQiMAgBIB0JaQAOfK0i2U0M15tnmdfYZsxjV3bIlCjIKEVAAP631zhNMxutSrPEthFLQCVv8/37U/r/nUO05FPbCGWwZwoa1/BsaxxTyr+HCKd+xZLw1ly+TCrSnG9bCGYoVxr3X9QzqdFmyoz4DtrdIMwSKZbZFpzaeoqWETWNvNxlLyywXXz0HSl42Wl8yNUpyY6DqjKiYvzwTvmmGmHX1VSG74KZwtjhmagAAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "3",
+   "src": "3.jpg",
+   "title": "Raw Vocals",
+   "category": "Portraits",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": true,
+   "captured": "2026-04-29T00:18:54",
+   "lqip": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAACQBACdASoUAB4APuleqk+pJKOiMBgIASAdCWkACBAGBICLsQsEchfvXO6bQAAA/vhH4c4PtKvO42KxpqLsKiR5uioS7+1oewUu6rdkiZ+yqav6BM8QU8PyfqMwShDWh+dP4TaCIsOEGGFVJO0SuG4MRTFG7GDsOd4fVJpwZ0z27fmYZRAAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "58",
+   "src": "58.jpg",
+   "title": "Sacred Dome",
+   "category": "Street",
+   "width": 4049,
+   "height": 5398,
+   "aspect": 0.7501,
+   "monochrome": true,
+   "captured": "2026-07-01T16:33:53",
+   "lqip": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4IMoAAABQBQCdASoUABsAPulgq08pJSOiMBgIASAdCWkAA+bwshJbSixzX1utIgY0qi90yuwZDAAAeBuSXE7V7Z18o+lyoOHbn7v5rfZPjYwJ2rLPZDfChd6yps7EHE+gOQinwCZZYNDcvslDeQPwYdM6okVy/0X6xV058GFAXvFt6nuMmg/B6jvdqapAvwXPppEyU2ucuAVYOTrtvOrQ/R4XiG8jJpJQdmVTIdcQNUowuksa86NU+537RSD854R7cXAnWIIYS+juG+0iAAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "43",
+   "src": "43.jpg",
+   "title": "Night Tower",
+   "category": "Landscape",
+   "width": 1179,
+   "height": 1338,
+   "aspect": 0.8812,
+   "monochrome": false,
+   "captured": null,
+   "lqip": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAABQBACdASoUABcAPuliqU6pJaOiKA1RIB0JagCsAAyEZJmqwi+pz5s1aizgAP7ytIyhE6xM6x9FjAL82+b2J28lu3Y44OljXV8Drf+H/xKx2DAdtdByNzMMkx/5XoXg6n8+Vlrj6XRpT1xHUev1xx+fX05DtnbcN+XXhu+f2C5j1kvzyvloCOnwyOscWZmqTMkPKAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "45",
+   "src": "45.jpg",
+   "title": "Doorway Visitor",
+   "category": "Street",
+   "width": 1179,
+   "height": 1460,
+   "aspect": 0.8075,
+   "monochrome": true,
+   "captured": null,
+   "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABQBACdASoUABkAPulgq08pJSOiMBgIASAdCWkAACqj66iSdjPc145jI14AAP70Mqp3cHPrxbPBb7jgrm5RJfIfXg3KPYX9R/vamv6DlK9mAZ+KJt/YgEOhbkmPt0sJ5TE7vQnip4EAAAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "22",
+   "src": "22.jpg",
+   "title": "Pink Wings",
+   "category": "Fashion",
+   "width": 5798,
+   "height": 7731,
+   "aspect": 0.75,
+   "monochrome": false,
+   "captured": "2025-11-30T02:09:48",
+   "lqip": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAADQBQCdASoUABsAPuloqlCpJaOiqAqpIB0JbACdOUE5j+ZxICWZgFOP9EBZ0ALmBdgOUvnPrOVAAP7itlpoIXIdnl+Z6lVMrYSIdeHGOzpKWKGjAt/kp7qorI0u3VBNEiHifOcqgi3PmeRwYy/PtO8gyEV77TtXdlydqXyTa6izxbRiLpZgMw5RN5ioYh3JUXLUDS3MpZzrGibjkwbz6BOsO+FmW9ZSlrzTFa8Q/ncrUYkUGAAAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "61",
+   "src": "61.jpg",
+   "title": "Mirror Bridge",
+   "category": "Landscape",
+   "width": 3712,
+   "height": 4949,
+   "aspect": 0.7501,
+   "monochrome": false,
+   "captured": "2026-07-01T16:34:14",
+   "lqip": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAABQBQCdASoUABsAPulgqE0pJaQiMAgBIB0JZgC7HX+qoAW7PxrdBeCrLSN4XeUZTjQtuCAA/vHTRsIZLtKE8PUf/GB6ZMi2qcqIXKjzmnYGau8Xjk+CdnSnuMWKPOdKXwQybIfDdHIggVVJDsPGsQ8DjNlBveQbeHL64fCitia/Tw+Ex5+6JFhpZIK+hXTpSM+PPuCTraYn5bJgeuykGEhjoGWqoBjI+zAANzu1u2vuVRNueP/fmR7+1Bq0FFp1BVKaweAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "17",
+   "src": "17.jpg",
+   "title": "Tropical Canal",
+   "category": "Landscape",
+   "width": 4000,
+   "height": 5600,
+   "aspect": 0.7143,
+   "monochrome": false,
+   "captured": "2025-05-25T01:14:08",
+   "lqip": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAADwBQCdASoUABwAPuleq0+pJKOiMBgIASAdCWMAyF2MvVmhbbk53M7iqpYN68T2B27Nmm7j9Hr+QAD++FLGAqc+XYECZ6CTweBHK+OIBHmYXNULXYy80bXNby5P8wnfpmFQwwZg1qQ/JUhF5rDUpy2RaZC0HfcjZV3lpvmEeorsQ2Yon2kp6YJKx32OoFsj1b1HGtpcoq9tREzR4usVn6TV9zGYDlwzzIj2KwLshKmAGC179P+Oc7Uf+eb4IlVUsBl9Sj+xET3xeXwfQASKYAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "72",
+   "src": "72.jpg",
+   "title": "Molten Horizon",
+   "category": "Landscape",
+   "width": 3041,
+   "height": 4055,
+   "aspect": 0.7499,
+   "monochrome": false,
+   "captured": "2026-08-20T15:06:27",
+   "lqip": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABQBQCdASoUABsAPuVcqk0pJSQiMBgMASAciWgAnTM0QpgPAOSn/BVpdEyfRmYIWKekTgAA/joUvrPbIhQX9nkFPLfBC/M04P/2sewJrIDVv/BBY+zf7sBOPeWVhwII2RJJtOt9CGUlWP99H6zL9+pBlfl/GtigptlnYola2yiD4AAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "21",
+   "src": "21.jpg",
+   "title": "Temple Gopuram",
+   "category": "Landscape",
+   "width": 2198,
+   "height": 2931,
+   "aspect": 0.7499,
+   "monochrome": false,
+   "captured": "2025-05-18T17:53:01",
+   "lqip": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAACwBQCdASoUABsAPuleq0+pJKOiMBgIASAdCWQAgR4NEq2yjIcwmXad6rssKrNExX16n8fOQ8AA/dlkC4UvGrTi6twy1p9xZNFmb8ph5eoQ4Slvr4d0P5Ut3q5YdK6LQiAfTEJel/0EOUVb67kp4U6KU/OS1YZ8Pox4jjcsrqkM3h9sY4Fh39RTp/UORElmjmIYXPg35iNIqwOvqwv1uqu9o8SswAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "2",
+   "src": "2.jpg",
+   "title": "Live Strings",
+   "category": "Events",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-04-29T00:18:53",
+   "lqip": "data:image/webp;base64,UklGRh4BAABXRUJQVlA4IBIBAABQBgCdASoUAB4APulmrFApJSQiqAqpIB0JbAC2+oLVC7ZjPZM+kn6oyJAl92WkMbL6XLE/2C08qhfQAAD++RN07NveYzyxlJejA2CrfbVWWPcO5av6pYKJmUPMqo/l9ZDmct0GuPy5jX1PjKcsgcVViwFUk3pV+PcvE0vRvfnMRENGyYHnvwO5GktGEGA2SKn0/ZCaCyuMW7Wx58ID04xiepmQ6kpkaS28PV4r9xkFGn18ClUJn7IDkgGUwojASHDQrdqKvfnmLOKEsQetH+xO0vh/FePIeEXH4svMYMH1YGkPdIPRlNzJR2H6VNX0TVPkuEIwRmOImHZ/2oRz1SUWrEMntDdW7LHJh6OfgthYAAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "11",
+   "src": "11.jpg",
+   "title": "Joyful Note",
+   "category": "Events",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-04-29T00:22:36",
+   "lqip": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAADQBQCdASoUAB4APulcpU0pJSMiMAgBIB0JbACdMoR8edBxBwwerNPLC8UBLWq6ExwNyW6LFbCAAP7ZBBI2ulpeDoDsdag2uacdNRCXdOVumUMhGYd+YLyWZH+IplDCDWykpJn1G1xEj10fj4NFKvFh/o175K9/AGrCNoSmBeElK3424o/DzRcTTMVISr0jF3cll6Ld5Mg/y9d72fWj1PUUKwbpDFlW6804+lmqhE2VvGoDMLdLsNeopbYm8E6iZ95UbHthUU9/C95wupqAm+6S8S9KBy2oWAe85bGYoAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "82",
+   "src": "82.jpg",
+   "title": "Cobalt Ascent",
+   "category": "Fashion",
+   "width": 4415,
+   "height": 5887,
+   "aspect": 0.75,
+   "monochrome": false,
+   "captured": "2026-08-20T16:08:40",
+   "lqip": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAAAQBQCdASoUABsAPuliqk4pJaQiKA1RIB0JYgCw7D+kb9Y8Ik1te0oUnLNoknTkUHKIAP7BPWsN5Fj7tM73CUVTVwiK1z0q3usNjjt0SACw0VcLBIz/+oRw7K7Lhn5UriYuoYUJTnY/bu3VGQqFIE92/kIn4f9KGyoFQKsgyCNRH1b/Wq/ZXjQ4HEWbNXcCq9/sIM95R44SkWuIoIcw8MKjrRofaNk1qjzKG74E4W0a9sFzNk4Tmo0AAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "66",
+   "src": "66.jpg",
+   "title": "Forest Table",
+   "category": "Landscape",
+   "width": 5117,
+   "height": 3411,
+   "aspect": 1.5001,
+   "monochrome": false,
+   "captured": "2026-07-01T16:34:13",
+   "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACwAwCdASoUAA0APuleqE0pJSOiMAgBIB0JaAAAXunnxNRXQGSiUAD+J32V/XTg/dtN3IAreYVcK3ZIFa53+9e9kkei3JZyN39VnWhFtvX3HP/+Tl2jxr5658vk+4G0FgNuQJqk3QXxHIq0k5tG6Yh8JmjZQWKUCB/A4AAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "50",
+   "src": "50.jpg",
+   "title": "Snow Watch",
+   "category": "Portraits",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-04-30T04:53:03",
+   "lqip": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAADwBQCdASoUAB4APulmrk+pJaQiKAqpIB0JZQDDN/AHhy4GDiVRx9QM8L1igl9koYndtS1Z73J4gAD+J6Z531X00ajaOSeksmPHYsEUB/pR6jERKjtRlQrrIPoT0s1ry60xXZd1EEXMrhJvkyPZzSe2UWgbO/fcRUUn96g3hZp2WqxxP6dDZII/q6Y8Ppjm1H4yHjVDbrPfWwi8+UKLUPqn3QyTHZYFMmLQJYCWrNWm0EGSTlK5LhrH0ZGo4UwuJ2tlN6DSx4YG1UMim33Xio8tpLn2UKLJIYswLBYyxmgJEy/RuQSj1pThJJgQ8AAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "81",
+   "src": "81.jpg",
+   "title": "Cobalt Gaze",
+   "category": "Fashion",
+   "width": 2875,
+   "height": 3833,
+   "aspect": 0.7501,
+   "monochrome": false,
+   "captured": "2026-08-20T16:08:32",
+   "lqip": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACQBQCdASoUABsAPulkqU0pJaQiMAgBIB0JQBOgA3azdn+310JIElPfZVPtsBi4CxX71I5vwAD+v3ZvP+8CkHnVrcx/KQakjUVIEBlVUdRgzBadehO7SWwsB5AGII9ebFgaWxwB2a+txML3sZkqJa4vRTQoZs+vcjRF2A9/JBG5em9prpcRk0vFnRrm8ZSwzO7Q5rdLVsw/jUl3RajhZxcT2M3jwwPbrhGtRlkXP1bTaDtG99Oa79bSDn3GfriGYgAAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "76",
+   "src": "76.jpg",
+   "title": "Acoustic Blue",
+   "category": "Events",
+   "width": 4000,
+   "height": 5328,
+   "aspect": 0.7508,
+   "monochrome": false,
+   "captured": "2026-07-16T21:02:11",
+   "lqip": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAADwBQCdASoUABsAPulmqE8pJaOiKA1RIB0JbACxHyS+Q0dLlAilmyjaXcK80fRuUr9VRHPwvzm0AAD++cXSnkguIbJAptCFlevWn4hFlK7Giv24TT0OimeFz1wgE/4yEBn+kkihC+xRRvQehXaUWL7owvlwat19bJ3lNmIatrlg12c91/BXw3KI2LpTZ0NkkPLmUFG/+g+GSjLrh/Bj4ORHCbXzoyLij0mBn6pDpZT5gjY2Rnc5VS5+AAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "14",
+   "src": "14.jpg",
+   "title": "Amber Silhouette",
+   "category": "Fashion",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-04-29T00:22:38",
+   "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAABwBQCdASoUAB4APulgq0+pJSOiMBgIASAdCWwAnTKEdlhBHoY+pUvVOrjcITjnA5td9nu0AP7u2QYCjmoQ4qpqv55yC9clZ3uX7q8OcFnfF155dkQNbCdo/P/gyPei/u8rJr4C+NzdeoMdbKv4gjZyB+7ulqojoWpC+iPBDckIEcGlmhmlbxt7L0OOlSbENkFBfRLhafFeQuG3m2oyS3s5G7O0d8qJDVaCCEsG8XgAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "51",
+   "src": "51.jpg",
+   "title": "DUMBO View",
+   "category": "Street",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-04-30T04:53:04",
+   "lqip": "data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAADwBQCdASoUAB4APuloqU6pJiOiMBgIASAdCUAVhmzln46Fb5CxgeueDjpewY0azGISdhuIB0u6AAD+4YXsh08vhEy/La8U26nFhmj1e6Olmo4Snx+Y9ZDzCMytUwm5u9XJ2AfFZ9yV1g3wf8hLEpOKYzdeTu+Gt7SrNLC8iP8UkeJ1/P/6A3+WaAOdODLk9cD7aBmHEe1qZJ8aj4FuCBi+e10Dc2vqAmu9q4FihwL3gpsZSFNHkm6iFPMeK/EGoqk1aM293/zbHtWUkmwat5yeUA+aiq84/mw8h8Quvw8Ix7aGBUFXqxxsZT1CqpDZu9E2Qn6hsYXUIAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "60",
+   "src": "60.jpg",
+   "title": "Dark Crossing",
+   "category": "Landscape",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-07-01T16:34:08",
+   "lqip": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAABwBQCdASoUAB4APulmrVApJSQiqAqpIB0JaAC22f/gXkBU1QinhFxXyEyqwfxCKOXkeEYAAP735rc6z+qIhW/0KeZSiV47JWDR5u1ADSTVWgeow/2NJlGLAli5vyy75XzQa9dqEiMYfrXJR9X9WO96r2+l+QkLGE6lqay5f9HLf+4asxBVKnwQUO+3ge0AG3BF1wEQQZUcqB0+HpuGqsunNnkPj4DKGdSLrgQOyPC5iZWE4N3y+CUeFFq3WpI8XZ82rHtgpXUAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "69",
+   "src": "69.jpg",
+   "title": "Forest Macaque",
+   "category": "Wildlife",
+   "width": 2553,
+   "height": 3404,
+   "aspect": 0.75,
+   "monochrome": false,
+   "captured": "2026-08-20T15:06:15",
+   "lqip": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAADQBQCdASoUABsAPulmr0+pJaSiKAqpIB0JagALACKFCT0+DbatMmTE1bjW82BsMX5F/jK6tlsAAP7ystbXja5d9THeai4pHEM+KrKiiaQh198/9RrVwU/TBd2+YlkFAMSO1GKyyOWODbHE6n+2TYMBg+QyTgPSnJv17Mni5vofvxm7urYYwwjUyJ0dtC2OecbarlSe905/vYZOcaJxWGBCImNRBXex3zz0bsqHdszAWoRKi8EJkJ/iAHiIOyiAQKW8Jxd8/bV6VDOnJJgAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "77",
+   "src": "77.jpg",
+   "title": "Center Stage",
+   "category": "Events",
+   "width": 3712,
+   "height": 5568,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-07-16T21:02:10",
+   "lqip": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAACwBACdASoUAB4APulsrlGpJaQiqAgBIB0JYwDLLFbPycSgfp3CL8r+yuIPs8tAAP78qG9j76f8wFBVIz5vb4Z+6N27Mn9atDFiXNxcAAmONADuu7k83zvhvRuuGEPZwVt5PnD1y0Qo9lOTAEK6ibsHTkBIfr2mQR48p47dd2yuPkeNf/bHPpo6ruI0F7Mvv4aL0ljj4+kJAWahCIgtQ9VlwAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "13",
+   "src": "13.jpg",
+   "title": "Golden Voice",
+   "category": "Portraits",
+   "width": 3712,
+   "height": 4949,
+   "aspect": 0.7501,
+   "monochrome": true,
+   "captured": "2026-04-29T00:22:38",
+   "lqip": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACQBACdASoUABsAPuVapk0pJSOiN/VYASAciWMAx+RFX8QRe2ZbBk2tRzaUb3AA/vm8qeCSO2C4jKSXPLw5HZn3LGpLSUdALkoiHOYQBFbDUtE+OB8u0iBGy+CBE9+iTnBoteGsBh/IKN61+8UDhJ0gx3ifR/BvJv57PsI1ZUGthAQAAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "65",
+   "src": "65.jpg",
+   "title": "Pine Curve",
+   "category": "Landscape",
+   "width": 5568,
+   "height": 3712,
+   "aspect": 1.5,
+   "monochrome": false,
+   "captured": "2026-07-01T16:34:17",
+   "lqip": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwAwCdASoUAA0APulgqE0pJaOiMAgBIB0JZAB3AASbwA/DTt3jmuvAAP7B1Zn6RrX0iF3pXbFsHH8Z0kOQnY/hIezQZyOhMiiz/pxf58SttAOn74CP/p9I+Jn3HTWDW1jdnhbco1wBO1lQZ9HcLnXogk/rYAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "44",
+   "src": "44.jpg",
+   "title": "Rapid Service",
+   "category": "Street",
+   "width": 1179,
+   "height": 1451,
+   "aspect": 0.8125,
+   "monochrome": false,
+   "captured": null,
+   "lqip": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAADwBACdASoUABkAPulsrlGpJaQiqAgBIB0JQBdgZYAbFN+SaXChutnBCLNGhzHxDXAA/pvKhtYKCcIqaB84DlO7744GmFn13PWIv3o99HEgjtvQm0b1+qvYFW809cmKWxV7/RAtfyGv01dvVLm5DPQiCrUt61beX0j6sFAZwpnPbf4PzdkYZ6GX+abWz4nS+Up6RRec6nsmx0et3VBfWze88kxJbvO3624tficRo57pmv1h63A9mtJm/FXzIEhkqaFkvbwkqwAAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "8",
+   "src": "8.jpg",
+   "title": "Dancer's Gaze",
+   "category": "Portraits",
+   "width": 1080,
+   "height": 1920,
+   "aspect": 0.5625,
+   "monochrome": false,
+   "captured": "2026-04-29T00:24:15",
+   "lqip": "data:image/webp;base64,UklGRiYBAABXRUJQVlA4IBoBAAAQBwCdASoUACQAPulqqlEpJaOipWzJIB0JbADGq6EMAFQKUXXEY4cSDKsDmkwJteqPOFeSyK4r2vve5RNLIUtuwAD++ltcn/OBJIdyWJa09XG0hquGtXVtLNxhMELrHISrRNThuawnIBOmKvrGMHX9EkWtBj+zqt/O3MLIsQ0QYVGUaP8I1/jkg901vTpU/TXKbb+aOM2DdAMhJbD3t3o455tY6G+ggTkzvXH/3igqoaA+H0Ve9WcSHC5VmFhN06dZ5BrU8XNZiZMPeVNzOHJkV/UW6fdZi2ACvcdFURDscbtAW/i07+XV/XsQjrT5ZlTauLldW5Xd/e7kcT07B72xHWaC2vOwHEHIichR6qWJSplFHiFF7IgAAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "71",
+   "src": "71.jpg",
+   "title": "Curved Glass",
+   "category": "Street",
+   "width": 2597,
+   "height": 3462,
+   "aspect": 0.7501,
+   "monochrome": false,
+   "captured": "2026-08-20T15:06:17",
+   "lqip": "data:image/webp;base64,UklGRi4BAABXRUJQVlA4ICIBAACwBgCdASoUABsAPulorFApJaQiqAqpIB0JZQC3vAnYub6jHophnj3+Wv9qGHqDLKokpgfqry7i2hj4K8QQMAD+Kywa783QF0npXhYUphbUKp2rzVOXBU17kWxAV3m9kYmeSApSV9aQzSaTCaf3kgaYkci1zzdAgzmkLkA5hcjGgItfo8vcEpeYv1swVIdvk/S2Om63Cy81tD2aGo9xWrrcU4Vpuo7RtJlrnAu9AuIraB7SJ00cFPGBAi8VuA55//HQUyxT05gI8c4m+1oOAYtx1X1vo4vvR35t/R/BL14Xx9pE3Sz4N3liR21RZYw1nwHfEUtEhQuFLAyvnhMgjt0SiAwuHLP46MM0s/On9/rtz8iKwBOh8fgrjmoyiue0zAvAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "80",
+   "src": "80.jpg",
+   "title": "Cobalt Poise",
+   "category": "Fashion",
+   "width": 4672,
+   "height": 7008,
+   "aspect": 0.6667,
+   "monochrome": false,
+   "captured": "2026-08-20T16:08:29",
+   "lqip": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBQCdASoUAB4APulkqU6pJaOiKA1RIB0JYgC3uDzSORsFTWB8+9EqYwKh7bqtKFZAAP7swTl7SguxBIuAyhJQKDdPaXHzaTle5rChvQQwYE9Oid2BQp7dUwVy0Gw98EmJP6nKB0Q82SqiO0Hqbopt+Jh9Yrut25OtCk2tWdeoK3QDxwwbtGyE9ku7i/OWyqm8nWvZdWlNqD0FYEWzfWcPWu8AAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "73",
+   "src": "73.jpg",
+   "title": "Sentinel at Sunset",
+   "category": "Wildlife",
+   "width": 1558,
+   "height": 2078,
+   "aspect": 0.7498,
+   "monochrome": false,
+   "captured": "2026-08-20T15:06:27",
+   "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAACQBQCdASoUABsAPulmrVApJSQiqAqpIB0JbACdMuN5n5nEmACuw1N3/i508ZW21s/U+PxEwAD+0AfsmVv15XdYwWu/LgzzY3o3cXrNuku/eljGEgfcVKOf6FRTIne50fqR5lm1GmKN5J8jZ5PXfbl+fI2S8Vbn8jVKmX4NBVd5W6PkuJknWscYMnWus+uppJmDfWf2L1duwaOAAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "15",
+   "src": "15.jpg",
+   "title": "Sunset Shore",
+   "category": "Landscape",
+   "width": 2899,
+   "height": 3865,
+   "aspect": 0.7501,
+   "monochrome": false,
+   "captured": "2025-06-01T23:12:44",
+   "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBQCdASoUABsAPt1eo00opSMiMAwBEBuJZgCdM1XC+/Kvo+kExeZXfb+fqYPavn/qXAD4oBiHSYvRX0sMWnTbcuPA9UvlMyniLwEQHC2ioFC7Fp94PQRF0KqqTBB/YYWPPvoqCdWha6LJbQ+r12AAAAA=",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "9",
+   "src": "9.jpg",
+   "title": "Red Glow",
+   "category": "Events",
+   "width": 1811,
+   "height": 2414,
+   "aspect": 0.7502,
+   "monochrome": false,
+   "captured": "2026-04-29T00:22:37",
+   "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACQBQCdASoUABsAPulmrk+pJSSiKAqpIB0JbACdMxx4GBTkOjPSmVXHX2q6LnuaNey6IxyiAAD+uK7baeTozXjUIEs4YyiJwrU68Dlg8GJESPVEBzkZsEgPVX5sQ/Li9F//iHKUAsSUsgjBdukJ/CTerKeH14RZ8yZ/pb1DxqrbpZgjhnitV5jJrb45+mAQfaUhymhqTJx0o+DYvE8TL+vSYRiTmfac7xKNXAAA",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  },
+  {
+   "id": "38",
+   "src": "38.jpg",
+   "title": "Still Waters",
+   "category": "Landscape",
+   "width": 1280,
+   "height": 960,
+   "aspect": 1.3333,
+   "monochrome": false,
+   "captured": "2026-07-01T16:34:12",
+   "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAwCdASoUAA8APulgqE2pJaQiMAgBIB0JYwAAXqcZSpgnJaZrBsAA/ZgW9UKJAL8aivr8wjgck1nmOmWEWWjV9DMmvmv9zd7TTbGJzV7L3CaMaM7PQvp5hm/BV+cbtVQAAA==",
+   "widths": [
+    400,
+    800,
+    1200
+   ]
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+# Build inputs and the internal rating report are not part of the site.
+/tools/*    /404.html  404
+/content/*  /404.html  404
+/Photos/*   /404.html  404
+
+# Netlify / Cloudflare Pages: client-side routes fall through to the app shell
+# so /portfolio, /about and /contact are all directly linkable.
+/*  /index.html  200

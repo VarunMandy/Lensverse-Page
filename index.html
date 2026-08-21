@@ -8,23 +8,23 @@
 <meta name="author" content="Varun Mandepudi">
 <meta name="theme-color" content="#0a0a0c">
 <meta name="color-scheme" content="dark light">
-<meta id="site-url" name="site-url" content="https://lensverse.photography">
-<link rel="canonical" href="https://lensverse.photography/">
+<meta id="site-url" name="site-url" content="https://varunmandy.github.io/Lensverse-Page">
+<link rel="canonical" href="https://varunmandy.github.io/Lensverse-Page/">
 
 <!-- Social preview -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Lensverse Photography">
 <meta property="og:title" content="Lensverse Photography — Varun Mandepudi, Boston">
 <meta property="og:description" content="Portrait, fashion, event, street and landscape photography by Varun Mandepudi, based in Boston, Massachusetts.">
-<meta property="og:url" content="https://lensverse.photography/">
-<meta property="og:image" content="https://lensverse.photography/og-image.jpg">
+<meta property="og:url" content="https://varunmandy.github.io/Lensverse-Page/">
+<meta property="og:image" content="https://varunmandy.github.io/Lensverse-Page/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="A Lensverse photograph of a city skyline at dusk.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lensverse Photography — Varun Mandepudi, Boston">
 <meta name="twitter:description" content="Portrait, fashion, event, street and landscape photography, Boston MA.">
-<meta name="twitter:image" content="https://lensverse.photography/og-image.jpg">
+<meta name="twitter:image" content="https://varunmandy.github.io/Lensverse-Page/og-image.jpg">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="favicon.svg">
@@ -49,7 +49,10 @@
      browsers still fetch a hidden <img> that has a real src. -->
 <script>
   (function () {
-    if (location.pathname.replace(/\/+$/, "") !== "") return;
+    // Runs before app.js, so it cannot use its BASE. Checking the last path
+    // segment works at a domain root and under a project subpath alike.
+    var seg = location.pathname.replace(/\/+$/, "").split("/").pop().toLowerCase();
+    if (seg === "portfolio" || seg === "about" || seg === "contact") return;
     var l = document.createElement("link");
     l.rel = "preload";
     l.as = "image";
@@ -72,11 +75,11 @@
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://lensverse.photography/#varun",
+      "@id": "https://varunmandy.github.io/Lensverse-Page/#varun",
       "name": "Varun Mandepudi",
       "jobTitle": "Photographer",
       "alternateName": "Lensverse",
-      "url": "https://lensverse.photography/",
+      "url": "https://varunmandy.github.io/Lensverse-Page/",
       "email": "lensverse1@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -90,19 +93,19 @@
     },
     {
       "@type": "WebSite",
-      "@id": "https://lensverse.photography/#site",
-      "url": "https://lensverse.photography/",
+      "@id": "https://varunmandy.github.io/Lensverse-Page/#site",
+      "url": "https://varunmandy.github.io/Lensverse-Page/",
       "name": "Lensverse Photography",
       "inLanguage": "en",
-      "publisher": { "@id": "https://lensverse.photography/#varun" }
+      "publisher": { "@id": "https://varunmandy.github.io/Lensverse-Page/#varun" }
     },
     {
       "@type": "ImageGallery",
       "name": "Lensverse — Selected Work",
-      "url": "https://lensverse.photography/portfolio",
+      "url": "https://varunmandy.github.io/Lensverse-Page/portfolio",
       "about": "Portrait, fashion, event, street and landscape photography",
-      "isPartOf": { "@id": "https://lensverse.photography/#site" },
-      "creator": { "@id": "https://lensverse.photography/#varun" }
+      "isPartOf": { "@id": "https://varunmandy.github.io/Lensverse-Page/#site" },
+      "creator": { "@id": "https://varunmandy.github.io/Lensverse-Page/#varun" }
     }
   ]
 }

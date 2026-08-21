@@ -78,6 +78,28 @@
     },
   };
 
+  /* The directory the site is deployed under.
+
+     At a domain root this is "/". On a GitHub Pages *project* site it is
+     "/<repo>/" — and getting this wrong is not a cosmetic bug: pushState to a
+     root-absolute "/portfolio" moves the document out of the deploy directory,
+     after which every relative asset URL (media/…, photos.json) resolves
+     against the wrong origin path and 404s.
+
+     Detected once, at load, before anything calls pushState. */
+  const BASE = (() => {
+    if (location.protocol === "file:") return "";
+    const segs = location.pathname.split("/").filter(Boolean);
+    // a trailing filename (index.html, 404.html) is not part of the base
+    if (segs.length && segs[segs.length - 1].includes(".")) segs.pop();
+    // nor is a trailing route name
+    if (segs.length && ROUTES[segs[segs.length - 1].toLowerCase()]) segs.pop();
+    return segs.length ? `/${segs.join("/")}/` : "/";
+  })();
+
+  /** Resolve a project-relative asset path against the deploy directory. */
+  const asset = (path) => (BASE === "" ? path : BASE + path);
+
   const Router = {
     useHash: location.protocol === "file:",
     current: null,
@@ -99,16 +121,32 @@
     },
 
     read() {
-      const raw = this.useHash
-        ? location.hash.replace(/^#\/?/, "")
-        : location.pathname.replace(/^\/+|\/+$/g, "");
+      let raw;
+      if (this.useHash) {
+        raw = location.hash.replace(/^#\/?/, "");
+      } else {
+        raw = location.pathname;
+        if (BASE !== "/" && raw.toLowerCase().startsWith(BASE.toLowerCase())) {
+          raw = raw.slice(BASE.length);
+        }
+        raw = raw.replace(/^\/+|\/+$/g, "");
+      }
       const name = raw.split("/")[0].toLowerCase();
       return ROUTES[name] ? name : "home";
     },
 
+    /** URL to navigate to — includes the deploy directory. */
     href(route) {
       if (this.useHash) return route === "home" ? "#/" : `#/${route}`;
-      return route === "home" ? "/" : `/${route}`;
+      return route === "home" ? BASE : BASE + route;
+    },
+
+    /** Canonical route segment, relative and with no leading slash.
+        A leading slash would make new URL() discard any path already in the
+        site URL, so ".../Lensverse-Page" + "/portfolio" would collapse to
+        "/portfolio" and the canonical would point at the wrong page. */
+    routeSlug(route) {
+      return route === "home" ? "" : route;
     },
 
     go(route) {
@@ -168,7 +206,11 @@
       $('meta[property="og:title"]')?.setAttribute("content", meta.title);
       $('meta[property="og:description"]')?.setAttribute("content", meta.description);
 
-      const canonicalUrl = new URL(this.href(route), $("#site-url")?.content || location.origin).href;
+      // Trailing slash matters: it makes the site URL a directory to resolve
+      // the route segment against, rather than a file to replace.
+      const siteRoot =
+        ($("#site-url")?.content || location.origin).replace(/\/+$/, "") + "/";
+      const canonicalUrl = new URL(this.routeSlug(route), siteRoot).href;
       $('link[rel="canonical"]')?.setAttribute("href", canonicalUrl);
       $('meta[property="og:url"]')?.setAttribute("content", canonicalUrl);
 
@@ -213,7 +255,7 @@
       if (!this.promise) {
         // Default caching so the <link rel="preload"> in the head is reused;
         // freshness is handled by the Cache-Control header on photos.json.
-        this.promise = fetch("photos.json").then((res) => {
+        this.promise = fetch(asset("photos.json")).then((res) => {
           if (!res.ok) throw new Error(`photos.json responded ${res.status}`);
           return res.json();
         });
@@ -594,7 +636,7 @@
     },
 
     tile(photo, index) {
-      const dir = this.data.mediaDir;
+      const dir = asset(this.data.mediaDir);
       const eager = index < 6;
 
       const srcset = (ext) => this.data.gridWidths
@@ -706,7 +748,7 @@
     show() {
       const photo = Gallery.visible[this.index];
       if (!photo) return;
-      const dir = Gallery.data.mediaDir;
+      const dir = asset(Gallery.data.mediaDir);
 
       $("#lb-avif").srcset = `${dir}/${photo.id}-full.avif`;
       $("#lb-webp").srcset = `${dir}/${photo.id}-full.webp`;

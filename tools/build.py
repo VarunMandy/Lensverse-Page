@@ -59,7 +59,7 @@ AVIF_SPEED = 6
 WEBP_QUALITY = 78
 JPEG_QUALITY = 82
 
-SITE_URL = "https://lensverse.photography"  # used for sitemap + og:url
+SITE_URL = "https://varunmandy.github.io/Lensverse-Page"  # used for sitemap + og:url
 
 
 def slugify(name: str) -> str:

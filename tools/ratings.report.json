@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-20T17:01:40",
+ "generated": "2026-08-21T09:42:13",
  "note": "Internal. Decides gallery order; never served to the browser.",
  "weights": {
   "sharpness": 18,

@@ -199,8 +199,29 @@ Push the folder. Config for the three common hosts is committed:
 - **GitHub Pages** — `404.html` is a build-generated copy of `index.html`, which
   is how Pages resolves client-side routes
 
-Set the real domain in one place, `SITE_URL` in `tools/build.py`, then rebuild —
-it feeds the sitemap and the canonical/OG URLs.
+Currently live at **https://varunmandy.github.io/Lensverse-Page/**.
+
+### Deploy directory
+
+GitHub Pages *project* sites are served from `/<repo>/`, not the domain root.
+`assets/app.js` detects that at load (`BASE`) and every route and asset URL is
+built from it, so the same files work at a root and under a subpath — verified
+against `/`, `/Lensverse-Page/` and nested paths. Do not replace those with
+root-absolute paths: pushing to a bare `/portfolio` moves the document out of
+the deploy directory and every relative `media/…` URL then 404s.
+
+`.nojekyll` is present so Pages copies the tree verbatim instead of running it
+through Jekyll (which ignores `_`-prefixed paths and adds minutes to a build
+with 700 media files).
+
+### Moving to a custom domain
+
+Two places, then rebuild:
+
+1. `SITE_URL` in `tools/build.py` — feeds the sitemap, robots.txt and og:image
+2. the absolute URLs in `index.html` (canonical, `og:url`, `#site-url`, JSON-LD)
+
+The router needs no change; it derives the base from wherever it is served.
 
 ⚠️ GitHub Pages has no deny rules, so `/tools/ratings.report.json` would be
 publicly readable there. If you deploy to Pages and want the scores private,

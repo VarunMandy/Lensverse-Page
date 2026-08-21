@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lensverse.photography/sitemap.xml
+Sitemap: https://varunmandy.github.io/Lensverse-Page/sitemap.xml

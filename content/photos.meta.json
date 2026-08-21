@@ -33,7 +33,7 @@
     "26.jpg": { "title": "Neon Bloom", "category": "Fashion" },
     "27.jpg": { "title": "Emerald Flame", "category": "Fashion" },
     "28.jpg": { "title": "Desert Prince", "category": "Fashion" },
-    "29.jpg": { "title": "Purple Halo", "category": "Portraits" },
+    "29.jpg": { "title": "Purple Halo", "category": "Fashion" },
     "30.jpg": { "title": "Blue Blossom", "category": "Fashion" },
     "31.jpg": { "title": "Lotus Glow", "category": "Fashion" },
     "32.jpg": { "title": "Crimson Fire", "category": "Fashion" },
@@ -80,8 +80,8 @@
     "77.jpg": { "title": "Center Stage", "category": "Events" },
     "78.jpg": { "title": "Gopuram Skyward", "category": "Landscape" },
     "79.jpg": { "title": "Tailored in Mono", "category": "Portraits" },
-    "80.jpg": { "title": "Cobalt Poise", "category": "Fashion" },
-    "81.jpg": { "title": "Cobalt Gaze", "category": "Fashion" },
-    "82.jpg": { "title": "Cobalt Ascent", "category": "Fashion" }
+    "80.jpg": { "title": "Cobalt Poise", "category": "Portraits" },
+    "81.jpg": { "title": "Cobalt Gaze", "category": "Portraits" },
+    "82.jpg": { "title": "Cobalt Ascent", "category": "Portraits" }
   }
 }

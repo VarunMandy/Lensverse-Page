@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-21T09:42:13",
+ "generated": "2026-08-21T10:02:53",
  "note": "Internal. Decides gallery order; never served to the browser.",
  "weights": {
   "sharpness": 18,
@@ -40,7 +40,7 @@
    "rank": 2,
    "src": "29.jpg",
    "title": "Purple Halo",
-   "category": "Portraits",
+   "category": "Fashion",
    "rating": 93.9,
    "boost": 0.0,
    "breakdown": {
@@ -1030,7 +1030,7 @@
    "rank": 57,
    "src": "82.jpg",
    "title": "Cobalt Ascent",
-   "category": "Fashion",
+   "category": "Portraits",
    "rating": 73.1,
    "boost": 0.0,
    "breakdown": {
@@ -1084,7 +1084,7 @@
    "rank": 60,
    "src": "81.jpg",
    "title": "Cobalt Gaze",
-   "category": "Fashion",
+   "category": "Portraits",
    "rating": 72.0,
    "boost": 0.0,
    "breakdown": {
@@ -1300,7 +1300,7 @@
    "rank": 72,
    "src": "80.jpg",
    "title": "Cobalt Poise",
-   "category": "Fashion",
+   "category": "Portraits",
    "rating": 65.7,
    "boost": 0.0,
    "breakdown": {

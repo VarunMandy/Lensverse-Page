@@ -48,6 +48,8 @@ MEDIA = ROOT / "media"
 META = ROOT / "content" / "photos.meta.json"
 MANIFEST = ROOT / "photos.json"
 RATINGS_REPORT = ROOT / "tools" / "ratings.report.json"
+PROJECTS_META = ROOT / "content" / "projects.meta.json"
+PROJECTS_MANIFEST = ROOT / "projects.json"
 
 GRID_WIDTHS = (400, 800, 1200)
 LIGHTBOX_EDGE = 2000
@@ -199,6 +201,43 @@ def build_portrait(name: str) -> dict | None:
     return info
 
 
+def natural_key(name: str):
+    """01.jpg before 10.jpg, and Untitled-2 before Untitled-10."""
+    m = re.search(r"(\d+)", Path(name).stem)
+    return (int(m.group(1)) if m else 0, name.lower())
+
+
+def load_projects() -> list[dict]:
+    """Read project definitions and resolve each one's photo list.
+
+    A project is a *sequence*, so photos stay in filename order. The rating
+    engine is only consulted to pick a cover when none is named.
+    """
+    if not PROJECTS_META.exists():
+        return []
+    data = json.loads(PROJECTS_META.read_text(encoding="utf-8"))
+    projects = []
+    for spec in data.get("projects", []):
+        if spec.get("slug", "").startswith("_"):
+            continue
+        folder = PHOTOS / spec["folder"]
+        if not folder.is_dir():
+            print(f"warning: project '{spec['slug']}' folder not found: {folder}")
+            continue
+        files = sorted((p.name for p in folder.iterdir()
+                        if p.is_file() and p.suffix.lower() in
+                        {".jpg", ".jpeg", ".png", ".webp"}),
+                       key=natural_key)
+        if not files:
+            print(f"warning: project '{spec['slug']}' has no images")
+            continue
+        if spec.get("inGallery"):
+            print(f"warning: project '{spec['slug']}' sets inGallery, which is not "
+                  f"wired up yet — its photos appear on the project page only")
+        projects.append({**spec, "files": files, "dir": folder})
+    return projects
+
+
 def write_sitemap(routes: list[str]) -> None:
     today = time.strftime("%Y-%m-%d")
     urls = "\n".join(
@@ -266,6 +305,8 @@ def main() -> int:
         if stale:
             print(f"cleaned {stale} stale file(s) from media/")
 
+    projects = load_projects()
+
     # ---- 1. rate ---------------------------------------------------------
     print(f"rating {len(names)} photos ...")
     scored = []
@@ -285,39 +326,65 @@ def main() -> int:
         seen.add(slug)
         slugs[name] = slug
 
+    # Project photos are scored separately: they are ranked only against their
+    # own project, so a cover choice is not skewed by the main gallery.
+    for proj in projects:
+        print(f"rating project '{proj['slug']}' ({len(proj['files'])} photos) ...")
+        pscored = [analyse(proj["dir"] / f) for f in proj["files"]]
+        normalise(pscored)
+        proj["scored"] = {s.file: s for s in pscored}
+        proj["slugs"] = {f: f"{proj['slug']}-{Path(f).stem}" for f in proj["files"]}
+
     # ---- 2. encode -------------------------------------------------------
+    # Every derivative, gallery and project alike, keyed by (project slug or
+    # None, filename) so the two namespaces cannot collide.
     derived: dict = {}
+    jobs = [(None, n, PHOTOS / n, slugs[n]) for n in names]
+    for proj in projects:
+        jobs += [(proj["slug"], f, proj["dir"] / f, proj["slugs"][f])
+                 for f in proj["files"]]
+
     if args.manifest_only:
         # Carry the LQIP placeholders and width lists over from the previous
-        # manifest -- they describe files we are deliberately not re-encoding,
+        # manifests -- they describe files we are deliberately not re-encoding,
         # so dropping them would silently regress the grid to blank frames.
+        reused = 0
         if MANIFEST.exists():
             previous = json.loads(MANIFEST.read_text(encoding="utf-8"))
             for entry in previous.get("photos", []):
                 if entry.get("lqip"):
-                    derived[entry["src"]] = {"lqip": entry["lqip"],
-                                            "widths": entry.get("widths", list(GRID_WIDTHS))}
-            print(f"skipping encode (--manifest-only); reused {len(derived)} placeholders")
-        else:
-            print("skipping encode (--manifest-only); no previous manifest to reuse")
+                    derived[(None, entry["src"])] = {
+                        "lqip": entry["lqip"],
+                        "widths": entry.get("widths", list(GRID_WIDTHS))}
+                    reused += 1
+        if PROJECTS_MANIFEST.exists():
+            prev = json.loads(PROJECTS_MANIFEST.read_text(encoding="utf-8"))
+            for p in prev.get("projects", []):
+                for entry in p.get("photos", []):
+                    if entry.get("lqip"):
+                        derived[(p["slug"], entry["src"])] = {
+                            "lqip": entry["lqip"],
+                            "widths": entry.get("widths", list(GRID_WIDTHS))}
+                        reused += 1
+        print(f"skipping encode (--manifest-only); reused {reused} placeholders")
     else:
-        print(f"encoding derivatives with {args.jobs} workers ...")
+        print(f"encoding {len(jobs)} images with {args.jobs} workers ...")
         t0 = time.time()
         done = 0
         with ProcessPoolExecutor(max_workers=args.jobs) as pool:
-            futures = {pool.submit(encode_one, str(PHOTOS / n), slugs[n]): n
-                       for n in names}
+            futures = {pool.submit(encode_one, str(path), slug): (owner, name)
+                       for owner, name, path, slug in jobs}
             for fut in as_completed(futures):
-                name = futures[fut]
+                key = futures[fut]
                 try:
-                    derived[name] = fut.result()
+                    derived[key] = fut.result()
                 except Exception as exc:
-                    print(f"  !! {name}: {exc}")
+                    print(f"  !! {key[1]}: {exc}")
                 done += 1
-                if done % 5 == 0 or done == len(names):
+                if done % 5 == 0 or done == len(jobs):
                     rate = done / max(0.001, time.time() - t0)
-                    eta = (len(names) - done) / max(rate, 1e-6)
-                    print(f"  {done}/{len(names)}  ({rate:.2f}/s, eta {eta:.0f}s)",
+                    eta = (len(jobs) - done) / max(rate, 1e-6)
+                    print(f"  {done}/{len(jobs)}  ({rate:.2f}/s, eta {eta:.0f}s)",
                           flush=True)
         print(f"encoded in {time.time() - t0:.0f}s")
 
@@ -370,7 +437,7 @@ def main() -> int:
     for entry in ranked:
         name = entry["src"]
         s = by_name[name]
-        d = derived.get(name)
+        d = derived.get((None, name))
         photos.append({
             "id": slugs[name],
             "src": name,
@@ -400,6 +467,54 @@ def main() -> int:
     }
     MANIFEST.write_text(json.dumps(manifest, indent=1), encoding="utf-8")
 
+    # ---- 5b. projects manifest ------------------------------------------
+    # Sequence order, never rating order. The cover is the only place a score
+    # is consulted, and it is not published.
+    project_out = []
+    for proj in projects:
+        photos_out = []
+        for f in proj["files"]:
+            s = proj["scored"][f]
+            d = derived.get((proj["slug"], f))
+            photos_out.append({
+                "id": proj["slugs"][f],
+                "src": f,
+                "width": s.width,
+                "height": s.height,
+                "aspect": round(s.width / max(1, s.height), 4),
+                "monochrome": s.monochrome,
+                "lqip": (d or {}).get("lqip"),
+                "widths": (d or {}).get("widths", list(GRID_WIDTHS)),
+            })
+
+        cover = proj.get("cover")
+        if cover not in proj["files"]:
+            if cover:
+                print(f"warning: project '{proj['slug']}' cover '{cover}' is not in "
+                      f"the folder — falling back to the highest-rated frame")
+            cover = max(proj["files"], key=lambda f: proj["scored"][f].score)
+        cover_id = proj["slugs"][cover]
+
+        project_out.append({
+            "slug": proj["slug"],
+            "title": proj.get("title") or proj["slug"],
+            "subtitle": proj.get("subtitle") or "",
+            "summary": proj.get("summary") or "",
+            "count": len(photos_out),
+            "cover": cover_id,
+            "coverAspect": next(p["aspect"] for p in photos_out if p["id"] == cover_id),
+            "coverLqip": next(p["lqip"] for p in photos_out if p["id"] == cover_id),
+            "photos": photos_out,
+        })
+
+    PROJECTS_MANIFEST.write_text(json.dumps(
+        {"generated": time.strftime("%Y-%m-%dT%H:%M:%S"),
+         "mediaDir": "media",
+         "gridWidths": list(GRID_WIDTHS),
+         "count": len(project_out),
+         "projects": project_out},
+        indent=1), encoding="utf-8")
+
     # ---- 6. private rating report ---------------------------------------
     # Your copy of the scores. Lives under tools/ (blocked from the deployed
     # site by _headers / vercel.json) and is never fetched by the page.
@@ -421,7 +536,8 @@ def main() -> int:
         "ranking": [dict(rank=i + 1, **e) for i, e in enumerate(ranked)],
     }, indent=1), encoding="utf-8")
 
-    write_sitemap(["/", "/portfolio", "/about", "/contact"])
+    write_sitemap(["/", "/portfolio", "/projects", "/about", "/contact"]
+                  + [f"/projects/{p['slug']}" for p in project_out])
 
     # GitHub Pages has no rewrite rules, but it does serve 404.html for unknown
     # paths -- so an identical copy makes /portfolio and friends resolve there.
@@ -444,6 +560,11 @@ def main() -> int:
     print("gallery order, top 5:")
     for i, p in enumerate(ranked[:5], 1):
         print(f"   {i}. {p['title']} ({p['category']})   [{p['rating']:.1f}]")
+    if project_out:
+        print(f"\nprojects.json  {len(project_out)} project(s):")
+        for p in project_out:
+            print(f"   {p['slug']:<16} {p['count']:>2} photos, "
+                  f"cover {p['cover']}")
     return 0
 
 

@@ -68,6 +68,10 @@
       title: "Portfolio — Lensverse Photography",
       description: "Selected photography by Varun Mandepudi — portraits, fashion, live music, street, landscape and wildlife, shot in Boston and beyond.",
     },
+    projects: {
+      title: "Projects — Lensverse Photography",
+      description: "Complete shoots and commissioned work by Varun Mandepudi, each presented as a sequence rather than a grid.",
+    },
     about: {
       title: "About — Lensverse Photography",
       description: "Varun Mandepudi is a photographer in Boston working across portrait, fashion, event, street and landscape work.",
@@ -90,11 +94,15 @@
   const BASE = (() => {
     if (location.protocol === "file:") return "";
     const segs = location.pathname.split("/").filter(Boolean);
-    // a trailing filename (index.html, 404.html) is not part of the base
-    if (segs.length && segs[segs.length - 1].includes(".")) segs.pop();
-    // nor is a trailing route name
-    if (segs.length && ROUTES[segs[segs.length - 1].toLowerCase()]) segs.pop();
-    return segs.length ? `/${segs.join("/")}/` : "/";
+    // Scan left to right for the first known route name; everything before it
+    // is the deploy directory. Popping from the right cannot work once routes
+    // are nested -- "/repo/projects/cloka-clc" would swallow the slug into the
+    // base and every asset URL would 404.
+    const idx = segs.findIndex((s) => ROUTES[s.toLowerCase()]);
+    const baseSegs = idx >= 0
+      ? segs.slice(0, idx)
+      : segs.filter((s) => !s.includes("."));  // drop index.html / 404.html
+    return baseSegs.length ? `/${baseSegs.join("/")}/` : "/";
   })();
 
   /** Resolve a project-relative asset path against the deploy directory. */
@@ -109,7 +117,7 @@
         const link = e.target.closest("a[data-route]");
         if (!link || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
         e.preventDefault();
-        this.go(link.dataset.route);
+        this.go(link.dataset.route, link.dataset.slug || null);
       });
 
       window.addEventListener("popstate", () => this.render(this.read(), false));
@@ -120,6 +128,7 @@
       this.render(this.read(), false);
     },
 
+    /** @returns {{route: string, slug: string|null}} */
     read() {
       let raw;
       if (this.useHash) {
@@ -131,41 +140,46 @@
         }
         raw = raw.replace(/^\/+|\/+$/g, "");
       }
-      const name = raw.split("/")[0].toLowerCase();
-      return ROUTES[name] ? name : "home";
+      const parts = raw.split("/").filter(Boolean);
+      const name = (parts[0] || "").toLowerCase();
+      if (!ROUTES[name]) return { route: "home", slug: null };
+      return {
+        route: name,
+        slug: parts[1] ? decodeURIComponent(parts[1]).toLowerCase() : null,
+      };
+    },
+
+    /** Route path, relative and with no leading slash or deploy directory. */
+    path(route, slug) {
+      if (route === "home") return "";
+      return slug ? `${route}/${encodeURIComponent(slug)}` : route;
     },
 
     /** URL to navigate to — includes the deploy directory. */
-    href(route) {
-      if (this.useHash) return route === "home" ? "#/" : `#/${route}`;
-      return route === "home" ? BASE : BASE + route;
+    href(route, slug) {
+      const p = this.path(route, slug);
+      if (this.useHash) return p ? `#/${p}` : "#/";
+      return BASE + p;
     },
 
-    /** Canonical route segment, relative and with no leading slash.
-        A leading slash would make new URL() discard any path already in the
-        site URL, so ".../Lensverse-Page" + "/portfolio" would collapse to
-        "/portfolio" and the canonical would point at the wrong page. */
-    routeSlug(route) {
-      return route === "home" ? "" : route;
-    },
-
-    go(route) {
-      if (!ROUTES[route]) route = "home";
-      if (route === this.current) {
+    go(route, slug) {
+      if (!ROUTES[route]) { route = "home"; slug = null; }
+      if (route === this.current && (slug || null) === (this.currentSlug || null)) {
         window.scrollTo({ top: 0, behavior: reduceMotion.matches ? "auto" : "smooth" });
         return;
       }
-      const url = this.href(route);
+      const url = this.href(route, slug);
       if (this.useHash) location.hash = url;
-      else history.pushState({ route }, "", url);
-      this.render(route, true);
+      else history.pushState({ route, slug }, "", url);
+      this.render({ route, slug }, true);
     },
 
     transitioning: false,
 
     render(route, isNavigation) {
-      if (!ROUTES[route]) route = "home";
-      const paint = () => this.paint(route, isNavigation);
+      const target = typeof route === "string" ? { route, slug: null } : route;
+      if (!ROUTES[target.route]) { target.route = "home"; target.slug = null; }
+      const paint = () => this.paint(target.route, target.slug, isNavigation);
 
       const canAnimate = isNavigation && !reduceMotion.matches
         && document.startViewTransition && !this.transitioning;
@@ -185,8 +199,9 @@
       transition.finished.then(settle, settle);
     },
 
-    paint(route, isNavigation) {
+    paint(route, slug, isNavigation) {
       this.current = route;
+      this.currentSlug = slug || null;
 
       $$("[data-view]").forEach((section) => {
         section.hidden = section.dataset.view !== route;
@@ -200,7 +215,7 @@
         }
       });
 
-      const meta = ROUTES[route];
+      let meta = ROUTES[route];
       document.title = meta.title;
       $('meta[name="description"]')?.setAttribute("content", meta.description);
       $('meta[property="og:title"]')?.setAttribute("content", meta.title);
@@ -210,7 +225,7 @@
       // the route segment against, rather than a file to replace.
       const siteRoot =
         ($("#site-url")?.content || location.origin).replace(/\/+$/, "") + "/";
-      const canonicalUrl = new URL(this.routeSlug(route), siteRoot).href;
+      const canonicalUrl = new URL(this.path(route, slug), siteRoot).href;
       $('link[rel="canonical"]')?.setAttribute("href", canonicalUrl);
       $('meta[property="og:url"]')?.setAttribute("content", canonicalUrl);
 
@@ -225,17 +240,19 @@
         requestAnimationFrame(() => Gallery.layout());
       }
 
+      if (route === "projects") Projects.show(slug);
+
       if (isNavigation) {
         window.scrollTo({ top: 0, behavior: "auto" });
         // Move focus to the new view so screen readers and keyboards land in
         // the right place instead of staying on the nav link.
-        const target = $(`[data-view="${route}"]`);
-        if (target) {
-          target.setAttribute("tabindex", "-1");
-          target.focus({ preventScroll: true });
-          target.addEventListener("blur", () => target.removeAttribute("tabindex"), { once: true });
+        const el = $(`[data-view="${route}"]`);
+        if (el) {
+          el.setAttribute("tabindex", "-1");
+          el.focus({ preventScroll: true });
+          el.addEventListener("blur", () => el.removeAttribute("tabindex"), { once: true });
         }
-        Announce.say(`${meta.title.split("—")[0].trim()} view loaded`);
+        Announce.say(`${document.title.split("—")[0].trim()} view loaded`);
       }
 
       Reveal.scan();
@@ -674,8 +691,201 @@
       else img.addEventListener("load", () => img.classList.add("is-loaded"), { once: true });
       img.addEventListener("error", () => img.classList.add("is-loaded"), { once: true });
 
-      btn.addEventListener("click", () => Lightbox.open(photo.id));
+      btn.addEventListener("click", () =>
+        Lightbox.open(this.visible, this.visible.indexOf(photo)));
       return btn;
+    },
+  };
+
+  /* ======================================================================
+     Projects
+
+     A project is a body of work shown as a *sequence*, so it deliberately does
+     not reuse the masonry grid: full-width frames in the order they were given,
+     landscapes running wide and portraits paired. The rating engine never
+     reorders a project -- filename order is the edit.
+     ====================================================================== */
+
+  const PROJECT_SIZES =
+    "(max-width: 700px) 94vw, (max-width: 1100px) 88vw, 1100px";
+  const PROJECT_PAIR_SIZES =
+    "(max-width: 700px) 94vw, (max-width: 1100px) 44vw, 545px";
+
+  const Projects = {
+    data: null,
+    loading: null,
+    indexRendered: false,
+    detailSlug: null,   // which project is currently in the DOM
+
+    load() {
+      if (!this.loading) {
+        this.loading = fetch(asset("projects.json"))
+          .then((res) => {
+            if (!res.ok) throw new Error(`projects.json responded ${res.status}`);
+            return res.json();
+          })
+          .then((data) => { this.data = data; return data; });
+      }
+      return this.loading;
+    },
+
+    async show(slug) {
+      // The shell holds the index heading *and* the grid; the detail view
+      // replaces both, so toggle the shell rather than just the grid.
+      const shell = $("#projects-shell");
+      const detail = $("#project-detail");
+      let data;
+      try {
+        data = await this.load();
+      } catch (err) {
+        shell.hidden = false;
+        detail.hidden = true;
+        $("#projects-index").innerHTML =
+          '<p class="gallery-empty">Projects could not be loaded. ' +
+          'Run <code>python tools/build.py</code> and serve over http.</p>';
+        console.error(err);
+        return;
+      }
+      // A slower fetch can resolve after the visitor has moved on.
+      if (Router.current !== "projects") return;
+
+      const project = slug && data.projects.find((p) => p.slug === slug);
+      if (slug && !project) {
+        // Unknown slug: fall back to the index rather than showing nothing.
+        Router.go("projects", null);
+        return;
+      }
+
+      if (project) {
+        shell.hidden = true;
+        detail.hidden = false;
+        this.renderDetail(project);
+        document.title = `${project.title} — Lensverse Photography`;
+        const desc = project.summary || ROUTES.projects.description;
+        $('meta[name="description"]')?.setAttribute("content", desc);
+        $('meta[property="og:title"]')?.setAttribute("content", document.title);
+        $('meta[property="og:description"]')?.setAttribute("content", desc);
+      } else {
+        detail.hidden = true;
+        shell.hidden = false;
+        this.renderIndex(data.projects);
+      }
+      Reveal.scan();
+    },
+
+    renderIndex(projects) {
+      const wrap = $("#projects-index");
+      if (this.indexRendered) return;
+      const dir = asset("media");
+
+      wrap.innerHTML = projects.map((p) => {
+        const srcset = (ext) => [400, 800, 1200]
+          .map((w) => `${dir}/${p.cover}-${w}.${ext} ${w}w`).join(", ");
+        return `
+        <a class="project-card reveal" href="${Router.href("projects", p.slug)}"
+           data-route="projects" data-slug="${escapeAttr(p.slug)}">
+          <span class="project-card__frame" style="aspect-ratio:4 / 5;
+                background-image:url('${p.coverLqip || ""}')">
+            <picture>
+              <source type="image/avif" srcset="${srcset("avif")}"
+                      sizes="(max-width: 700px) 94vw, 46vw">
+              <source type="image/webp" srcset="${srcset("webp")}"
+                      sizes="(max-width: 700px) 94vw, 46vw">
+              <!-- Covers are the whole point of this page and there are few of
+                   them, so they are not deferred. -->
+              <img src="${dir}/${p.cover}-800.jpg" alt="" decoding="async">
+            </picture>
+          </span>
+          <span class="project-card__body">
+            <span class="project-card__title">${escapeHtml(p.title)}</span>
+            <span class="project-card__meta">${escapeHtml(p.subtitle)}</span>
+            <span class="project-card__count">${p.count} frames</span>
+          </span>
+        </a>`;
+      }).join("");
+      this.indexRendered = true;
+    },
+
+    renderDetail(project) {
+      const host = $("#project-detail");
+      // Only skip when this exact project is already the one in the DOM.
+      if (this.detailSlug === project.slug) return;
+      const dir = asset("media");
+
+      // The opening frames load eagerly: a project page is read top to bottom,
+      // so the first thing on screen should not wait for an intersection
+      // callback. Everything below the fold is deferred as usual.
+      let shown = 0;
+      const figure = (photo, paired) => {
+        const eager = shown++ < 2;
+        const sizes = paired ? PROJECT_PAIR_SIZES : PROJECT_SIZES;
+        const srcset = (ext) => [400, 800, 1200]
+          .map((w) => `${dir}/${photo.id}-${w}.${ext} ${w}w`).join(", ");
+        return `
+          <button type="button" class="project-shot${paired ? " project-shot--pair" : ""}"
+                  data-id="${photo.id}"
+                  aria-label="${escapeAttr(project.title)}. Open larger view.">
+            <span class="project-shot__frame" style="aspect-ratio:${photo.width} / ${photo.height};
+                  background-image:url('${photo.lqip || ""}')">
+              <picture>
+                <source type="image/avif" srcset="${srcset("avif")}" sizes="${sizes}">
+                <source type="image/webp" srcset="${srcset("webp")}" sizes="${sizes}">
+                <img src="${dir}/${photo.id}-800.jpg" alt="" decoding="async"
+                     ${eager ? 'fetchpriority="high"' : 'loading="lazy"'}>
+              </picture>
+            </span>
+          </button>`;
+      };
+
+      // Landscapes stand alone full width; consecutive portraits pair up.
+      const blocks = [];
+      const photos = project.photos;
+      for (let i = 0; i < photos.length;) {
+        const p = photos[i];
+        const isPortrait = p.aspect < 0.95;
+        const next = photos[i + 1];
+        if (isPortrait && next && next.aspect < 0.95) {
+          blocks.push(`<div class="project-pair">${figure(p, true)}${figure(next, true)}</div>`);
+          i += 2;
+        } else {
+          blocks.push(`<div class="project-single">${figure(p, false)}</div>`);
+          i += 1;
+        }
+      }
+
+      host.innerHTML = `
+        <div class="route-head shell-width">
+          <p class="eyebrow reveal">
+            <a href="${Router.href("projects", null)}" data-route="projects"
+               class="project-back">Projects</a>
+          </p>
+          <h2 class="route-head__title reveal" data-delay="1">${escapeHtml(project.title)}</h2>
+          <p class="project-detail__meta reveal" data-delay="2">
+            ${escapeHtml(project.subtitle)} · ${project.count} frames
+          </p>
+          ${project.summary
+            ? `<p class="route-head__lede reveal" data-delay="3">${escapeHtml(project.summary)}</p>`
+            : ""}
+        </div>
+        <div class="project-flow shell-width">${blocks.join("")}</div>`;
+
+      $$(".project-shot", host).forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const i = project.photos.findIndex((p) => p.id === btn.dataset.id);
+          Lightbox.open(project.photos, i, { label: project.title });
+        });
+      });
+
+      $$("img", host).forEach((img) => {
+        const done = () => img.classList.add("is-loaded");
+        if (img.complete) done();
+        else {
+          img.addEventListener("load", done, { once: true });
+          img.addEventListener("error", done, { once: true });
+        }
+      });
+
+      this.detailSlug = project.slug;
     },
   };
 
@@ -687,6 +897,8 @@
   const Lightbox = {
     dialog: null,
     index: 0,
+    items: [],          // whatever set is being browsed: gallery or a project
+    returnTo: null,     // element to restore focus to on close
 
     init() {
       this.dialog = $("#lightbox");
@@ -703,8 +915,11 @@
 
       this.dialog.addEventListener("close", () => {
         document.body.style.removeProperty("overflow");
-        const tile = $(`.tile[data-id="${Gallery.visible[this.index]?.id}"]`);
-        tile?.focus({ preventScroll: false });
+        // Prefer the thumbnail for whichever photo is showing now (arrow keys
+        // may have moved on), falling back to whatever opened the dialog.
+        const id = this.items[this.index]?.id;
+        const back = (id && $(`[data-id="${id}"]`)) || this.returnTo;
+        back?.focus({ preventScroll: false });
       });
 
       // Click the empty area around the photo to dismiss. <picture> fills the
@@ -729,26 +944,33 @@
       }, { passive: true });
     },
 
-    open(id) {
-      const idx = Gallery.visible.findIndex((p) => p.id === id);
-      if (idx < 0) return;
-      this.index = idx;
+    /**
+     * @param {Array}  items  the set to browse (gallery selection or a project)
+     * @param {number} index  which one to show
+     * @param {object} [opts] { label } extra caption context, e.g. project title
+     */
+    open(items, index, opts = {}) {
+      if (!items || !items.length || index < 0 || index >= items.length) return;
+      this.items = items;
+      this.index = index;
+      this.label = opts.label || null;
+      this.returnTo = document.activeElement;
       this.show();
       document.body.style.overflow = "hidden";
       if (!this.dialog.open) this.dialog.showModal();
     },
 
     step(delta) {
-      const n = Gallery.visible.length;
+      const n = this.items.length;
       if (!n) return;
       this.index = (this.index + delta + n) % n;
       this.show();
     },
 
     show() {
-      const photo = Gallery.visible[this.index];
+      const photo = this.items[this.index];
       if (!photo) return;
-      const dir = asset(Gallery.data.mediaDir);
+      const dir = asset("media");
 
       $("#lb-avif").srcset = `${dir}/${photo.id}-full.avif`;
       $("#lb-webp").srcset = `${dir}/${photo.id}-full.webp`;
@@ -757,20 +979,21 @@
       img.classList.remove("is-loaded");
       img.width = photo.width;
       img.height = photo.height;
-      img.alt = photo.title;
+      img.alt = photo.title || this.label || "";
       img.src = `${dir}/${photo.id}-800.jpg`;
       if (img.complete) img.classList.add("is-loaded");
       else img.addEventListener("load", () => img.classList.add("is-loaded"), { once: true });
 
-      $("#lb-title").textContent = photo.title;
+      $("#lb-title").textContent = photo.title || this.label || "";
       $("#lb-sub").textContent =
-        [photo.category, photo.monochrome ? "Black & white" : null,
+        [photo.title ? photo.category : this.label,
+         photo.monochrome ? "Black & white" : null,
          photo.captured ? photo.captured.slice(0, 10) : null].filter(Boolean).join(" · ");
-      $("#lb-counter").textContent = `${this.index + 1} / ${Gallery.visible.length}`;
+      $("#lb-counter").textContent = `${this.index + 1} / ${this.items.length}`;
 
       // warm the neighbours so arrow-key browsing feels instant
       for (const offset of [1, -1]) {
-        const next = Gallery.visible[(this.index + offset + Gallery.visible.length) % Gallery.visible.length];
+        const next = this.items[(this.index + offset + this.items.length) % this.items.length];
         if (next && next.id !== photo.id) new Image().src = `${dir}/${next.id}-full.avif`;
       }
     },

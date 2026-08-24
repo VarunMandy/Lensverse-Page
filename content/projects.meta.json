@@ -1,0 +1,16 @@
+{
+  "_comment": "Project definitions. Edit this file, then run: python tools/build.py. Photos come from Photos/<folder> in filename order -- that order is the sequence the project page renders, so name them 01, 02, 03. Ratings never reorder a project.",
+  "projects": [
+    {
+      "slug": "cloka-clc",
+      "title": "Cloka CLC",
+      "subtitle": "Activewear campaign · July 2026",
+      "_summary_note": "PLACEHOLDER — replace with your own copy. Written from what is visible in the frames only; no client, brief or location has been assumed.",
+      "summary": "A training-floor session for activewear label Cloka: lifting under the gym's orange and teal light, apparel worn in use rather than staged, and close detail on the branding itself.",
+      "folder": "projects/cloka-clc",
+      "_cover_note": "Set to null to let the build pick the highest-rated frame. It chose 13.jpg (the logo macro) — technically the sharpest, but a detail shot makes a weak campaign card, so 11 is named explicitly: product worn in use, branding fully legible, the shoot's teal/orange light at its strongest.",
+      "cover": "11.jpg",
+      "inGallery": false
+    }
+  ]
+}

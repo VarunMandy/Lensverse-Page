@@ -76,6 +76,48 @@ Visitors can also re-sort to **Newest first** (from EXIF `DateTimeOriginal`) or
 
 ---
 
+## Projects
+
+A project is a complete shoot shown as a **sequence**, not a ranked grid:
+`/projects` lists them, `/projects/<slug>` is one project. Landscapes run full
+width, consecutive portraits pair up, and the rating engine never reorders a
+project — **filename order is the edit**.
+
+To add one:
+
+1. Make `Photos/projects/<slug>/` and put the frames in, named `01.jpg`,
+   `02.jpg` … in the order you want them read.
+2. Add an entry to `content/projects.meta.json`:
+
+   ```jsonc
+   {
+     "slug": "cloka-clc",
+     "title": "Cloka CLC",
+     "subtitle": "Activewear campaign · July 2026",
+     "summary": "Two or three sentences of real context.",
+     "folder": "projects/cloka-clc",
+     "cover": "11.jpg"     // null = highest-rated frame
+   }
+   ```
+
+3. `python tools/build.py`
+
+The `summary` is the part that earns the page. Without it a project is just
+another grid — say who it was for and what you were going for.
+
+`cover: null` lets the score choose, which favours technical sharpness and
+tends to pick detail shots; naming a frame is usually better for a campaign
+card.
+
+> `inGallery` is accepted in the schema but not wired up — project photos appear
+> on the project page only. The build prints a warning if you set it.
+
+### Project masters are not committed
+
+`.gitignore` excludes `Photos/projects/`. The derivatives in `media/` *are*
+committed, so the published site is complete, but a fresh clone cannot re-run
+the build for a project without its originals. Keep them backed up.
+
 ## Adding, removing and renaming photos
 
 1. Drop the file into `Photos/`.

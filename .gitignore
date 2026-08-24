@@ -1,0 +1,13 @@
+# Project masters stay local. The site only ever serves the derivatives in
+# media/, which ARE committed, so the published gallery is complete without
+# shipping 286 MB of 24-megapixel originals to a public repo.
+#
+# Consequence: a fresh clone cannot re-run `python tools/build.py` for these
+# projects without the originals. Keep them backed up (they live in
+# C:\VARUN\Photos and in OneDrive) — media/ cannot be regenerated from git alone.
+Photos/projects/
+
+# Local scratch
+*.tmp
+.DS_Store
+Thumbs.db

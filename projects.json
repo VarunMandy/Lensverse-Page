@@ -1,0 +1,276 @@
+{
+ "generated": "2026-08-24T16:49:29",
+ "mediaDir": "media",
+ "gridWidths": [
+  400,
+  800,
+  1200
+ ],
+ "count": 1,
+ "projects": [
+  {
+   "slug": "cloka-clc",
+   "title": "Cloka CLC",
+   "subtitle": "Activewear campaign \u00b7 July 2026",
+   "summary": "A training-floor session for activewear label Cloka: lifting under the gym's orange and teal light, apparel worn in use rather than staged, and close detail on the branding itself.",
+   "count": 18,
+   "cover": "cloka-clc-11",
+   "coverAspect": 0.6667,
+   "coverLqip": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAAAQBgCdASoUAB4APuliq08pJSOiMBgIASAdCWIAnSE2IM8JwpYVxgn3EGrWiUMkFKxncB6vo1rCg4AA/u6fTW2vDo5ab2JeC7wuI3s4bi+DDxgqO7y7bVYzVHNLeYzvcixqKvBUyyXB24V88uFRryHZJRROBJG6x+kby2KjACBS2klKRFrrMmpRdbbIp37uLm1wFRUczDeFtUc4Gq5ah6mcDfJJcSFGqJhDDsCx2xNUQJ3oGNiAPruxX7uwdAiBmb4XYuWVRuTRTS42QTmpdTIpNrvEVjVYIJ1+I6WN/c/esrC8dCH7/7G6DCfz5LJey+OUIAAA",
+   "photos": [
+    {
+     "id": "cloka-clc-01",
+     "src": "01.jpg",
+     "width": 3914,
+     "height": 5871,
+     "aspect": 0.6667,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAABwBQCdASoUAB4APulgq08pJSOiMBgIASAdCWMAwcwR/dYY9yIRMXPtAmgRgAaFIG9faYUAAP7y2Z6Kb9ZMvfemlI41iSsSRVTggVLIi/zFePKTzcIC85Xq7+ERj+MZjh2I1F/njBBB0b1KWrT6RbKiqYBrtmaZQNKDBTgjeKJ+1ovY918YF18oLgDHPl+LWT5kUwiXgy/Ri1Q8vJoAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-02",
+     "src": "02.jpg",
+     "width": 4000,
+     "height": 6000,
+     "aspect": 0.6667,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRgoBAABXRUJQVlA4IP4AAADwBACdASoUAB4APulip00pJaOiMAgBIB0JbAAD52oC2F7Y1yo5N6I6/lBWIeqa+7AA/ulWzuEsiWq3kD51N5YHv/H+kzVZghIRLySX3dWIlwwO3U4v6vf0UXj0hMwzMGb94ZAms6SpCJ8C84n6Ao2CnbQOYWmHkCPfKHlpswK5syXH2I0DgqrGKgmgnS/drZY6FvrTl3aPzvbAosfJ9FjqIXUZYWXYb+L8uMzfWXChz2jwB1vV1YIXXw8UZ/hgyJ6GjToLh7Q7AZwWVGxvdRODh7VxEiFr2I2xkcn/OGs4CFr9++BuZpSGyKmW+eKjnaC1axpsWrP1ag8iR4AAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-03",
+     "src": "03.jpg",
+     "width": 4000,
+     "height": 6000,
+     "aspect": 0.6667,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAADQBQCdASoUAB4APuloq1ApJaOiqAqpIB0JQBdkIXE/xbItbADbcP7gVvSZcd4Jgj5zcojueuAAAP76XnNyNgZEr2FXbA6ml2lg1y4Y+nJ+En00uTJfimuRYNRaTYjlR10O7jB0k+eWSRiv7oygSac0vZpsToiA+BKmVqKIPPjzrXDunCIlXSK807nJczV/MqCyBBXO1G56/+LJxtBoz/KrhXJ9T4CKKDgBq0ow0u65aVNctQPHTcIKUuSGRg/yTQ3hnPK2bLUB39CFfh0Wv6+pAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-04",
+     "src": "04.jpg",
+     "width": 4000,
+     "height": 6000,
+     "aspect": 0.6667,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAADQBACdASoUAB4APulgqE0pJaOiMAgBIB0JZgDACYAAwcptj31EVkhyJT0EHnrSAAD+8v7XTnIjNfOu66+VJxVEOmHIrxZHOdjrCwTvWdyhL+MiTf6hUYHzydMYocRr26ER7s5w6R6xCp2qI+0PXmtRjTUbOh9z89T+HAhVLDQVwJwupCtbFQ/e/nb+r/5ovCBAvhAnEok5Jv050WOr+msLxO2DlWXcmUaO7csZ8plyVB7KDaXFwbhR7TEYYMaMrROCD6BKwAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-05",
+     "src": "05.jpg",
+     "width": 2824,
+     "height": 5649,
+     "aspect": 0.4999,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAABwBgCdASoUACgAPtlapk0oJSOiMA1RABsJZgCpJ7FqAerkdk05ruK1HAlKNvSOGxRR+c/i3R1r6MqKIQAA/uZiMUelffp1KeGB9tWwGuvsm+vhFrM2x/ouh/QPpJyGlz+7org9sPOitoHq3h23G7DtdBfecS8iUA4Lc1shMLoCnMGbIAkK6BJ1zGv1BMqaU0L67XKK6agf5xpt2ZYejrEfjZ4agmKndXYPwE4QEtPDH3sy5uzm9SSx9Tpukic5qhbJ4AQonRwnDKF/lQuTTOz0DG2Xe8myg8xWefIAIgAEoc+ZcAZypTQpvREM5yRJESCdMMYAAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-06",
+     "src": "06.jpg",
+     "width": 5722,
+     "height": 3815,
+     "aspect": 1.4999,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABwAwCdASoUAA0APulgp00pJaOiMAgBIB0JYwAAW9cesz/q+uwA/vQqji8HQnwazJLr8T0U/mrXXBStnLq39vJ0ajHQphchGbtcxKA2g9hNI0GxvqXmZPnRnvo/cbgJp0cRVkYgAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-07",
+     "src": "07.jpg",
+     "width": 3319,
+     "height": 4979,
+     "aspect": 0.6666,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAAAQBgCdASoUAB4APulmp0+pJaMiKA1RIB0JYgC+aQSgyDC77O1Eyh9Ldu6fmcvRhSS1x2uBBHHhbqAA/vpgta2k4td9IhzkEeWRYlCb0HXDLkh0cgm+gxnSoURapyUoh9UR7+Y07Bgj9ZG+xwXY8p7riv6t0U6kE9YOxDirpm7dGO0gXJvvizcRS1+IHPPVAkWFBPZo2xWbuSELvx74Tr+zp8fh9Dv6KP2JHa82Kho9l0jgX88i6z5PgGgHlW2Ht5+xHz3U8ROcadRUx1bCLRMHuoMkWidC0nomZwri1Tpc9uOXy8iwyEmLW/u2M+SsB4cL960AAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-08",
+     "src": "08.jpg",
+     "width": 4000,
+     "height": 6000,
+     "aspect": 0.6667,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRjABAABXRUJQVlA4ICQBAADQBQCdASoUAB4APulgp00pJaOiMAgBIB0JZgC06d0VgxbsJ/oRU4Cf+ZvcLncwUnctAbTjFoGAAP70KTVCJW0mmV8H/olrbFC3Jz9yar9w4Rym4skz3ojx9lGl4YF1PGI774MvR4KwaT3m8leZaNgOpaf8DeRhvVrTssN1/QfTR6KDwrfQrxvQOpwJh6Wsm3oT+7Gaf+Z9/zO+DF65zMzWVDmCexiS7Eg9ZkUIIXdB8Yy7bcsd1XDthCXHb9aQbGpi3fEFq0o7BqsUhkMlythmK3KX02HARiKj238uewnBj1/tD4v++55F0qP0Q91NXUJc3TwIO63H/13r69zZq2CBlGecWY940RWLImN9P7f1T2pPcvj9vnqpdgPcuODN+AfbxngA",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-09",
+     "src": "09.jpg",
+     "width": 6000,
+     "height": 4000,
+     "aspect": 1.5,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAACQAwCdASoUAA0APulgqE0pJaOiMAgBIB0JQBhQA9Tev8M16+6gAP7xdDCB2/EOOxN6TN6qmCL2a05QK96mFBbmTh5khGS59XGMXcARdOReaiBmTig6yBQzOhMfIH39gwGCtkJXp4gKR9Mz/zMH0fxsOgFiw3lmnEkGOxPAAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-10",
+     "src": "10.jpg",
+     "width": 3423,
+     "height": 5134,
+     "aspect": 0.6667,
+     "monochrome": true,
+     "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACwBQCdASoUAB4APuliq08pJSOiMBgIASAdCWkAAC52RwawWtzZfyMgV6MXVGnMI0HcXED9dLAA/vQwaQDhBr/Pwcp4+LC/v9iPd8XWEboyc3S11/MhKo8RNEZlB/EmrD1giUpxeORsK9S7/whjzInZD2JK2Jx98HlFTE6Q7x+inbuMeSrH8lIIdJjVqJ5QdV5WpmYYDWx7gyaPKAj1IXRgurU1rTnfUkX3bTthiAAAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-11",
+     "src": "11.jpg",
+     "width": 3210,
+     "height": 4815,
+     "aspect": 0.6667,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRgABAABXRUJQVlA4IPQAAAAQBgCdASoUAB4APuliq08pJSOiMBgIASAdCWIAnSE2IM8JwpYVxgn3EGrWiUMkFKxncB6vo1rCg4AA/u6fTW2vDo5ab2JeC7wuI3s4bi+DDxgqO7y7bVYzVHNLeYzvcixqKvBUyyXB24V88uFRryHZJRROBJG6x+kby2KjACBS2klKRFrrMmpRdbbIp37uLm1wFRUczDeFtUc4Gq5ah6mcDfJJcSFGqJhDDsCx2xNUQJ3oGNiAPruxX7uwdAiBmb4XYuWVRuTRTS42QTmpdTIpNrvEVjVYIJ1+I6WN/c/esrC8dCH7/7G6DCfz5LJey+OUIAAA",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-12",
+     "src": "12.jpg",
+     "width": 3791,
+     "height": 5055,
+     "aspect": 0.75,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAACQBQCdASoUABsAPulsr1GpJaQiqAgBIB0JZQC9WYteSoQ25ksDicLVyuWUdqbyeYzfFwigAAD+6S3v1B6aoBoQc2d7k8Ilq9npptbOgLCI/QjxbmeTNlJjlU59KmAgqHZRzPUUAjGgwDeYGHog2SaIMqVDyOCQovEVJAFSFQW8K3XYjyXrLUcC6xS8nD0ZHJQRqfFEBwwbvZ/gqMtcMufaoFtrwwxdwo2Kji/w9HS/Y4UshL6wPqcTWieBJSpWAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-13",
+     "src": "13.jpg",
+     "width": 4000,
+     "height": 5333,
+     "aspect": 0.75,
+     "monochrome": true,
+     "lqip": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAwBQCdASoUABsAPulsrlGpJaQiqAgBIB0JaQAD5Vig1c2yvsVgHkmOpFX+MiwJtidYSAD+7yGwsqXTOO7Sf0EfjOLL/XqXhiICT7kf21xT/clFd5R11Z1ve3l8nUKNMQrdUX0gjFc0Hk/sZIWagbm5SbDr6dk8xpfJ4BHcPzzSYYKsAwOpzwYntcVGrwaZhWwwDUpCmQjP/th0NDV8YjiwnAAAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-14",
+     "src": "14.jpg",
+     "width": 3759,
+     "height": 5639,
+     "aspect": 0.6666,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAACwBQCdASoUAB4APuleq0+pJKOiMBgIASAdCWUAwpH/4CBvfRCacNA3XFzkZt8G6GPjns3ynQAA/vDhKrpmydPZWHSsXhs6K+xr5XgOKodMVWh6oqpS3jXNeF3llDGllkSZe91j80DB09Ufxs+165zQdDnu4h09Ja8SzhIcF91U5kiSYycVKlC8HcDjIvBcTxUWbm0s3/batKex4RZpKyNIbwdbm/PyDFbhQP57N7CzamDlSnxMte1R4etXvJ0ebW8nPdPYT0twVAVV00M4AAAA",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-15",
+     "src": "15.jpg",
+     "width": 2756,
+     "height": 4134,
+     "aspect": 0.6667,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRhoBAABXRUJQVlA4IA4BAADwBQCdASoUAB4APulkqU0pJaQiMAgBIB0JYgCdIJmDyBANZog2bRgvD+k9OqqS4rlcmLA4WevuAAD+6+qLZRj4XHJINdCyrKDIKihFeiDbX44qeRW+8ea3HumTvzYXN3EWvntOzkoIOCPMJJG3cZPke8nYWjpN7prdoootYGGIHUtuWOvpkcledILxU/3h6QAggBidX/6Pduksu2lJLRapQ86P0LR93a/ur/PkYlsLzD/G0K60JnHMgOgGfEn1dMv1Was9tCNLXWj1U/jU4gv9FgSgji18aQYGddz/SICeGP4k0Urcy085m9NcWyM+g9SO11qB0fIUhTQFSBvru5OYNjlf2LMwhFCTOSJGwAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-16",
+     "src": "16.jpg",
+     "width": 4000,
+     "height": 6000,
+     "aspect": 0.6667,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRgoBAABXRUJQVlA4IP4AAADwBQCdASoUAB4APulmr0+pJaSiKAqpIB0JQBfrHdVLPulI3rXJ2NXLt3SXu3MClbnNBGz4qR1sSAD+6UgCIpqDAcw2mm9dNSPvLUw4Hg5yUfmU9jQAY9vwGmAqil+2WgvptxWQ76ZCmhfIAnGr4CQmW1sQz8uF/6HL65GBNL+FN+uf/f/l9gzswf0HKzBc9qA4HLMFJoYsz44CjMK0ItUAsaXBQxthfMZoDdgV91k86uHqhdmUDEWH73j7tyK/Y0X4euk0QrO/fS3Va+xD/2Qesz9Z7Gd/aYS1xSNnTvZLS+YWYU58ZPAZK1B87BgfxBABMp+Ieztd4h/s7iAAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-17",
+     "src": "17.jpg",
+     "width": 6000,
+     "height": 4000,
+     "aspect": 1.5,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABQBQCdASoUAA0APulgqE0pJaQiMAgBIB0JagCdDKVf1A+AD//kVYMOpO8lWslBHRzbzZwA/sxrwWnu+YPLWKmNTsYLk5YlATetKsjaoQwe5RGgxfMTR8jZx8y97eKqd19Y10FthIyvKm4m/6pR2JBJWLTcyKAKnkgM4cOuIZOJXzj3F27oiJd5D/SOZdCQlrzfX8+tQvxhl955vB7P5uLWXSlk3+4GAWBgAAAA",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cloka-clc-18",
+     "src": "18.jpg",
+     "width": 4000,
+     "height": 6000,
+     "aspect": 0.6667,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRhwBAABXRUJQVlA4IBABAAAwBwCdASoUAB4APulgp00pJaOiMAgBIB0JbACsMuN/d+e8BLIB2ArnJwPfpP82ovHH8SF3V9oyJsJa4gnHNCIsAKAA/vQjtGUX86UfYML8fuHsE4EHMhYbHwq3l/Gw4OaJu1CCL2Y4WA6mFeEzqTjdJx3pyka57ZgY8KiOg7vbs6G06xmf+r7PQqOJ1x2A3RQborPCq6yOUUN2lqvOv5QluJYmoL0ekQwaZhtXQ2pyIbe7wFtPtQDzqvzouUrzHSgKP8X2vL2lF4nCFiwCSxEhORQQn3yjiTRBCcgCpaXoG7E2I1jSZ7BivsdW7lcsRxezrXf+OwiNeAwPMcdgA8hXPYJhtran5mOHX+HGJhAAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -19,7 +19,10 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ROUTES = {"", "portfolio", "about", "contact"}
+# Top-level client-side routes. "projects" also takes a second segment
+# (/projects/<slug>), which must fall through to the shell as well.
+ROUTES = {"", "portfolio", "projects", "about", "contact"}
+NESTED = {"projects"}
 
 mimetypes.add_type("image/avif", ".avif")
 mimetypes.add_type("image/webp", ".webp")
@@ -30,8 +33,13 @@ mimetypes.add_type("image/svg+xml", ".svg")
 class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):  # noqa: N802
         path = self.path.split("?", 1)[0].split("#", 1)[0].strip("/")
-        # A client-side route (no file extension, known name) -> serve the shell.
-        if path in ROUTES and not Path(path).suffix:
+        segments = [s for s in path.split("/") if s]
+        # A client-side route (no file extension) -> serve the shell, the same
+        # way Netlify's fallback and GitHub Pages' 404.html do in production.
+        if not Path(path).suffix and (
+            path in ROUTES
+            or (len(segments) == 2 and segments[0] in NESTED)
+        ):
             self.path = "/index.html"
         return super().do_GET()
 

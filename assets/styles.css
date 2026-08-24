@@ -621,6 +621,130 @@ button, input, textarea, select { font: inherit; color: inherit; }
 }
 
 /* ==========================================================================
+   Projects
+   ========================================================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  gap: clamp(1.5rem, 3.5vw, 3rem);
+  padding-bottom: clamp(4rem, 9vw, 7rem);
+}
+
+.project-card {
+  display: grid;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  isolation: isolate;
+}
+
+.project-card__frame {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: var(--bg-sunk);
+  background-size: cover;
+  background-position: center;
+}
+.project-card picture { display: block; width: 100%; height: 100%; }
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease), filter 0.4s var(--ease);
+}
+@media (hover: hover) {
+  .project-card:hover img,
+  .project-card:focus-visible img { transform: scale(1.04); }
+  .project-card:hover .project-card__title { color: var(--accent); }
+}
+
+.project-card__body { display: grid; gap: 0.28rem; }
+.project-card__title {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  line-height: 1.1;
+  transition: color 0.2s var(--ease);
+}
+.project-card__meta {
+  font-size: var(--step--1);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+.project-card__count {
+  font-size: var(--step--1);
+  color: var(--fg-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- one project ------------------------------------------------------- */
+
+.project-back {
+  color: var(--fg-faint);
+  text-decoration: none;
+  letter-spacing: 0.34em;
+}
+.project-back::before { content: "\2190"; margin-right: 0.5rem; }
+.project-back:hover { color: var(--accent); }
+
+.project-detail__meta {
+  margin-top: 0.9rem;
+  font-size: var(--step--1);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+/* Sequence, not a grid: full-bleed singles, paired portraits. */
+.project-flow {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  padding-bottom: clamp(4rem, 9vw, 7rem);
+}
+
+.project-single, .project-pair { display: grid; }
+.project-pair {
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(0.6rem, 1.5vw, 1.25rem);
+  align-items: start;
+}
+@media (max-width: 43.75rem) {
+  .project-pair { grid-template-columns: 1fr; }
+}
+
+.project-shot {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: var(--bg-sunk);
+  cursor: zoom-in;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+.project-shot__frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.project-shot picture { display: block; width: 100%; height: 100%; }
+.project-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.55s var(--ease), transform 0.9s var(--ease);
+}
+.project-shot img.is-loaded { opacity: 1; }
+@media (hover: hover) {
+  .project-shot:hover img, .project-shot:focus-visible img { transform: scale(1.02); }
+}
+
+/* ==========================================================================
    Lightbox
    ========================================================================== */
 

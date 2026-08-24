@@ -121,6 +121,7 @@
 
     <nav class="nav" id="primary-nav" data-open="false" aria-label="Primary">
       <a class="nav__link" href="/" data-route="home">Home</a>
+      <a class="nav__link" href="/projects" data-route="projects">Projects</a>
       <a class="nav__link" href="/portfolio" data-route="portfolio">Portfolio</a>
       <a class="nav__link" href="/about" data-route="about">About</a>
       <a class="nav__link" href="/contact" data-route="contact">Contact</a>
@@ -230,6 +231,22 @@
         <p>Nothing in this category yet.</p>
       </div>
     </div>
+  </section>
+
+  <!-- ============================================================ PROJECTS -->
+  <section class="route" data-view="projects" aria-labelledby="projects-title" hidden>
+    <!-- Index of projects. Replaced by #project-detail when a slug is in the URL. -->
+    <div id="projects-shell">
+      <div class="route-head shell-width">
+        <p class="eyebrow reveal">Complete shoots</p>
+        <h2 class="route-head__title reveal" data-delay="1" id="projects-title">Projects</h2>
+        <p class="route-head__lede reveal" data-delay="2">
+          Whole bodies of work, shown in sequence rather than shuffled into a grid.
+        </p>
+      </div>
+      <div class="projects-grid shell-width" id="projects-index"></div>
+    </div>
+    <div id="project-detail" hidden></div>
   </section>
 
   <!-- =============================================================== ABOUT -->

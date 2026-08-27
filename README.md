@@ -286,6 +286,20 @@ Push the folder. Config for the three common hosts is committed:
 - **GitHub Pages** — `404.html` is a build-generated copy of `index.html`, which
   is how Pages resolves client-side routes
 
+`vercel.json` sets `additionalProperties: false`, so **a comment key anywhere in
+it fails the build** with "should NOT have additional property". Do not
+annotate it; put the explanation here instead. For the record, the `redirects`
+block exists because `tools/` holds the internal rating report, `content/` the
+build input and `Photos/` the full-resolution originals — none belong on the
+public site.
+
+Every client-side route needs a rewrite there, `/projects/:slug` included. To
+check before pushing:
+
+```bash
+python -c "import json,urllib.request,jsonschema; s=json.loads(urllib.request.urlopen('https://openapi.vercel.sh/vercel.json').read()); jsonschema.Draft7Validator(s).validate(json.load(open('vercel.json'))); print('vercel.json OK')"
+```
+
 Currently live at **https://varunmandy.github.io/Lensverse-Page/**.
 
 ### Deploy directory

@@ -4,10 +4,11 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/portfolio", "destination": "/index.html" },
+    { "source": "/projects", "destination": "/index.html" },
+    { "source": "/projects/:slug", "destination": "/index.html" },
     { "source": "/about", "destination": "/index.html" },
     { "source": "/contact", "destination": "/index.html" }
   ],
-  "_comment": "tools/ holds the internal rating report, content/ the build input, Photos/ the full-resolution originals. None belong on the public site.",
   "redirects": [
     { "source": "/tools/:path*", "destination": "/", "permanent": false },
     { "source": "/content/:path*", "destination": "/", "permanent": false },
@@ -21,7 +22,7 @@
       ]
     },
     {
-      "source": "/photos.json",
+      "source": "/(photos|projects).json",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]

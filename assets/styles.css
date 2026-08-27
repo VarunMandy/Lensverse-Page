@@ -695,6 +695,8 @@ button, input, textarea, select { font: inherit; color: inherit; }
 }
 
 .project-single, .project-pair { display: grid; }
+/* A height-capped portrait is narrower than the column, so centre it. */
+.project-single { justify-items: center; }
 .project-pair {
   grid-template-columns: 1fr 1fr;
   gap: clamp(0.6rem, 1.5vw, 1.25rem);
@@ -702,6 +704,15 @@ button, input, textarea, select { font: inherit; color: inherit; }
 }
 @media (max-width: 43.75rem) {
   .project-pair { grid-template-columns: 1fr; }
+}
+
+/* No frame may fill the screen. A full-width single is capped by height, not
+   width: max-width = (height cap x aspect ratio), so a tall portrait and a
+   wide landscape both land at the same height and the page always shows that
+   it continues below. --ar is set inline per photo. */
+.project-single .project-shot {
+  max-width: min(100%, calc(68vh * var(--ar, 1)));
+  margin-inline: auto;
 }
 
 .project-shot {

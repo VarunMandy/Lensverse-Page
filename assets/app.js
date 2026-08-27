@@ -821,9 +821,12 @@
         const sizes = paired ? PROJECT_PAIR_SIZES : PROJECT_SIZES;
         const srcset = (ext) => [400, 800, 1200]
           .map((w) => `${dir}/${photo.id}-${w}.${ext} ${w}w`).join(", ");
+        // --ar lets the CSS cap a frame by *height*: max-width is derived as
+        // (height cap x aspect), so a portrait single is bounded to the same
+        // height as a landscape one instead of running off the screen.
         return `
           <button type="button" class="project-shot${paired ? " project-shot--pair" : ""}"
-                  data-id="${photo.id}"
+                  data-id="${photo.id}" style="--ar:${photo.aspect}"
                   aria-label="${escapeAttr(project.title)}. Open larger view.">
             <span class="project-shot__frame" style="aspect-ratio:${photo.width} / ${photo.height};
                   background-image:url('${photo.lqip || ""}')">

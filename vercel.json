@@ -3,11 +3,11 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/portfolio", "destination": "/index.html" },
-    { "source": "/projects", "destination": "/index.html" },
-    { "source": "/projects/:slug", "destination": "/index.html" },
-    { "source": "/about", "destination": "/index.html" },
-    { "source": "/contact", "destination": "/index.html" }
+    { "source": "/portfolio", "destination": "/" },
+    { "source": "/projects", "destination": "/" },
+    { "source": "/projects/:slug", "destination": "/" },
+    { "source": "/about", "destination": "/" },
+    { "source": "/contact", "destination": "/" }
   ],
   "redirects": [
     { "source": "/tools/:path*", "destination": "/", "permanent": false },

@@ -1,12 +1,12 @@
 {
- "generated": "2026-08-27T11:36:11",
+ "generated": "2026-08-27T12:03:02",
  "mediaDir": "media",
  "gridWidths": [
   400,
   800,
   1200
  ],
- "count": 3,
+ "count": 4,
  "projects": [
   {
    "slug": "cloka-clc",
@@ -568,6 +568,102 @@
      "aspect": 0.5625,
      "monochrome": false,
      "lqip": "data:image/webp;base64,UklGRiYBAABXRUJQVlA4IBoBAAAQBwCdASoUACQAPulqqlEpJaOipWzJIB0JbADGq6EMAFQKUXXEY4cSDKsDmkwJteqPOFeSyK4r2vve5RNLIUtuwAD++ltcn/OBJIdyWJa09XG0hquGtXVtLNxhMELrHISrRNThuawnIBOmKvrGMHX9EkWtBj+zqt/O3MLIsQ0QYVGUaP8I1/jkg901vTpU/TXKbb+aOM2DdAMhJbD3t3o455tY6G+ggTkzvXH/3igqoaA+H0Ve9WcSHC5VmFhN06dZ5BrU8XNZiZMPeVNzOHJkV/UW6fdZi2ACvcdFURDscbtAW/i07+XV/XsQjrT5ZlTauLldW5Xd/e7kcT07B72xHWaC2vOwHEHIichR6qWJSplFHiFF7IgAAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "cobalt",
+   "title": "Cobalt",
+   "subtitle": "Portrait editorial \u00b7 2026",
+   "summary": "A tailored cobalt suit worked against the two hardest surfaces the block had to offer \u2014 old brick with the street falling away behind it, and raw board-marked concrete. Shot mostly tight, with one frame taken down to black and white where the colour stopped adding anything.",
+   "count": 6,
+   "cover": "cobalt-01",
+   "coverAspect": 0.6667,
+   "coverLqip": "data:image/webp;base64,UklGRv4AAABXRUJQVlA4IPIAAAAwBgCdASoUAB4APt1cpk0opSOiMAwBEBuJZAC+evU6OT+HkuPtgRAlhTzfdiVTYipqNCWPhFUA2EwAAP2ZNdR9+9SniHfd4vTb20sufK+UM+ZETVGJs63QlKhuBfR8gFnl6x9K8cqrNhXOFsb4jCJBG0M5BGI5EXiE3rObpTTwCf9+7ypCWj8uauRPsZc3x0YmVuikI734m8o2ZV2jO19P9ECkp3/+Gkk4KAxD/n6wpFElj0scbM5dCOh81kKY9IwzIAp6Kv09DQriau7xC3aaQZaBuL1QSQ9a0MmgfJQ0EmCL09eadLlyfFUV2NnDCyAAAA==",
+   "photos": [
+    {
+     "id": "cobalt-01",
+     "src": "01.jpg",
+     "width": 4672,
+     "height": 7008,
+     "aspect": 0.6667,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRv4AAABXRUJQVlA4IPIAAAAwBgCdASoUAB4APt1cpk0opSOiMAwBEBuJZAC+evU6OT+HkuPtgRAlhTzfdiVTYipqNCWPhFUA2EwAAP2ZNdR9+9SniHfd4vTb20sufK+UM+ZETVGJs63QlKhuBfR8gFnl6x9K8cqrNhXOFsb4jCJBG0M5BGI5EXiE3rObpTTwCf9+7ypCWj8uauRPsZc3x0YmVuikI734m8o2ZV2jO19P9ECkp3/+Gkk4KAxD/n6wpFElj0scbM5dCOh81kKY9IwzIAp6Kv09DQriau7xC3aaQZaBuL1QSQ9a0MmgfJQ0EmCL09eadLlyfFUV2NnDCyAAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cobalt-02",
+     "src": "02.jpg",
+     "width": 4672,
+     "height": 7008,
+     "aspect": 0.6667,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBQCdASoUAB4APulkqU6pJaOiKA1RIB0JYgC3uDzSORsFTWB8+9EqYwKh7bqtKFZAAP7swTl7SguxBIuAyhJQKDdPaXHzaTle5rChvQQwYE9Oid2BQp7dUwVy0Gw98EmJP6nKB0Q82SqiO0Hqbopt+Jh9Yrut25OtCk2tWdeoK3QDxwwbtGyE9ku7i/OWyqm8nWvZdWlNqD0FYEWzfWcPWu8AAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cobalt-03",
+     "src": "03.jpg",
+     "width": 2875,
+     "height": 3833,
+     "aspect": 0.7501,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACQBQCdASoUABsAPulkqU0pJaQiMAgBIB0JQBOgA3azdn+310JIElPfZVPtsBi4CxX71I5vwAD+v3ZvP+8CkHnVrcx/KQakjUVIEBlVUdRgzBadehO7SWwsB5AGII9ebFgaWxwB2a+txML3sZkqJa4vRTQoZs+vcjRF2A9/JBG5em9prpcRk0vFnRrm8ZSwzO7Q5rdLVsw/jUl3RajhZxcT2M3jwwPbrhGtRlkXP1bTaDtG99Oa79bSDn3GfriGYgAAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cobalt-04",
+     "src": "04.jpg",
+     "width": 3877,
+     "height": 5816,
+     "aspect": 0.6666,
+     "monochrome": true,
+     "lqip": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAABwBQCdASoUAB4APulgqE0pJaQiMAgBIB0JaQAOfK0i2U0M15tnmdfYZsxjV3bIlCjIKEVAAP631zhNMxutSrPEthFLQCVv8/37U/r/nUO05FPbCGWwZwoa1/BsaxxTyr+HCKd+xZLw1ly+TCrSnG9bCGYoVxr3X9QzqdFmyoz4DtrdIMwSKZbZFpzaeoqWETWNvNxlLyywXXz0HSl42Wl8yNUpyY6DqjKiYvzwTvmmGmHX1VSG74KZwtjhmagAAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cobalt-05",
+     "src": "05.jpg",
+     "width": 4415,
+     "height": 5887,
+     "aspect": 0.75,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAAAQBQCdASoUABsAPuliqk4pJaQiKA1RIB0JYgCw7D+kb9Y8Ik1te0oUnLNoknTkUHKIAP7BPWsN5Fj7tM73CUVTVwiK1z0q3usNjjt0SACw0VcLBIz/+oRw7K7Lhn5UriYuoYUJTnY/bu3VGQqFIE92/kIn4f9KGyoFQKsgyCNRH1b/Wq/ZXjQ4HEWbNXcCq9/sIM95R44SkWuIoIcw8MKjrRofaNk1qjzKG74E4W0a9sFzNk4Tmo0AAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "cobalt-06",
+     "src": "06.jpg",
+     "width": 4130,
+     "height": 2065,
+     "aspect": 2.0,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBACdASoUAAoAPuliqU2pJaQiMAgBIB0JQBOmUABoYwxqk4QaCOmgAAD90zgYI04cQVwxyDpJsXsliI+3V9amkN+aN4htE3NYnxUpEZHnoYNA8E2z9FCXX2NV5Sv96zivpvf48D5Xzd9wttUCCbhH3AA=",
      "widths": [
       400,
       800,

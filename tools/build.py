@@ -238,6 +238,60 @@ def load_projects() -> list[dict]:
     return projects
 
 
+def build_icons() -> list[int]:
+    """Raster app icons, drawn to match favicon.svg.
+
+    iOS ignores SVG for apple-touch-icon and falls back to a screenshot of the
+    page, so PNGs are not optional. Drawn rather than rasterised because Pillow
+    cannot read SVG.
+    """
+    import math
+
+    from PIL import ImageDraw
+
+    BG, GOLD = (10, 10, 12), (227, 184, 118)
+    written = []
+
+    def draw(size: int, pad_ratio: float = 0.0) -> Image.Image:
+        """A lens iris: outer ring plus six blades tangent to a hexagonal
+        opening. Blades must not meet at the centre -- spokes through the middle
+        read as a wagon wheel, not an aperture."""
+        s = size * 4                      # supersample, then downscale
+        img = Image.new("RGB", (s, s), BG)
+        d = ImageDraw.Draw(img)
+        c = s / 2
+        span = (1.0 - 2 * pad_ratio)      # maskable icons need a safe margin
+        R = 0.375 * s * span              # outer ring radius
+        r = 0.150 * s * span              # hexagonal opening radius
+        w = max(1, int(round(0.030 * s * span)))
+
+        def polar(radius, deg):
+            a = math.radians(deg)
+            return (c + radius * math.cos(a), c + radius * math.sin(a))
+
+        d.ellipse([c - R, c - R, c + R, c + R], outline=GOLD, width=w)
+
+        # the opening
+        hexagon = [polar(r, -90 + 60 * i) for i in range(6)]
+        d.line(hexagon + [hexagon[0]], fill=GOLD, width=w, joint="curve")
+
+        # one blade per vertex, each swept the same way so the iris looks wound
+        for i in range(6):
+            start = hexagon[i]
+            end = polar(R, -90 + 60 * (i + 1))
+            d.line([start, end], fill=GOLD, width=w, joint="curve")
+
+        return img.resize((size, size), Image.LANCZOS)
+
+    for size in (180, 192, 512):
+        draw(size).save(ROOT / f"icon-{size}.png", format="PNG", optimize=True)
+        written.append(size)
+    # Android masks maskable icons to a circle; keep the mark inside the safe area
+    draw(512, pad_ratio=0.10).save(ROOT / "icon-512-maskable.png",
+                                   format="PNG", optimize=True)
+    return written
+
+
 def write_sitemap(routes: list[str]) -> None:
     today = time.strftime("%Y-%m-%d")
     urls = "\n".join(
@@ -546,6 +600,9 @@ def main() -> int:
         },
         "ranking": [dict(rank=i + 1, **e) for i, e in enumerate(ranked)],
     }, indent=1), encoding="utf-8")
+
+    icons = build_icons()
+    print(f"icons        {', '.join(f'{s}px' for s in icons)} + maskable")
 
     write_sitemap(["/", "/portfolio", "/projects", "/about", "/contact"]
                   + [f"/projects/{p['slug']}" for p in project_out])

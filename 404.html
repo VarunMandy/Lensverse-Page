@@ -27,8 +27,18 @@
 <meta name="twitter:image" content="https://varunmandy.github.io/Lensverse-Page/og-image.jpg">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
+<!-- iOS ignores SVG here and substitutes a screenshot of the page, so the
+     home-screen icon has to be a PNG. -->
+<link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
 <link rel="manifest" href="site.webmanifest">
+
+<!-- Home-screen behaviour on iOS. All relative, so they survive being served
+     from a project subpath rather than a domain root. -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Lensverse">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <!-- Fonts: two families, two weights each, swapped in so text never blocks paint -->
 <link rel="preconnect" href="https://fonts.googleapis.com">

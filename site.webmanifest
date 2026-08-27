@@ -2,12 +2,18 @@
   "name": "Lensverse Photography",
   "short_name": "Lensverse",
   "description": "Portrait, fashion, event, street and landscape photography by Varun Mandepudi, Boston MA.",
-  "start_url": "/",
-  "scope": "/",
+  "_comment": "start_url and scope are RELATIVE on purpose. They resolve against this file's own URL, so the app opens where the site actually lives. Absolute '/' sent iOS home-screen launches to the domain root, which on a GitHub Pages project site is a 404.",
+  "start_url": "./",
+  "scope": "./",
+  "id": "./",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#0a0a0c",
   "theme_color": "#0a0a0c",
   "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
     { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
   ]
 }

@@ -7,6 +7,13 @@
 # C:\VARUN\Photos and in OneDrive) — media/ cannot be regenerated from git alone.
 Photos/projects/
 
+# Seven loose originals dropped straight into Photos/ root as 1-1..1-7. They are
+# a second copy of the Cobalt shoot (now a project) plus one extra frame, are
+# not listed in content/photos.meta.json, and so never appear on the site. The
+# build reports them on every run. Untracked so ~103 MB of 24-megapixel masters
+# do not sit in a public repo for files nothing references.
+/Photos/1-*.jpg
+
 # Local scratch
 *.tmp
 .DS_Store

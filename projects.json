@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-27T12:31:04",
+ "generated": "2026-08-27T14:53:25",
  "mediaDir": "media",
  "gridWidths": [
   400,
@@ -21,6 +21,7 @@
     {
      "id": "cloka-clc-01",
      "src": "01.jpg",
+     "alt": "A row of people holding a plank position on the gym floor under warm overhead light",
      "width": 3914,
      "height": 5871,
      "aspect": 0.6667,
@@ -35,6 +36,7 @@
     {
      "id": "cloka-clc-02",
      "src": "02.jpg",
+     "alt": "A man photographed from behind in an orange tee printed RUN, with the gym crowd beyond him",
      "width": 4000,
      "height": 6000,
      "aspect": 0.6667,
@@ -49,6 +51,7 @@
     {
      "id": "cloka-clc-03",
      "src": "03.jpg",
+     "alt": "A man pressing a dumbbell on a bench in low light, a spotter's hands above the weight",
      "width": 4000,
      "height": 6000,
      "aspect": 0.6667,
@@ -63,6 +66,7 @@
     {
      "id": "cloka-clc-04",
      "src": "04.jpg",
+     "alt": "A man in a blue tee lying on a bench pressing a loaded barbell, two spotters leaning over him",
      "width": 4000,
      "height": 6000,
      "aspect": 0.6667,
@@ -77,6 +81,7 @@
     {
      "id": "cloka-clc-05",
      "src": "05.jpg",
+     "alt": "A tall perforated orange panel filling the frame as a graphic block of colour",
      "width": 2824,
      "height": 5649,
      "aspect": 0.4999,
@@ -91,6 +96,7 @@
     {
      "id": "cloka-clc-06",
      "src": "06.jpg",
+     "alt": "Wide view of the gym interior, red pillars and racks receding into shadow",
      "width": 5722,
      "height": 3815,
      "aspect": 1.4999,
@@ -105,6 +111,7 @@
     {
      "id": "cloka-clc-07",
      "src": "07.jpg",
+     "alt": "A woman at the bottom of a barbell squat, others watching from behind",
      "width": 3319,
      "height": 4979,
      "aspect": 0.6666,
@@ -119,6 +126,7 @@
     {
      "id": "cloka-clc-08",
      "src": "08.jpg",
+     "alt": "Two trainers steadying a man through a seated press, orange machine frames around them",
      "width": 4000,
      "height": 6000,
      "aspect": 0.6667,
@@ -133,6 +141,7 @@
     {
      "id": "cloka-clc-09",
      "src": "09.jpg",
+     "alt": "A group working through the machines, one man seated at a cable station",
      "width": 6000,
      "height": 4000,
      "aspect": 1.5,
@@ -147,6 +156,7 @@
     {
      "id": "cloka-clc-10",
      "src": "10.jpg",
+     "alt": "Black and white: a man from behind, the words BEYOND THE LIMIT across his shoulders",
      "width": 3423,
      "height": 5134,
      "aspect": 0.6667,
@@ -161,6 +171,7 @@
     {
      "id": "cloka-clc-11",
      "src": "11.jpg",
+     "alt": "A man from behind under teal light, the Cloka wordmark legible across his back against an orange wall",
      "width": 3210,
      "height": 4815,
      "aspect": 0.6667,
@@ -175,6 +186,7 @@
     {
      "id": "cloka-clc-12",
      "src": "12.jpg",
+     "alt": "Close detail of a black embroidered logo on the shoulder of a white ribbed vest",
      "width": 3791,
      "height": 5055,
      "aspect": 0.75,
@@ -189,6 +201,7 @@
     {
      "id": "cloka-clc-13",
      "src": "13.jpg",
+     "alt": "Close detail of the same black logo on white fabric, lit hard against a dark ground",
      "width": 4000,
      "height": 5333,
      "aspect": 0.75,
@@ -203,6 +216,7 @@
     {
      "id": "cloka-clc-14",
      "src": "14.jpg",
+     "alt": "A man in a white vest mid dumbbell curl, gym equipment falling away behind him",
      "width": 3759,
      "height": 5639,
      "aspect": 0.6666,
@@ -217,6 +231,7 @@
     {
      "id": "cloka-clc-15",
      "src": "15.jpg",
+     "alt": "A man in a blue tee straining at the top of a dip, head tipped back",
      "width": 2756,
      "height": 4134,
      "aspect": 0.6667,
@@ -231,6 +246,7 @@
     {
      "id": "cloka-clc-16",
      "src": "16.jpg",
+     "alt": "A muscular man curling a dumbbell, an orange rack filling the background",
      "width": 4000,
      "height": 6000,
      "aspect": 0.6667,
@@ -245,6 +261,7 @@
     {
      "id": "cloka-clc-17",
      "src": "17.jpg",
+     "alt": "A group standing together on the training floor between sets",
      "width": 6000,
      "height": 4000,
      "aspect": 1.5,
@@ -259,6 +276,7 @@
     {
      "id": "cloka-clc-18",
      "src": "18.jpg",
+     "alt": "A woman in a white Cloka top, arms folded, looking straight into the lens",
      "width": 4000,
      "height": 6000,
      "aspect": 0.6667,
@@ -285,6 +303,7 @@
     {
      "id": "pregnancy-photoshoot-01",
      "src": "01.jpg",
+     "alt": "A couple standing on a rocky causeway at sunset, her red tulle gown trailing across the stones, the sun low on the water behind them",
      "width": 4708,
      "height": 6277,
      "aspect": 0.75,
@@ -299,6 +318,7 @@
     {
      "id": "pregnancy-photoshoot-02",
      "src": "02.jpg",
+     "alt": "A woman in a red gown resting both hands on her bump, bare winter branches overhead",
      "width": 3905,
      "height": 5206,
      "aspect": 0.7501,
@@ -313,6 +333,7 @@
     {
      "id": "pregnancy-photoshoot-03",
      "src": "03.jpg",
+     "alt": "The same woman laughing, red gown against bare trees and open blue sky",
      "width": 4000,
      "height": 5328,
      "aspect": 0.7508,
@@ -327,6 +348,7 @@
     {
      "id": "pregnancy-photoshoot-04",
      "src": "04.jpg",
+     "alt": "Extreme close-up of her eye and cheekbone, a pearl earring just in frame",
      "width": 3045,
      "height": 4060,
      "aspect": 0.75,
@@ -341,6 +363,7 @@
     {
      "id": "pregnancy-photoshoot-05",
      "src": "05.jpg",
+     "alt": "The couple turned towards each other under bare branches, sky bright behind",
      "width": 4000,
      "height": 5328,
      "aspect": 0.7508,
@@ -355,6 +378,7 @@
     {
      "id": "pregnancy-photoshoot-06",
      "src": "06.jpg",
+     "alt": "The couple cheek to cheek, both smiling, framed tight",
      "width": 4000,
      "height": 5328,
      "aspect": 0.7508,
@@ -369,6 +393,7 @@
     {
      "id": "pregnancy-photoshoot-07",
      "src": "07.jpg",
+     "alt": "A small dog sitting on a wooden deck against a backdrop of the same red tulle",
      "width": 3644,
      "height": 4859,
      "aspect": 0.7499,
@@ -383,6 +408,7 @@
     {
      "id": "pregnancy-photoshoot-08",
      "src": "08.jpg",
+     "alt": "Low angle looking up: the red gown spread wide against a deep blue winter sky",
      "width": 4000,
      "height": 5328,
      "aspect": 0.7508,
@@ -397,6 +423,7 @@
     {
      "id": "pregnancy-photoshoot-09",
      "src": "09.jpg",
+     "alt": "A silhouette on the causeway as the sun sets behind her, the gown lifting in the wind",
      "width": 6120,
      "height": 8160,
      "aspect": 0.75,
@@ -411,6 +438,7 @@
     {
      "id": "pregnancy-photoshoot-10",
      "src": "10.jpg",
+     "alt": "The couple with their foreheads touching, backlit by the last of the sun",
      "width": 3853,
      "height": 5137,
      "aspect": 0.75,
@@ -437,6 +465,7 @@
     {
      "id": "traditional-art-form-01",
      "src": "01.jpg",
+     "alt": "A dancer in a purple and gold silk costume standing in position on a dark stage, one hand raised in a mudra",
      "width": 1080,
      "height": 1620,
      "aspect": 0.6667,
@@ -451,6 +480,7 @@
     {
      "id": "traditional-art-form-02",
      "src": "02.jpg",
+     "alt": "The dancer mid movement, one arm swept above the head, costume pleats fanning out",
      "width": 1048,
      "height": 1864,
      "aspect": 0.5622,
@@ -465,6 +495,7 @@
     {
      "id": "traditional-art-form-03",
      "src": "03.jpg",
+     "alt": "Tight portrait: temple jewellery across the forehead, jasmine in the hair, gaze held steady",
      "width": 596,
      "height": 1060,
      "aspect": 0.5623,
@@ -479,6 +510,7 @@
     {
      "id": "traditional-art-form-04",
      "src": "04.jpg",
+     "alt": "The dancer standing square to the camera, hands at the waist, gold blouse catching the light",
      "width": 1080,
      "height": 1920,
      "aspect": 0.5625,
@@ -493,6 +525,7 @@
     {
      "id": "traditional-art-form-05",
      "src": "05.jpg",
+     "alt": "A standing portrait with one hand lifted, fingers shaped into a mudra",
      "width": 959,
      "height": 1705,
      "aspect": 0.5625,
@@ -507,6 +540,7 @@
     {
      "id": "traditional-art-form-06",
      "src": "06.jpg",
+     "alt": "Close on the face and hands together, fingertips stained red with alta",
      "width": 1080,
      "height": 1920,
      "aspect": 0.5625,
@@ -521,6 +555,7 @@
     {
      "id": "traditional-art-form-07",
      "src": "07.jpg",
+     "alt": "Close frame, smiling, both hands held in a mudra at chest height",
      "width": 1080,
      "height": 1920,
      "aspect": 0.5625,
@@ -535,6 +570,7 @@
     {
      "id": "traditional-art-form-08",
      "src": "08.jpg",
+     "alt": "Close frame with the hands cupped together in front of the chest",
      "width": 1080,
      "height": 1920,
      "aspect": 0.5625,
@@ -549,6 +585,7 @@
     {
      "id": "traditional-art-form-09",
      "src": "09.jpg",
+     "alt": "Full length on the stage floor, arms extended, weight low in the stance",
      "width": 971,
      "height": 1456,
      "aspect": 0.6669,
@@ -563,6 +600,7 @@
     {
      "id": "traditional-art-form-10",
      "src": "10.jpg",
+     "alt": "Tight frame, one hand raised beside the face, expression carrying the line",
      "width": 1080,
      "height": 1920,
      "aspect": 0.5625,
@@ -589,6 +627,7 @@
     {
      "id": "cobalt-01",
      "src": "01.jpg",
+     "alt": "A woman in a tailored cobalt suit against an old brick wall, one hand to her head, the street falling away behind her",
      "width": 4672,
      "height": 7008,
      "aspect": 0.6667,
@@ -603,6 +642,7 @@
     {
      "id": "cobalt-02",
      "src": "02.jpg",
+     "alt": "The same suit against board-marked concrete, one hand resting at her chest",
      "width": 4672,
      "height": 7008,
      "aspect": 0.6667,
@@ -617,6 +657,7 @@
     {
      "id": "cobalt-03",
      "src": "03.jpg",
+     "alt": "Closer in, hands brought together, the concrete wall filling the frame",
      "width": 2875,
      "height": 3833,
      "aspect": 0.7501,
@@ -631,6 +672,7 @@
     {
      "id": "cobalt-04",
      "src": "04.jpg",
+     "alt": "Black and white: the suit against brick with city buildings rising behind",
      "width": 3877,
      "height": 5816,
      "aspect": 0.6666,
@@ -645,6 +687,7 @@
     {
      "id": "cobalt-05",
      "src": "05.jpg",
+     "alt": "Full length beside a stair rail, concrete behind, hands at the collar",
      "width": 4415,
      "height": 5887,
      "aspect": 0.75,
@@ -659,6 +702,7 @@
     {
      "id": "cobalt-06",
      "src": "06.jpg",
+     "alt": "A wide crop of head and shoulders turned against the concrete",
      "width": 4130,
      "height": 2065,
      "aspect": 2.0,

@@ -1,5 +1,6 @@
 {
   "_comment": "Project definitions. Edit this file, then run: python tools/build.py. Photos come from Photos/<folder> in filename order -- that order is the sequence the project page renders, so name them 01, 02, 03. Ratings never reorder a project.",
+  "_alt_comment": "'alt' maps a filename to a description of the photograph, used as the accessible name of its button. Without it a screen reader gets the project title repeated once per frame, which is useless. Describe what is in the frame, not how good it is.",
   "projects": [
     {
       "slug": "cloka-clc",
@@ -10,7 +11,27 @@
       "folder": "projects/cloka-clc",
       "_cover_note": "Set to null to let the build pick the highest-rated frame. It chose 13.jpg (the logo macro) — technically the sharpest, but a detail shot makes a weak campaign card, so 11 is named explicitly: product worn in use, branding fully legible, the shoot's teal/orange light at its strongest.",
       "cover": "11.jpg",
-      "inGallery": false
+      "inGallery": false,
+      "alt": {
+        "01.jpg": "A row of people holding a plank position on the gym floor under warm overhead light",
+        "02.jpg": "A man photographed from behind in an orange tee printed RUN, with the gym crowd beyond him",
+        "03.jpg": "A man pressing a dumbbell on a bench in low light, a spotter's hands above the weight",
+        "04.jpg": "A man in a blue tee lying on a bench pressing a loaded barbell, two spotters leaning over him",
+        "05.jpg": "A tall perforated orange panel filling the frame as a graphic block of colour",
+        "06.jpg": "Wide view of the gym interior, red pillars and racks receding into shadow",
+        "07.jpg": "A woman at the bottom of a barbell squat, others watching from behind",
+        "08.jpg": "Two trainers steadying a man through a seated press, orange machine frames around them",
+        "09.jpg": "A group working through the machines, one man seated at a cable station",
+        "10.jpg": "Black and white: a man from behind, the words BEYOND THE LIMIT across his shoulders",
+        "11.jpg": "A man from behind under teal light, the Cloka wordmark legible across his back against an orange wall",
+        "12.jpg": "Close detail of a black embroidered logo on the shoulder of a white ribbed vest",
+        "13.jpg": "Close detail of the same black logo on white fabric, lit hard against a dark ground",
+        "14.jpg": "A man in a white vest mid dumbbell curl, gym equipment falling away behind him",
+        "15.jpg": "A man in a blue tee straining at the top of a dip, head tipped back",
+        "16.jpg": "A muscular man curling a dumbbell, an orange rack filling the background",
+        "17.jpg": "A group standing together on the training floor between sets",
+        "18.jpg": "A woman in a white Cloka top, arms folded, looking straight into the lens"
+      }
     },
     {
       "slug": "pregnancy-photoshoot",
@@ -18,7 +39,19 @@
       "subtitle": "Maternity shoot · December 2025",
       "summary": "A winter maternity session on a coastal causeway, timed so the sun sat low behind the water for the last of it. Red tulle against bare trees and a hard blue sky, close enough to catch the small moments between the two of them — and the dog got a frame of its own.",
       "folder": "projects/pregnancy-photoshoot",
-      "cover": "01.jpg"
+      "cover": "01.jpg",
+      "alt": {
+        "01.jpg": "A couple standing on a rocky causeway at sunset, her red tulle gown trailing across the stones, the sun low on the water behind them",
+        "02.jpg": "A woman in a red gown resting both hands on her bump, bare winter branches overhead",
+        "03.jpg": "The same woman laughing, red gown against bare trees and open blue sky",
+        "04.jpg": "Extreme close-up of her eye and cheekbone, a pearl earring just in frame",
+        "05.jpg": "The couple turned towards each other under bare branches, sky bright behind",
+        "06.jpg": "The couple cheek to cheek, both smiling, framed tight",
+        "07.jpg": "A small dog sitting on a wooden deck against a backdrop of the same red tulle",
+        "08.jpg": "Low angle looking up: the red gown spread wide against a deep blue winter sky",
+        "09.jpg": "A silhouette on the causeway as the sun sets behind her, the gown lifting in the wind",
+        "10.jpg": "The couple with their foreheads touching, backlit by the last of the sun"
+      }
     },
     {
       "slug": "traditional-art-form",
@@ -26,7 +59,19 @@
       "subtitle": "Classical dance recital · 2026",
       "summary": "A solo recital shot tight against a black stage, where the only light is the one the performer is standing in. The set moves between full posture and the details the form actually lives in: the mudras of the hands, the alta on the fingers, and the expression carrying the story.",
       "folder": "projects/traditional-art-form",
-      "cover": "03.jpg"
+      "cover": "03.jpg",
+      "alt": {
+        "01.jpg": "A dancer in a purple and gold silk costume standing in position on a dark stage, one hand raised in a mudra",
+        "02.jpg": "The dancer mid movement, one arm swept above the head, costume pleats fanning out",
+        "03.jpg": "Tight portrait: temple jewellery across the forehead, jasmine in the hair, gaze held steady",
+        "04.jpg": "The dancer standing square to the camera, hands at the waist, gold blouse catching the light",
+        "05.jpg": "A standing portrait with one hand lifted, fingers shaped into a mudra",
+        "06.jpg": "Close on the face and hands together, fingertips stained red with alta",
+        "07.jpg": "Close frame, smiling, both hands held in a mudra at chest height",
+        "08.jpg": "Close frame with the hands cupped together in front of the chest",
+        "09.jpg": "Full length on the stage floor, arms extended, weight low in the stance",
+        "10.jpg": "Tight frame, one hand raised beside the face, expression carrying the line"
+      }
     },
     {
       "slug": "cobalt",
@@ -35,7 +80,15 @@
       "_overlap_note": "04, 02, 03 and 05 are the same frames published in the gallery as Tailored in Mono, Cobalt Poise, Cobalt Gaze and Cobalt Ascent. Kept in both places deliberately.",
       "summary": "A tailored cobalt suit worked against the two hardest surfaces the block had to offer — old brick with the street falling away behind it, and raw board-marked concrete. Shot mostly tight, with one frame taken down to black and white where the colour stopped adding anything.",
       "folder": "projects/cobalt",
-      "cover": "01.jpg"
+      "cover": "01.jpg",
+      "alt": {
+        "01.jpg": "A woman in a tailored cobalt suit against an old brick wall, one hand to her head, the street falling away behind her",
+        "02.jpg": "The same suit against board-marked concrete, one hand resting at her chest",
+        "03.jpg": "Closer in, hands brought together, the concrete wall filling the frame",
+        "04.jpg": "Black and white: the suit against brick with city buildings rising behind",
+        "05.jpg": "Full length beside a stair rail, concrete behind, hands at the collar",
+        "06.jpg": "A wide crop of head and shoulders turned against the concrete"
+      }
     }
   ]
 }

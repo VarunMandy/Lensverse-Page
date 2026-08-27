@@ -442,6 +442,10 @@ def main() -> int:
             "id": slugs[name],
             "src": name,
             "title": entry["title"],
+            # Optional per-photo description. Empty means the accessible name
+            # falls back to title + category, which identifies a photo but does
+            # not describe it.
+            "alt": (entries[name].get("alt") or "").strip(),
             "category": entry["category"],
             "width": s.width,
             "height": s.height,
@@ -472,6 +476,12 @@ def main() -> int:
     # is consulted, and it is not published.
     project_out = []
     for proj in projects:
+        alt_map = proj.get("alt") or {}
+        undescribed = [f for f in proj["files"] if not alt_map.get(f)]
+        if undescribed:
+            print(f"warning: project '{proj['slug']}' has {len(undescribed)} frame(s) "
+                  f"with no alt text: {', '.join(undescribed)}")
+
         photos_out = []
         for f in proj["files"]:
             s = proj["scored"][f]
@@ -479,6 +489,7 @@ def main() -> int:
             photos_out.append({
                 "id": proj["slugs"][f],
                 "src": f,
+                "alt": alt_map.get(f) or "",
                 "width": s.width,
                 "height": s.height,
                 "aspect": round(s.width / max(1, s.height), 4),
@@ -548,8 +559,12 @@ def main() -> int:
 
     out_bytes = sum(f.stat().st_size for f in MEDIA.glob("*") if f.is_file())
     src_bytes = sum((PHOTOS / n).stat().st_size for n in names)
+    no_alt = sum(1 for p in photos if not p["alt"])
     print(f"\nphotos.json  {len(photos)} photos, order only "
           f"(no ratings published)")
+    if no_alt:
+        print(f"             {no_alt} without alt text — their accessible name "
+              f"falls back to title + category")
     print(f"{RATINGS_REPORT.relative_to(ROOT).as_posix()}  ratings "
           f"{min(ratings):.1f}-{max(ratings):.1f}, "
           f"median {sorted(ratings)[len(ratings) // 2]:.1f}  [internal]")

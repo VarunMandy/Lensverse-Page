@@ -238,9 +238,15 @@
         Gallery.ensure();
         // A gallery built while this section was hidden has no layout yet.
         requestAnimationFrame(() => Gallery.layout());
+        Manifest.load().then((d) => {
+          if (this.current === "portfolio") StructuredData.portfolio(d);
+        }).catch(() => {});
       }
 
       if (route === "projects") Projects.show(slug);
+
+      // Views with no per-route markup fall back to the static graph alone.
+      if (route !== "portfolio" && route !== "projects") StructuredData.write(null);
 
       if (isNavigation) {
         window.scrollTo({ top: 0, behavior: "auto" });
@@ -290,6 +296,108 @@
       $$("[data-stat]").forEach((el) => {
         const value = values[el.dataset.stat];
         if (value !== undefined) el.textContent = value;
+      });
+    },
+  };
+
+  /* ======================================================================
+     Structured data
+
+     The static graph in index.html covers the person and the site. This adds
+     the part that matters for a photographer and cannot be static: an
+     ImageObject per photograph, so individual frames are eligible for image
+     search, plus a node per project. Swapped on every route change.
+     ====================================================================== */
+
+  const StructuredData = {
+    siteRoot() {
+      return ($("#site-url")?.content || location.origin).replace(/\/+$/, "");
+    },
+
+    /** Absolute URL for a media file — schema.org requires absolute. */
+    mediaUrl(id, suffix) {
+      return `${this.siteRoot()}/media/${id}-${suffix}`;
+    },
+
+    image(photo, extra = {}) {
+      const node = {
+        "@type": "ImageObject",
+        contentUrl: this.mediaUrl(photo.id, "full.avif"),
+        thumbnailUrl: this.mediaUrl(photo.id, "400.avif"),
+        width: photo.width,
+        height: photo.height,
+        creator: { "@id": `${this.siteRoot()}/#varun` },
+        copyrightHolder: { "@id": `${this.siteRoot()}/#varun` },
+        ...extra,
+      };
+      const description = (photo.alt || "").trim();
+      if (description) node.description = description;
+      if (photo.captured) node.dateCreated = photo.captured.slice(0, 10);
+      return node;
+    },
+
+    write(node) {
+      let tag = $("#route-ld");
+      if (!node) { tag?.remove(); return; }
+      if (!tag) {
+        tag = document.createElement("script");
+        tag.type = "application/ld+json";
+        tag.id = "route-ld";
+        document.head.appendChild(tag);
+      }
+      tag.textContent = JSON.stringify(node);
+    },
+
+    portfolio(data) {
+      this.write({
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "@id": `${this.siteRoot()}/portfolio#gallery`,
+        name: "Lensverse — Selected Work",
+        url: `${this.siteRoot()}/portfolio`,
+        isPartOf: { "@id": `${this.siteRoot()}/#site` },
+        creator: { "@id": `${this.siteRoot()}/#varun` },
+        numberOfItems: data.photos.length,
+        associatedMedia: data.photos.map((p) =>
+          this.image(p, { name: p.title, genre: p.category })),
+      });
+    },
+
+    projectIndex(projects) {
+      this.write({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": `${this.siteRoot()}/projects#index`,
+        name: "Projects — Lensverse Photography",
+        url: `${this.siteRoot()}/projects`,
+        isPartOf: { "@id": `${this.siteRoot()}/#site` },
+        hasPart: projects.map((p) => ({
+          "@type": "ImageGallery",
+          "@id": `${this.siteRoot()}/projects/${p.slug}#project`,
+          name: p.title,
+          url: `${this.siteRoot()}/projects/${p.slug}`,
+          description: p.summary || undefined,
+          numberOfItems: p.count,
+          thumbnailUrl: this.mediaUrl(p.cover, "800.avif"),
+        })),
+      });
+    },
+
+    project(p) {
+      this.write({
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "@id": `${this.siteRoot()}/projects/${p.slug}#project`,
+        name: p.title,
+        alternativeHeadline: p.subtitle || undefined,
+        description: p.summary || undefined,
+        url: `${this.siteRoot()}/projects/${p.slug}`,
+        isPartOf: { "@id": `${this.siteRoot()}/#site` },
+        creator: { "@id": `${this.siteRoot()}/#varun` },
+        numberOfItems: p.count,
+        thumbnailUrl: this.mediaUrl(p.cover, "800.avif"),
+        associatedMedia: p.photos.map((photo, i) =>
+          this.image(photo, { name: `${p.title} — ${i + 1} of ${p.count}` })),
       });
     },
   };
@@ -663,8 +771,11 @@
       btn.type = "button";
       btn.className = "tile";
       btn.dataset.id = photo.id;
+      // Prefer a real description; fall back to title + category, which
+      // identifies the photo without describing it.
+      const described = (photo.alt || "").trim();
       btn.setAttribute("aria-label",
-        `${photo.title}. ${photo.category}. ` +
+        `${described || `${photo.title}. ${photo.category}`}. ` +
         `${photo._pos} of ${this.visible.length}. Open larger view.`);
 
       btn.innerHTML = `
@@ -672,7 +783,9 @@
           <picture>
             <source type="image/avif" srcset="${srcset("avif")}" sizes="${TILE_SIZES}">
             <source type="image/webp" srcset="${srcset("webp")}" sizes="${TILE_SIZES}">
-            <img src="${dir}/${photo.id}-800.jpg" alt="${escapeAttr(photo.title)}"
+            <!-- alt="" is deliberate: the button around this image carries the
+                 accessible name, so describing it here too double-announces. -->
+            <img src="${dir}/${photo.id}-800.jpg" alt=""
                  width="${photo.width}" height="${photo.height}"
                  loading="${eager ? "eager" : "lazy"}"
                  ${eager ? 'fetchpriority="high"' : ""}
@@ -710,6 +823,22 @@
     "(max-width: 700px) 94vw, (max-width: 1100px) 88vw, 1100px";
   const PROJECT_PAIR_SIZES =
     "(max-width: 700px) 94vw, (max-width: 1100px) 44vw, 545px";
+
+  /**
+   * Accessible name for one frame of a project.
+   *
+   * The <img> stays alt="" on purpose: it sits inside a button, and the button
+   * carries the name, so a description on both would be announced twice. The
+   * position is always appended, so even an undescribed frame is distinct --
+   * without it a screen reader hears the project title eighteen times over.
+   */
+  function shotLabel(project, photo) {
+    const position = `${project.photos.indexOf(photo) + 1} of ${project.photos.length}`;
+    const description = (photo.alt || "").trim();
+    return description
+      ? `${description}. ${position}. Open larger view.`
+      : `${project.title}, frame ${position}. Open larger view.`;
+  }
 
   const Projects = {
     data: null,
@@ -760,6 +889,7 @@
         shell.hidden = true;
         detail.hidden = false;
         this.renderDetail(project);
+        StructuredData.project(project);
         document.title = `${project.title} — Lensverse Photography`;
         const desc = project.summary || ROUTES.projects.description;
         $('meta[name="description"]')?.setAttribute("content", desc);
@@ -769,6 +899,7 @@
         detail.hidden = true;
         shell.hidden = false;
         this.renderIndex(data.projects);
+        StructuredData.projectIndex(data.projects);
       }
       Reveal.scan();
     },
@@ -827,7 +958,7 @@
         return `
           <button type="button" class="project-shot${paired ? " project-shot--pair" : ""}"
                   data-id="${photo.id}" style="--ar:${photo.aspect}"
-                  aria-label="${escapeAttr(project.title)}. Open larger view.">
+                  aria-label="${escapeAttr(shotLabel(project, photo))}">
             <span class="project-shot__frame" style="aspect-ratio:${photo.width} / ${photo.height};
                   background-image:url('${photo.lqip || ""}')">
               <picture>
@@ -987,7 +1118,9 @@
       img.classList.remove("is-loaded");
       img.width = photo.width;
       img.height = photo.height;
-      img.alt = photo.title || this.label || "";
+      // Here the image is the content rather than a button's label, so it takes
+      // the full description.
+      img.alt = (photo.alt || "").trim() || photo.title || this.label || "";
       img.src = `${dir}/${photo.id}-800.jpg`;
       if (img.complete) img.classList.add("is-loaded");
       else img.addEventListener("load", () => img.classList.add("is-loaded"), { once: true });

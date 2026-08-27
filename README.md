@@ -206,6 +206,51 @@ are never published**.
 
 ---
 
+## Alt text
+
+Both metadata files take an optional per-photo `alt` describing what is in the
+frame. It becomes the accessible name of that photo's button, and the `alt` of
+the full-size image in the lightbox.
+
+```jsonc
+// content/photos.meta.json
+"36.jpg": { "title": "Scarlet Dance", "category": "Fashion",
+            "alt": "Two dancers mid-turn against a scarlet backdrop" }
+
+// content/projects.meta.json — keyed by filename
+"alt": { "01.jpg": "A dancer in purple and gold silk, one hand raised in a mudra" }
+```
+
+Fallbacks when `alt` is absent: a gallery photo uses `title + category`, a
+project frame uses `title + frame N of M`. Both *identify* a photo without
+describing it, so the build reports how many are still undescribed.
+
+All 44 project frames are written. The 76 gallery photos are not — they fall
+back to title and category.
+
+The images themselves carry `alt=""` **on purpose**: each sits inside a button
+that already holds the accessible name, and describing both double-announces.
+The exception is the lightbox, where the image is the content rather than a
+button label, so it takes the full description.
+
+## Structured data
+
+`index.html` holds a static graph (`Person`, `WebSite`, `ImageGallery`).
+`assets/app.js` adds the part that has to be dynamic and swaps it per route
+under `<script id="route-ld">`:
+
+| Route | Emits |
+| --- | --- |
+| `/portfolio` | `ImageGallery` + one `ImageObject` per photograph (~32 KB) |
+| `/projects` | `CollectionPage` with an `ImageGallery` per project |
+| `/projects/<slug>` | `ImageGallery` + an `ImageObject` per frame |
+| others | nothing; the static graph stands alone |
+
+Each `ImageObject` carries absolute `contentUrl` and `thumbnailUrl`, pixel
+dimensions, the capture date where EXIF had one, and creator/copyright pointing
+at the `Person` node — which is what makes individual frames eligible for image
+search rather than just the page.
+
 ## Accessibility
 
 - Every gallery tile is a real `<button>`, reachable and operable by keyboard

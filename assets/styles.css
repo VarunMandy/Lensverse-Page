@@ -958,7 +958,7 @@ button, input, textarea, select { font: inherit; color: inherit; }
   text-transform: uppercase;
   color: var(--fg-faint);
 }
-.field input, .field textarea {
+.field input, .field textarea, .field select {
   width: 100%;
   padding: 0.85rem 1rem;
   background: var(--bg-elev);
@@ -967,10 +967,29 @@ button, input, textarea, select { font: inherit; color: inherit; }
   transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
 }
 .field input::placeholder, .field textarea::placeholder { color: var(--fg-faint); }
-.field input:hover, .field textarea:hover { border-color: var(--line-firm); }
+.field input:hover, .field textarea:hover, .field select:hover { border-color: var(--line-firm); }
 .field textarea { resize: vertical; min-height: 9.5rem; }
+
+/* Square-cornered to match the text fields, not the pill-shaped toolbar
+   select. The chevron is drawn in CSS so there is no icon request. */
+.field select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 2.5rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: calc(100% - 1.35rem) 55%, calc(100% - 1rem) 55%;
+  background-size: 0.36rem 0.36rem, 0.36rem 0.36rem;
+  background-repeat: no-repeat;
+}
+/* The placeholder option reads as placeholder text until a real choice is made. */
+.field select:has(option[value=""]:checked) { color: var(--fg-faint); }
+.field select option { color: var(--fg); background: var(--bg-elev); }
+
 .field[data-invalid="true"] input,
-.field[data-invalid="true"] textarea { border-color: #e26d6d; }
+.field[data-invalid="true"] textarea,
+.field[data-invalid="true"] select { border-color: #e26d6d; }
 .field__error { font-size: var(--step--1); color: #e26d6d; min-height: 0; }
 
 .honeypot {

@@ -1028,6 +1028,8 @@
         // Bots fill hidden inputs; humans cannot see this one.
         if (form.elements.botcheck.value) return;
 
+        const projectType = form.elements.project_type.value.trim() || "Unspecified";
+
         const btn = $("#form-submit", form);
         const label = btn.textContent;
         btn.disabled = true;
@@ -1041,10 +1043,13 @@
             headers: { "Content-Type": "application/json", Accept: "application/json" },
             body: JSON.stringify({
               access_key: form.elements.access_key.value,
-              subject: "New enquiry from the Lensverse portfolio",
+              // Project type goes in the subject so an enquiry can be triaged
+              // from the inbox list without opening it.
+              subject: `New enquiry: ${projectType} — Lensverse portfolio`,
               from_name: "Lensverse Portfolio",
               name: form.elements.name.value.trim(),
               email: form.elements.email.value.trim(),
+              project_type: projectType,
               message: form.elements.message.value.trim(),
             }),
           });
@@ -1068,8 +1073,11 @@
         }
       });
 
-      $$(".field input, .field textarea", form).forEach((input) => {
+      $$(".field input, .field textarea, .field select", form).forEach((input) => {
         input.addEventListener("blur", () => this.check(input));
+        // `change` matters for the select: clear its error the moment a real
+        // option is picked, rather than waiting for blur.
+        input.addEventListener("change", () => this.check(input));
         input.addEventListener("input", () => {
           if (input.closest(".field").dataset.invalid === "true") this.check(input);
         });
@@ -1089,7 +1097,7 @@
     },
 
     validate(form) {
-      return $$(".field input, .field textarea", form)
+      return $$(".field input, .field textarea, .field select", form)
         .map((input) => this.check(input))
         .every(Boolean);
     },

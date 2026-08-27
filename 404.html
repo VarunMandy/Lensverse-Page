@@ -354,6 +354,23 @@
         </div>
 
         <div class="field">
+          <label for="project-type">Type of project</label>
+          <select id="project-type" name="project_type" required
+                  aria-describedby="project-type-error">
+            <option value="" selected>Please choose…</option>
+            <option>Portrait session</option>
+            <option>Fashion / editorial</option>
+            <option>Maternity</option>
+            <option>Wedding</option>
+            <option>Event or live music</option>
+            <option>Performance or dance</option>
+            <option>Brand or commercial</option>
+            <option>Something else</option>
+          </select>
+          <p class="field__error" id="project-type-error"></p>
+        </div>
+
+        <div class="field">
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="6" required
                     placeholder="What are you planning, and roughly when?"

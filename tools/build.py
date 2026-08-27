@@ -48,6 +48,7 @@ MEDIA = ROOT / "media"
 META = ROOT / "content" / "photos.meta.json"
 MANIFEST = ROOT / "photos.json"
 RATINGS_REPORT = ROOT / "tools" / "ratings.report.json"
+CONTENT = ROOT / "content"
 PROJECTS_META = ROOT / "content" / "projects.meta.json"
 PROJECTS_MANIFEST = ROOT / "projects.json"
 
@@ -238,58 +239,109 @@ def load_projects() -> list[dict]:
     return projects
 
 
-def build_icons() -> list[int]:
-    """Raster app icons, drawn to match favicon.svg.
+def build_icons() -> dict:
+    """Derive every icon from the supplied logo lockup in content/.
 
-    iOS ignores SVG for apple-touch-icon and falls back to a screenshot of the
-    page, so PNGs are not optional. Drawn rather than rasterised because Pillow
-    cannot read SVG.
+    The source is a stacked lockup -- mark above the LENSVERSE wordmark -- on
+    opaque black. Two things come out of it:
+
+      icon-*.png      the mark on black, square, for iOS and Android
+      favicon-*.png   the central iris only; the full mark turns to mush at 16px
+
+    The logo is not used on the page itself; the masthead keeps its Cormorant
+    wordmark. iOS ignores SVG for apple-touch-icon and substitutes a screenshot
+    of the page, so the PNGs are not optional.
     """
-    import math
+    import numpy as np
 
-    from PIL import ImageDraw
+    sources = sorted(CONTENT.glob("logo*.png")) + sorted(CONTENT.glob("logo*.jpg"))
+    if not sources:
+        print("warning: no content/logo*.png — skipping icons, existing ones kept")
+        return {}
+    src = sources[0]
 
-    BG, GOLD = (10, 10, 12), (227, 184, 118)
-    written = []
+    rgb = Image.open(src).convert("RGB")
+    a = np.asarray(rgb, dtype=np.int16)
+    ink = a.max(axis=2) > 18                      # anything above the black ground
 
-    def draw(size: int, pad_ratio: float = 0.0) -> Image.Image:
-        """A lens iris: outer ring plus six blades tangent to a hexagonal
-        opening. Blades must not meet at the centre -- spokes through the middle
-        read as a wagon wheel, not an aperture."""
-        s = size * 4                      # supersample, then downscale
-        img = Image.new("RGB", (s, s), BG)
-        d = ImageDraw.Draw(img)
-        c = s / 2
-        span = (1.0 - 2 * pad_ratio)      # maskable icons need a safe margin
-        R = 0.375 * s * span              # outer ring radius
-        r = 0.150 * s * span              # hexagonal opening radius
-        w = max(1, int(round(0.030 * s * span)))
+    rows = np.where(ink.any(axis=1))[0]
+    if not len(rows):
+        print(f"warning: {src.name} looks blank — skipping icons")
+        return {}
 
-        def polar(radius, deg):
-            a = math.radians(deg)
-            return (c + radius * math.cos(a), c + radius * math.sin(a))
+    # The lockup has one tall blank band between mark and wordmark. Find the
+    # widest such gap and treat everything above it as the mark, so this keeps
+    # working if the logo is re-exported at another size.
+    row_ink = ink.sum(axis=1)
+    gaps, run = [], None
+    for y in range(rows.min(), rows.max() + 1):
+        if row_ink[y] == 0 and run is None:
+            run = y
+        elif row_ink[y] != 0 and run is not None:
+            gaps.append((run, y - 1))
+            run = None
+    band = max(gaps, key=lambda g: g[1] - g[0]) if gaps else None
+    mark_bottom = band[0] if band else rows.max() + 1
 
-        d.ellipse([c - R, c - R, c + R, c + R], outline=GOLD, width=w)
+    mark_ink = ink[:mark_bottom]
+    ys = np.where(mark_ink.any(axis=1))[0]
+    xs = np.where(mark_ink.any(axis=0))[0]
+    x0, x1, y0, y1 = int(xs.min()), int(xs.max()), int(ys.min()), int(ys.max())
+    mw, mh = x1 - x0 + 1, y1 - y0 + 1
 
-        # the opening
-        hexagon = [polar(r, -90 + 60 * i) for i in range(6)]
-        d.line(hexagon + [hexagon[0]], fill=GOLD, width=w, joint="curve")
+    # Silhouette alpha, so the mark can be composited onto an icon canvas
+    # without carrying a black rectangle. The mark is a rounded rectangle whose
+    # outer edge is gradient-filled all the way round, so the first and last
+    # non-black pixel on each row *is* the shape boundary. Filling between them
+    # keeps the black that belongs to the design (the aperture opening) and
+    # drops only the background -- which a colour key could not do.
+    region = mark_ink[y0:y1 + 1, x0:x1 + 1]
+    alpha = np.zeros(region.shape, dtype=np.uint8)
+    for r in range(region.shape[0]):
+        cols_on = np.where(region[r])[0]
+        if len(cols_on):
+            alpha[r, cols_on.min():cols_on.max() + 1] = 255
 
-        # one blade per vertex, each swept the same way so the iris looks wound
-        for i in range(6):
-            start = hexagon[i]
-            end = polar(R, -90 + 60 * (i + 1))
-            d.line([start, end], fill=GOLD, width=w, joint="curve")
+    mark = Image.merge("RGBA", (
+        *rgb.crop((x0, y0, x1 + 1, y1 + 1)).split(),
+        Image.fromarray(alpha, mode="L"),
+    ))
 
-        return img.resize((size, size), Image.LANCZOS)
+    # App icons: mark centred on the logo's own black, square.
+    def square(size: int, fill_ratio: float) -> Image.Image:
+        canvas = Image.new("RGB", (size, size), (0, 0, 0))
+        target_w = int(size * fill_ratio)
+        target_h = max(1, round(target_w * mh / mw))
+        if target_h > size * fill_ratio:
+            target_h = int(size * fill_ratio)
+            target_w = max(1, round(target_h * mw / mh))
+        resized = mark.resize((target_w, target_h), Image.LANCZOS)
+        canvas.paste(resized, ((size - target_w) // 2, (size - target_h) // 2),
+                     resized)
+        return canvas
 
+    icons = []
     for size in (180, 192, 512):
-        draw(size).save(ROOT / f"icon-{size}.png", format="PNG", optimize=True)
-        written.append(size)
-    # Android masks maskable icons to a circle; keep the mark inside the safe area
-    draw(512, pad_ratio=0.10).save(ROOT / "icon-512-maskable.png",
-                                   format="PNG", optimize=True)
-    return written
+        square(size, 0.92).save(ROOT / f"icon-{size}.png", format="PNG",
+                                optimize=True)
+        icons.append(size)
+    # Android crops maskable icons to a circle, so pull the mark well inside
+    square(512, 0.68).save(ROOT / "icon-512-maskable.png", format="PNG",
+                           optimize=True)
+
+    # Favicon: the central iris. Verified legible to 16px where the whole mark
+    # collapses into an unreadable smudge.
+    cx, cy = (x0 + x1) // 2, (y0 + y1) // 2
+    half = int(mh * 0.34)
+    iris = rgb.crop((cx - half, cy - half, cx + half, cy + half))
+    favicons = []
+    for size in (16, 32, 48):
+        iris.resize((size, size), Image.LANCZOS).save(
+            ROOT / f"favicon-{size}.png", format="PNG", optimize=True)
+        favicons.append(size)
+
+    return {"source": src.name, "mark": (mw, mh), "icons": icons,
+            "favicons": favicons}
 
 
 def write_sitemap(routes: list[str]) -> None:
@@ -601,8 +653,12 @@ def main() -> int:
         "ranking": [dict(rank=i + 1, **e) for i, e in enumerate(ranked)],
     }, indent=1), encoding="utf-8")
 
-    icons = build_icons()
-    print(f"icons        {', '.join(f'{s}px' for s in icons)} + maskable")
+    art = build_icons()
+    if art:
+        print(f"icons        from {art['source']} "
+              f"(mark {art['mark'][0]}x{art['mark'][1]}) — "
+              f"app {', '.join(f'{s}px' for s in art['icons'])} + maskable, "
+              f"favicon {', '.join(f'{s}px' for s in art['favicons'])}")
 
     write_sitemap(["/", "/portfolio", "/projects", "/about", "/contact"]
                   + [f"/projects/{p['slug']}" for p in project_out])

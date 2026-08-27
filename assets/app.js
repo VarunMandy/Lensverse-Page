@@ -837,14 +837,19 @@
           </button>`;
       };
 
-      // Landscapes stand alone full width; consecutive portraits pair up.
+      // Rhythm rules, in order:
+      //   the opening frame always runs full width -- it is the establishing
+      //     shot, and an all-portrait project would otherwise render as a flat
+      //     two-column grid with no entry point
+      //   landscapes always run full width
+      //   consecutive portraits pair up
       const blocks = [];
       const photos = project.photos;
       for (let i = 0; i < photos.length;) {
         const p = photos[i];
-        const isPortrait = p.aspect < 0.95;
         const next = photos[i + 1];
-        if (isPortrait && next && next.aspect < 0.95) {
+        const pairable = i > 0 && p.aspect < 0.95 && next && next.aspect < 0.95;
+        if (pairable) {
           blocks.push(`<div class="project-pair">${figure(p, true)}${figure(next, true)}</div>`);
           i += 2;
         } else {

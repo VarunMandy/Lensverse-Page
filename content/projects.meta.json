@@ -11,6 +11,22 @@
       "_cover_note": "Set to null to let the build pick the highest-rated frame. It chose 13.jpg (the logo macro) — technically the sharpest, but a detail shot makes a weak campaign card, so 11 is named explicitly: product worn in use, branding fully legible, the shoot's teal/orange light at its strongest.",
       "cover": "11.jpg",
       "inGallery": false
+    },
+    {
+      "slug": "pregnancy-photoshoot",
+      "title": "Almost Three",
+      "subtitle": "Maternity shoot · December 2025",
+      "summary": "A winter maternity session on a coastal causeway, timed so the sun sat low behind the water for the last of it. Red tulle against bare trees and a hard blue sky, close enough to catch the small moments between the two of them — and the dog got a frame of its own.",
+      "folder": "projects/pregnancy-photoshoot",
+      "cover": "01.jpg"
+    },
+    {
+      "slug": "traditional-art-form",
+      "title": "Abhinaya",
+      "subtitle": "Classical dance recital · 2026",
+      "summary": "A solo recital shot tight against a black stage, where the only light is the one the performer is standing in. The set moves between full posture and the details the form actually lives in: the mudras of the hands, the alta on the fingers, and the expression carrying the story.",
+      "folder": "projects/traditional-art-form",
+      "cover": "03.jpg"
     }
   ]
 }

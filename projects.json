@@ -1,12 +1,12 @@
 {
- "generated": "2026-08-25T16:09:59",
+ "generated": "2026-08-27T11:20:32",
  "mediaDir": "media",
  "gridWidths": [
   400,
   800,
   1200
  ],
- "count": 1,
+ "count": 3,
  "projects": [
   {
    "slug": "cloka-clc",
@@ -264,6 +264,310 @@
      "aspect": 0.6667,
      "monochrome": false,
      "lqip": "data:image/webp;base64,UklGRhwBAABXRUJQVlA4IBABAAAwBwCdASoUAB4APulgp00pJaOiMAgBIB0JbACsMuN/d+e8BLIB2ArnJwPfpP82ovHH8SF3V9oyJsJa4gnHNCIsAKAA/vQjtGUX86UfYML8fuHsE4EHMhYbHwq3l/Gw4OaJu1CCL2Y4WA6mFeEzqTjdJx3pyka57ZgY8KiOg7vbs6G06xmf+r7PQqOJ1x2A3RQborPCq6yOUUN2lqvOv5QluJYmoL0ekQwaZhtXQ2pyIbe7wFtPtQDzqvzouUrzHSgKP8X2vL2lF4nCFiwCSxEhORQQn3yjiTRBCcgCpaXoG7E2I1jSZ7BivsdW7lcsRxezrXf+OwiNeAwPMcdgA8hXPYJhtran5mOHX+HGJhAAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "pregnancy-photoshoot",
+   "title": "Almost Three",
+   "subtitle": "Maternity shoot \u00b7 December 2025",
+   "summary": "A winter maternity session on a coastal causeway, timed so the sun sat low behind the water for the last of it. Red tulle against bare trees and a hard blue sky, close enough to catch the small moments between the two of them \u2014 and the dog got a frame of its own.",
+   "count": 10,
+   "cover": "pregnancy-photoshoot-01",
+   "coverAspect": 0.75,
+   "coverLqip": "data:image/webp;base64,UklGRgQBAABXRUJQVlA4IPgAAACQBgCdASoUABsAPulgpU2pJSMiMBgMASAdCWwAnTKEfieBqd8+hZOIDH9DRq5ZIDh8i7gINZpTMP7p0OBAAMsnoxpKdUSpcDiDQh+pB11attcjAOmOi1ZOj3dAdq0CphFoqRXSPwYbJTbuA9BETmQF0ivjiMUs5Tjv55LfZgwdOgGALeb36IPbI5sik/3shd4CV2YKUvTVpT8s99swWZKMoAfEMC1LGS1Lvp59iSAvb6iB1IekswCUpkdkuSYU3U9+azzn7Eu6Z0Requk1mrl48Dv+4nu0F9A3eXnx8MgwSwM2pKY94n/wDEG/kgN3LuK99jSSLZ7AAA==",
+   "photos": [
+    {
+     "id": "pregnancy-photoshoot-01",
+     "src": "01.jpg",
+     "width": 4708,
+     "height": 6277,
+     "aspect": 0.75,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRgQBAABXRUJQVlA4IPgAAACQBgCdASoUABsAPulgpU2pJSMiMBgMASAdCWwAnTKEfieBqd8+hZOIDH9DRq5ZIDh8i7gINZpTMP7p0OBAAMsnoxpKdUSpcDiDQh+pB11attcjAOmOi1ZOj3dAdq0CphFoqRXSPwYbJTbuA9BETmQF0ivjiMUs5Tjv55LfZgwdOgGALeb36IPbI5sik/3shd4CV2YKUvTVpT8s99swWZKMoAfEMC1LGS1Lvp59iSAvb6iB1IekswCUpkdkuSYU3U9+azzn7Eu6Z0Requk1mrl48Dv+4nu0F9A3eXnx8MgwSwM2pKY94n/wDEG/kgN3LuK99jSSLZ7AAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "pregnancy-photoshoot-02",
+     "src": "02.jpg",
+     "width": 3905,
+     "height": 5206,
+     "aspect": 0.7501,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAACwBQCdASoUABsAPuliq08pJSOiMBgIASAdCWYAnQGM+G/vOVx8Il1Nc2U6evfthdA/7FAuqgAA/uCKOlq9ohoeRenwAUIJi553H/IuWsdjbVkmtcy1f4N3OJVHWe1OZFlOvMdmQue4tqM1emOJAtAorqHUwAmL/GskVdy1j+FVh2rtBD8vGpiCy5FqHNY4iP225p8Ftp/elUDhqFMlslAxiZAFQOyanVNB3w7UOD/TNFofccCwGiERL2KnU5bbObNU2x44UcpIT3TPrSyiypddkoZW68Qk6ICStR+v9HiY+v1luOEkXwdAgzAPW8lxVZ7ZJOZAAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "pregnancy-photoshoot-03",
+     "src": "03.jpg",
+     "width": 4000,
+     "height": 5328,
+     "aspect": 0.7508,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAACwBQCdASoUABsAPulmrk+pJSSiKAqpIB0JbACdMoRwJ9ArmMWdOSf/+9P7tsi9orIegMiyLAAA/pA32KfwrDRMvYZIRuUtqLSSV4/mGDy5Kl0dH61W5Gc6qrLaeJwdFeAnNfWToKmrHyuSQRLRroWiye5Vlub9DPLGFobp2+nEpMCPvrwMmwViRCX1q9MBNHZI6iMY5JqPEABJgYtF2+1MsmPpqVPpkf4tKi690friv7Qv/1GXhYYa8RtvB88BR4ngu4wQAITjL4xWQWwRswgkqAuHxzHMDlS2COeVsfxhNTNo8+nm6riR8mzqtVlV54SQpsY6YNiihkAA",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "pregnancy-photoshoot-04",
+     "src": "04.jpg",
+     "width": 3045,
+     "height": 4060,
+     "aspect": 0.75,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAACwBgCdASoUABsAPuleq0+pJKOiMBgIASAdCWwAnTKEfjeq3K5ygAoMeJvx4NPn0Z9dFsTv5XS6/hGJx43teAD+wqJJ4vwZgOKbKcQiT9K8OlLVvSm6LwXTpW6yEpf7m+/ld8CZCq2divpiIBsuBj6L6Sw2fD/Apx6GCYw9G2Q2l9+IxhLqoWhu2OmlikvBbsJ1ZxBZvG9K5l90dDKUMcQChC075XcDP93rnR9x0sBKIcU7e+5SObH6U2uQRYMjvZ7Ji1xYEo7Zihaco4FV/2Q+MlSvl+lDOp/JjNA+yyfURFZs0BGLkmYMFUAXiYAA",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "pregnancy-photoshoot-05",
+     "src": "05.jpg",
+     "width": 4000,
+     "height": 5328,
+     "aspect": 0.7508,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRggBAABXRUJQVlA4IPwAAADwBQCdASoUABsAPulmqk6pJaOiMBgIASAdCWwAnTLjdn6AcQAJn7xntacqY/3vOWOm2AI75/pvAAD7nI6VScBJQeGMC6RSeiZwHd0ZCqn5Hj36oA2E/BMS/34RNUYnBBv8Gd/5L4IR2ZfEc1eOIqPdiPVTpPOX6VFsq7Lj8/I5v8ZbjebOLtyJfSfJq2th3JEFZIObPSsjQ2zlUDS8D4RGVuL9CjIDrN1bn42vKKvLDnSyaeEZ63I7aPgcO/ndpNts+1twICluipsf5/DxHCcFSWUxWhIHKlZNxLXY31r4VIqcOILeMfHDTQztpTEq4fPzPGZx2dcsmcEgAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "pregnancy-photoshoot-06",
+     "src": "06.jpg",
+     "width": 4000,
+     "height": 5328,
+     "aspect": 0.7508,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRg4BAABXRUJQVlA4IAIBAADQBQCdASoUABsAPulmqU6pJaOiMBgIASAdCWwAsR7yJc4IS+LKK/PrZkiVM7/IgQgQgOqa+CGAAPjdWFEiKZ8N3eHWGV6H0N/YMxeogCpoo9Fn3kMYJzMcZVMT1pNUM085B7bidDrDmoAKdtEArZL4YWPw2HXeDDTjLE8WFkSYYifxWDzDK5OCuW48hnh2jZEFdNiAlUOQ+qLUHcrzEYeaGv/jA2Kx19JpTXabRTMSTaMSGBHxADnGEY1fmfsKvCLlMa09eqE+pvpk6W3TZgLnX14+Fw/kgeXrYlt3ADwhzrzid3/c7WpQUTTtT5MoOlGvwZlYK+y06OyPhZ1EbQGCSAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "pregnancy-photoshoot-07",
+     "src": "07.jpg",
+     "width": 3644,
+     "height": 4859,
+     "aspect": 0.7499,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAADQBQCdASoUABsAPuleq0+pJKOiMBgIASAdCWwAnTKEenipQS0VOHJM0dPka0UroUBLSOGGcJtQAPypftNN12YF4NEXYxmnuR4rSHs5B6eV6nRp0F10LMAjpxrb0bfrqfRn/4i/r5NQ9zMvDh0g0X4h3oSOoBFtavCcCkl5oIfV1SLK9iin7mYIONXLV3hv+ocvt2ROJOi2vT0aXCSnlkWKNOvc7TDXTDgG9Er5bMQX32HMvZD7JTKSq0h4/21eFYpN5mIsfXC8hhRoccf8BJ9e6jHD7+cKHN4gzwWLRfHs2HZ3lneumJynCcINoAAA",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "pregnancy-photoshoot-08",
+     "src": "08.jpg",
+     "width": 4000,
+     "height": 5328,
+     "aspect": 0.7508,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAAAwBgCdASoUABsAPuVYp00pJKOiN/VYASAciWwAnTKEeYb67e6Jz8bjPmts5rgP12yMwXm9Fr52GfMQAP1QhybMSF2wloPqsPCrLroEHFUb7o3/9y+6HJO4av+3x4NUIWI8gFbFDot4RyRdTVHZxRUywdQ29y4tdWl7ILCrSVbPsvkYUnk6150i/NlqLCOMap/ZX8pLXwoG9RVhaj46MuSS2ijfQmuvxE4bpPU7VX+Yqt4TpD3WjpnBqtDyNutpMbRz2UcOspamw9m21kzjm1+qw4XyX04AFfV7assAAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "pregnancy-photoshoot-09",
+     "src": "09.jpg",
+     "width": 6120,
+     "height": 8160,
+     "aspect": 0.75,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAADQBQCdASoUABsAPulkqU8pJaOiKA1RIB0JagC1GoMuunQAPGlVM02kBTOLfcrlkULo3pGmQzgAAPpm5iiJhOwbVVHk++Ek5ln27A4rppC+iX+gsIMR68LOKDWgIt4BRfFseTk4j8m7aKRAg2C/aNDJGEMDVArXmbxk2l5yhh0TSxzuePch9hZNUD7efCFX8+HoleqbQNdB0xY5JtlhNXGWbDlYP0QKVGs9KTWdaLLfVinN86JdeCXJuFcgZpqs5P1uNnpITgZIOZ7x5oI48cAA",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "pregnancy-photoshoot-10",
+     "src": "10.jpg",
+     "width": 3853,
+     "height": 5137,
+     "aspect": 0.75,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAACQBQCdASoUABsAPt1epk0opSOiMAwBEBuJaACdMoGv/gPDQQAfebyktYyU4NAmtZZPf9SogAD93UPcPBDjBJ4fdubgmUBW1+vyOpHHplOU928iO4otW2N7gfe0gd2GVRma8vTB4MGlWffu1WMbnGxKSyHlFwoyuSl+wH7EjaZYlLGWgnUzvtG2B9gOWWNdhBhBEufwlsByo9nl8ksxIeqWwwReo1wCkkG3zUUZSftfFU3DzyioTJW5JOEmLGHQAAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "traditional-art-form",
+   "title": "Abhinaya",
+   "subtitle": "Classical dance recital \u00b7 2026",
+   "summary": "A solo recital shot tight against a black stage, where the only light is the one the performer is standing in. The set moves between full posture and the details the form actually lives in: the mudras of the hands, the alta on the fingers, and the expression carrying the story.",
+   "count": 10,
+   "cover": "traditional-art-form-03",
+   "coverAspect": 0.5623,
+   "coverLqip": "data:image/webp;base64,UklGRvgAAABXRUJQVlA4IOwAAABQBgCdASoUACQAPulmqk8pJaOiJW5hIB0JaADGct8lyDCfwfCXhHU1qvWgt1zDb6CmPL3vNmISDC+wAAD++lqVGvA2Gx43q3w8jJi5dAx1HG/4uxtyp8kd33NBUkv4h+w4C4kcykbRweVF7CwCUljgOeMQ4bVnhLgKIn/Qn/9RfmwjOJGNjyxYPx+dxwvWWDG5HOmStp+/Yn9NHRsE0ZhdBi9xgDYpzlr8IEFJjfksF6tcV4wKvbPAm3hs9+5dGASVDf9iijLyIewdV5B8qvUZz/0RXoQyc5x0t1pyaj4wcqZAr42RQU4ectgAAA==",
+   "photos": [
+    {
+     "id": "traditional-art-form-01",
+     "src": "01.jpg",
+     "width": 1080,
+     "height": 1620,
+     "aspect": 0.6667,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAACQBACdASoUAB4APulgp00pJaOiMAgBIB0JYwAAW+qsvV9Mlu23RsoV9JGh14AA/vVm2x4elhr5+D6BUEGLnZD9Hloo1VPJCXiqBfFsg6TpbVo+RdyZRd2s4WhA2+DDGVIDy36bn8pyFThAz6evIx/0ifA1gQ6UTyOP0QlBY6jL98En5KgrtPhXwZPNs6YV+xGqD7cJNswwAAAA",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "traditional-art-form-02",
+     "src": "02.jpg",
+     "width": 1048,
+     "height": 1864,
+     "aspect": 0.5622,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAAAQBQCdASoUACQAPuVcqE0pJSQiKq35IByJQBnOgs2aXCQwN71aKvAgHga9BMHifUNgAP71aRd1mbYbCbE+PZ9h6xNp1neL0HOTvHxbeR+NqKdCPCRAM8+UYqe9LrKTaPou+zQsgvvjHSHMIYKtb8Qtj38Z5twc7SiYGyPHeInL2lJte1QkFfA7MzZYPijZgMGXFOudIrQUMGMQZGCCiOwVYQpydwmL64bqzLqjTBJN2BHmOyx/DlptYWsJEos/wAA=",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "traditional-art-form-03",
+     "src": "03.jpg",
+     "width": 596,
+     "height": 1060,
+     "aspect": 0.5623,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRvgAAABXRUJQVlA4IOwAAABQBgCdASoUACQAPulmqk8pJaOiJW5hIB0JaADGct8lyDCfwfCXhHU1qvWgt1zDb6CmPL3vNmISDC+wAAD++lqVGvA2Gx43q3w8jJi5dAx1HG/4uxtyp8kd33NBUkv4h+w4C4kcykbRweVF7CwCUljgOeMQ4bVnhLgKIn/Qn/9RfmwjOJGNjyxYPx+dxwvWWDG5HOmStp+/Yn9NHRsE0ZhdBi9xgDYpzlr8IEFJjfksF6tcV4wKvbPAm3hs9+5dGASVDf9iijLyIewdV5B8qvUZz/0RXoQyc5x0t1pyaj4wcqZAr42RQU4ectgAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "traditional-art-form-04",
+     "src": "04.jpg",
+     "width": 1080,
+     "height": 1920,
+     "aspect": 0.5625,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRhIBAABXRUJQVlA4IAYBAAAQBgCdASoUACQAPuloq1CpJaOipWzJIB0JZgDBsIjgtd2qX4ASn5UDhGGMo6RUEbEDU/HSA0YQKnAA/vpagxqDn1mK3YD/49AiXnWyhkVvUlI6fmmFLSFUsgbEqXrv9JuznyySUarNicKe1zio1WT8seqVWMKa2H4upoB8TAiobl62QvQ1IhLhZBs56fLVpQSZcydFe6knisqATCIZdhOLeyh0lcHzjsPMrIwiDgzXrWRB9lkwsf1Mj8QaYROdpLrsNvAYrCQKdmNMxqBP+pmDSd1H2dLC+/9PhRo+TXe9rxJ+5QuYGa61NewA/WTkR4kknYwe/grXJgphRN6PHTdTsHTMAAAA",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "traditional-art-form-05",
+     "src": "05.jpg",
+     "width": 959,
+     "height": 1705,
+     "aspect": 0.5625,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAAAQBgCdASoUACQAPulmrE+pJaQiJWzJIB0JYgDM8HEwADk/OJ/CMICA2xy1lKToYVqBTV1tH+QKWAAA/vm8lc8sngTz+4GX6j+iekWMQORCMT/PX+76HqsutZQoVUTqKP6iDGBBJ1Cplww/GMefjzTj2a2LJkjsc/OkFhRUaXVhub9YQ1rkp/mqCQqVJzpmonLgWnQt4tqZiitpcxerFeMhLuuIIAh7I2ge1gqX+YObCBzUTSBqBivTfPibmJofzFwAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "traditional-art-form-06",
+     "src": "06.jpg",
+     "width": 1080,
+     "height": 1920,
+     "aspect": 0.5625,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRiIBAABXRUJQVlA4IBYBAAAQBwCdASoUACQAPulsq1GpJaOipWsxIB0JaADHUL8IBtxhT7JP1nWLdjqwKbc66gxz1M6+uWJT6LClODsre4MOGAD+/KXUerp+4EZSaAeCbpWpM254AFnfodzp/acN6gL/+Me2a/X5jZtiHrRIY7SmB0BpJcFik8YOUdo1/uz34cN0bzm9bv+ANIT/KL2lkupr7a2Z6x4yEJBHEZshIj+3wdrbVVCL50T/Am+HVw0FIq6JtVqwesByga5pNIkEXVKAd1jlD7TKlFWQ4IWsLmvEOJv91EysgH2jfR6J7xdM0JIwh6PAMIudwlcFfUrxDSqZ3zmn/7mIOOwSiWLr8WLkpkvYehhbMrf3VadzvsruS5Yg2fJAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "traditional-art-form-07",
+     "src": "07.jpg",
+     "width": 1080,
+     "height": 1920,
+     "aspect": 0.5625,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRh4BAABXRUJQVlA4IBIBAADwBgCdASoUACQAPulsq1IpJaOipWsxIB0JZgDGb16prlilKBiAVSgs2uaclwtRsVzdOcyHoLyTjcIuhTxGMmegAP78Q9zVjvQEzF5xCbLWwf8zlEhVK3FxuGYapt9yhsJzw7XfjpgrhFfnr3zRTauLF/uFIuSR/00tCBcUyZW7i6wa+rZr5espXSHeedQJISvcfUHgflSkRf8fneI1O0yCsHx1NAIoeXYpnjeEXiSE97sqmzqfmJCxifFC9n7ImYt6i+lfwm4n5n5x5PaItcEfFOXMdWt++WHMBAS+KK0xGadtz5mzZOm3rTTXJY5h+Hvj/J4aMSHDjSM/hwHtFFzbBgz/Ws9P13d+82Y9HBj/3AAA",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "traditional-art-form-08",
+     "src": "08.jpg",
+     "width": 1080,
+     "height": 1920,
+     "aspect": 0.5625,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRigBAABXRUJQVlA4IBwBAAAQBwCdASoUACQAPulqq1GpJaOipWsxIB0JZgDDvfVF2CyBNBpP1nd0p77FJRFsQxSaxyPfOzHpmFmbq7TdTbHLnAD+/KXUZ7mObQC10zqmZLAjRNo/lWmPKgo35hmA4jvMad9r6mxDDjS0tMIGolPQiw12Kq+Ly3Ppj4YM4mqjr79cKd06YMMFFwjugH4MeiecPXAcjQ4FbjF5oscLUwPDmtJ4fOCwDptRd8ULItm+7GBYJUd6E3X6g8iMNXFiSy7uExy00cRe3/MrVIl8g0VC5vki+ie7N94CtWtO8jrxnDX+yojaW7utURgPOAJ0BA+wFWQe02T8L1+ANWCpIv6pz51icUypGONMWGaMX5dLnCiRv00dvjN+aeAAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "traditional-art-form-09",
+     "src": "09.jpg",
+     "width": 971,
+     "height": 1456,
+     "aspect": 0.6669,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAADQBACdASoUAB4APulgqk8pJSOiMBgIASAdCUAZIgaN+NL8mTPi3/tnrr/uQdqAAAD++EjPye+jwLjXjM6KY8xRwZ2BOEdQf+iRE2HHiLi1FslJMIIgD4MrLPVSYoKdUtwegkAszO8qKvPvkkdBk3Fv1RmUiHnoF2XP8hQ+sZCUqetBR9hy79f10aWs6JakPne69I9mljqHq8H3MlbOw4VNi+sM4hrXCjQAAA==",
+     "widths": [
+      400,
+      800,
+      1200
+     ]
+    },
+    {
+     "id": "traditional-art-form-10",
+     "src": "10.jpg",
+     "width": 1080,
+     "height": 1920,
+     "aspect": 0.5625,
+     "monochrome": false,
+     "lqip": "data:image/webp;base64,UklGRiYBAABXRUJQVlA4IBoBAAAQBwCdASoUACQAPulqqlEpJaOipWzJIB0JbADGq6EMAFQKUXXEY4cSDKsDmkwJteqPOFeSyK4r2vve5RNLIUtuwAD++ltcn/OBJIdyWJa09XG0hquGtXVtLNxhMELrHISrRNThuawnIBOmKvrGMHX9EkWtBj+zqt/O3MLIsQ0QYVGUaP8I1/jkg901vTpU/TXKbb+aOM2DdAMhJbD3t3o455tY6G+ggTkzvXH/3igqoaA+H0Ve9WcSHC5VmFhN06dZ5BrU8XNZiZMPeVNzOHJkV/UW6fdZi2ACvcdFURDscbtAW/i07+XV/XsQjrT5ZlTauLldW5Xd/e7kcT07B72xHWaC2vOwHEHIichR6qWJSplFHiFF7IgAAAA=",
      "widths": [
       400,
       800,
